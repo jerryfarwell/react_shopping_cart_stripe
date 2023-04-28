@@ -3,3 +3,8 @@
 .image-cart{
     width: 80px;
 }
+
+.cartProduct{
+    width: 100%;
+    margin: auto;
+}

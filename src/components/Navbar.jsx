@@ -117,7 +117,7 @@ useEffect(() => {
 
 
 
-              <Navbar.Collapse>
+              <Navbar.Collapse className='modal-for-login'>
                 <Nav className='navdropdown'>
              <NavDropdown 
                 title="Ordinateurs et périphériques" 
@@ -143,7 +143,7 @@ useEffect(() => {
                </Nav>
                </Navbar.Collapse>
 
-              <Navbar.Collapse>
+              <Navbar.Collapse className='modal-for-login'>
                <Nav className='navdropdown'>
              <NavDropdown 
                 title="Stockage et mémoire" 
@@ -169,7 +169,7 @@ useEffect(() => {
                </Nav>
                </Navbar.Collapse>
 
-               <Navbar.Collapse>
+               <Navbar.Collapse className='modal-for-login'>
                <Nav className='navdropdown'>
              <NavDropdown 
                 title="Accessoires" 
@@ -241,7 +241,7 @@ useEffect(() => {
 
 
 
-            <Modal show={showThird} onHide={handleCloseThird}  >
+            <Modal show={showThird} onHide={handleCloseThird}  className='modal-for-login'>
                 <Modal.Header closeButton className='login-modal'>
                     <Modal.Title className='modal-logint'>mon compte</Modal.Title>
                 </Modal.Header>
@@ -252,7 +252,7 @@ useEffect(() => {
             </Modal>
 
             
-             <Modal show={showSecond} onHide={handleCloseSecond}>
+             <Modal show={showSecond} onHide={handleCloseSecond} className='modal-for-login'>
              <Modal.Header closeButton className='login-modal'>
             <Modal.Title className='modal-logint'>mon compte</Modal.Title>
             </Modal.Header>
@@ -266,7 +266,7 @@ useEffect(() => {
 
 
         
-           <Modal show={show} onHide={handleClose}>
+           <Modal show={show} onHide={handleClose} className='modal-for-login'>
                 <Modal.Header closeButton>
                     <Modal.Title>mon panier</Modal.Title>
                 </Modal.Header>

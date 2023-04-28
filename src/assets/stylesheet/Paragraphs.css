@@ -3,6 +3,9 @@
     background: rgb(207, 122, 197);
     padding: 20px;
     border-color: transparent;
+    width: 100%;
+    margin: auto;
+
 }
 
 
@@ -11,6 +14,9 @@
     background: linear-gradient(#64e6ae, #646aa7);
     padding: 20px;
     border-color: transparent;
+    width: 100%;
+    margin: auto;
+
 }
 
 
@@ -19,4 +25,7 @@
     background: linear-gradient(#69b8cc, #ec92bb);
     padding: 20px;
     border-color: transparent;
+    width: 100%;
+    margin: auto;
+
 }

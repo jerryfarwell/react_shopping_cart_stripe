@@ -22,10 +22,17 @@ width: 30px;
     top: 0;
     z-index: 1000;
     width: 100%;
+    margin: auto;
 }
 
 .login-modal{
     background-color: blue;
+ 
+}
+
+.modal-for-login{
+    width: 100%;
+    margin: auto;
 }
 
 .modal-logint{
