@@ -108,7 +108,6 @@ useEffect(() => {
     return (
         
         <>
-        <div className='navbar'>
             <Navbar expand="sm" className="navb" >
             <Navbar.Brand href="/"><h4></h4></Navbar.Brand>
                 <Navbar.Brand href="/"><img src={networkleed} alt="My Image" className='networkleed-img' /></Navbar.Brand>
@@ -290,7 +289,6 @@ useEffect(() => {
                     }
                 </Modal.Body>
             </Modal>
-          </div>  
 
         </>
     )
