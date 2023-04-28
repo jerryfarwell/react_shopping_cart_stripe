@@ -1,0 +1,68 @@
+.cart-button{
+    background-color: white;
+    border-color: white;
+}
+
+.nb-products{
+    color: red;
+}
+
+
+.networkleed-img{
+    width: 450px;
+}
+
+.cart-image{
+width: 30px;
+}
+
+.navb{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+}
+
+.login-modal{
+    background-color: blue;
+}
+
+.modal-logint{
+    color: white;
+    text-align: center;
+}
+
+
+.loginF{
+    background-image: url(https://images.pexels.com/photos/672111/pexels-photo-672111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+.signupF{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(https://cdn.pixabay.com/photo/2013/05/09/09/06/waves-circles-109964_960_720.jpg);
+}
+
+
+.dropdown-item:hover {
+    background-color: blue;
+    color: white;
+  }
+
+  .buttonlink{
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .navdropdown{
+    margin-right: 5%;
+  }
+  
+

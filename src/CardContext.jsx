@@ -12,6 +12,8 @@ export const CartContext = createContext({
 
 export function CartProvider({children}) {
     const [cartProducts, setCartProducts] = useState([]);
+    const CartData = localStorage.getItem('cart') || []
+    
     
     // [ { id: 1 , quantity: 3 }, { id: 2, quantity: 1 } ]
 
@@ -98,6 +100,8 @@ export function CartProvider({children}) {
         getTotalCost
     }
 
+
+
     return (
         <CartContext.Provider value={contextValue}>
             {children}
@@ -107,8 +111,8 @@ export function CartProvider({children}) {
 
 export default CartProvider;
 
-
 // CODE DOWN HERE
 
 // Context (cart, addToCart, removeCart)
 // Provider -> gives your React app access to all the things in your context
+

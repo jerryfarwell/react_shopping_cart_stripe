@@ -2,6 +2,8 @@ import Button from 'react-bootstrap/Button';
 import { CartContext } from '../CardContext';
 import { useContext } from "react";
 import { GetProductData } from '../productStore';
+import '../assets/stylesheet/CartProduct.css'
+
 
 function CartProduct(props) {
     const cart = useContext(CartContext);
@@ -9,13 +11,15 @@ function CartProduct(props) {
     const quantity = props.quantity;
     const productData = GetProductData(id);
 
+   
     return (
         <>
             <h3>{productData.title}</h3>
-            <p>{quantity} total</p>
+            <small>Quantité: {quantity} </small>
             <p>{ (quantity * productData.price).toFixed(2) }€</p>
-            <Button size="sm" onClick={() => cart.deleteFromCart(id)}>Remove from cart</Button>
-            <hr></hr>
+            <p><img src={productData.imageSrc} alt={productData.title} className='image-cart'/></p>
+            <Button size="sm" onClick={() => cart.deleteFromCart(id)}>Retirer du panier</Button>
+         <hr></hr>
         </>
     )
 }

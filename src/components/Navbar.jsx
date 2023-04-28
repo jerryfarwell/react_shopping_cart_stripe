@@ -1,15 +1,90 @@
-import {Button, Container, Navbar, Modal} from 'react-bootstrap';   // by importing this we simply put for example <Button></Button> we have to use the capital letter for react-bootstrap
-import { useState, useContext } from 'react';
+import {Button, Container, Navbar, Modal, DropdownButton, Dropdown, Nav, NavDropdown} from 'react-bootstrap';   // by importing this we simply put for example <Button></Button> we have to use the capital letter for react-bootstrap
+import { useState, useContext, useEffect } from 'react';
 import { CartContext } from '../CardContext';
 import CartProduct from './CartProduct';
+import '../assets/stylesheet/Navbar.css'
+import networkleed from '../assets/images/networkleed.jpg';
+import LoginForm from './authentification/sessions/New';
+import SignupForm from './authentification/registrations/New';
+import Cookies from 'js-cookie';
+import Logout from './authentification/sessions/Logout';
+
 
 function NavbarComponent() {
+
+//-- this belongs to the dropdown using onMousse------------------------//
+
+const [showDropdown, setShowDropdown] = useState(false);
+
+const handleDropdownEnter = () => {
+  setShowDropdown(true);
+}
+
+const handleDropdownLeave = () => {
+  setShowDropdown(false);
+}
+//-----------------------------------------------------------------------------
+const [showDropdown2, setShowDropdown2] = useState(false);
+
+const handleDropdownEnter2 = () => {
+  setShowDropdown2(true);
+}
+
+const handleDropdownLeave2 = () => {
+  setShowDropdown2(false);
+}
+//-----------------------------------------------------------------------------
+const [showDropdown3, setShowDropdown3] = useState(false);
+
+const handleDropdownEnter3 = () => {
+  setShowDropdown3(true);
+}
+
+const handleDropdownLeave3 = () => {
+  setShowDropdown3(false);
+}
+//-----------------------------------------------------------------------------
+
+
+
+
+// this const get the cookie set into sessions/New.jsx to be able to hide or show something on the
+// navbar when user is logged in
+
+const [isLoggedIn, setIsLoggedIn] = useState(Cookies.get("token") !== undefined);
+
+useEffect(() => {
+    const checkLoginStatus = () => {
+      setIsLoggedIn(Cookies.get("token") !== undefined);
+    };
+    checkLoginStatus();
+  }, []); 
+
+
+
+// here we simply create cart to be able to use our cart context set into src/CardContext.jsx
     const cart = useContext(CartContext);
 
+
+// here creating useSate to be able to show and close modal this one is for the cart 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+
+// here creating useSate to be able to show and close modal this one is for LoginForm 
+    const [showSecond, setShowSecond] = useState(false);
+    const handleCloseSecond = () => setShowSecond(false);
+    const handleShowSecond = () => setShowSecond(true);
+
+
+// here creating useSate to be able to show and close modal this one is for SignupForm 
+    const [showThird, setShowThird] = useState(false);
+    const handleCloseThird = () => setShowThird(false);
+    const handleShowThird = () => setShowThird(true);
+    
+
+// here this is set to fech our backend data for stripe -----------
     const checkout = async () => {
         await fetch('http://localhost:3000/checkout', {
             method: "POST",
@@ -26,25 +101,179 @@ function NavbarComponent() {
         });
     }
 
-    const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
+    // this is set to calculate the total into our cart, our cart is modal into navbar that is why this is set here
+    const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
+    
     return (
+        
         <>
-            <Navbar expand="sm">
-                <Navbar.Brand href="/">Ecommerce Store</Navbar.Brand>
+            <Navbar expand="sm" className="navb" >
+            <Navbar.Brand href="/"><h4></h4></Navbar.Brand>
+                <Navbar.Brand href="/"><img src={networkleed} alt="My Image" className='networkleed-img' /></Navbar.Brand>
                 <Navbar.Toggle />
-                <Navbar.Collapse className="justify-content-end">
-                    <Button onClick={handleShow}>Cart ({productsCount} Items)</Button>
-                </Navbar.Collapse>
+
+
+
+
+
+              <Navbar.Collapse>
+                <Nav className='navdropdown'>
+             <NavDropdown 
+                title="Ordinateurs et périphériques" 
+                id="basic-nav-dropdown"
+               onMouseEnter={handleDropdownEnter}
+               onMouseLeave={handleDropdownLeave}
+               >
+                <NavDropdown.Item href="#action-1" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-2">Telephones portables</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Enceinte Bleutooth</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Casque audio</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                </NavDropdown>
+                 <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`} onMouseEnter={handleDropdownEnter} onMouseLeave={handleDropdownLeave}>
+                <NavDropdown.Item href="#action-1" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
+                <NavDropdown.Item href="#action-2">Telephones portables</NavDropdown.Item>
+                <NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Enceinte Bleutooth</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Casque audio</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                 </div>
+               </Nav>
+               </Navbar.Collapse>
+
+              <Navbar.Collapse>
+               <Nav className='navdropdown'>
+             <NavDropdown 
+                title="Stockage et mémoire" 
+                id="basic-nav-dropdown"
+               onMouseEnter={handleDropdownEnter2}
+               onMouseLeave={handleDropdownLeave2}
+               >
+                <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Cartes mémoire</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Mémoire RAM</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                </NavDropdown>
+                 <div className={`dropdown-menu ${showDropdown2 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter2} onMouseLeave={handleDropdownLeave2}>
+                <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
+                <NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item>
+                <NavDropdown.Item href="#action-1">Cartes mémoire</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Mémoire RAM</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                 </div>
+               </Nav>
+               </Navbar.Collapse>
+
+               <Navbar.Collapse>
+               <Nav className='navdropdown'>
+             <NavDropdown 
+                title="Accessoires" 
+                id="basic-nav-dropdown"
+               onMouseEnter={handleDropdownEnter3}
+               onMouseLeave={handleDropdownLeave3}
+               >
+                <NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-2">Supports pour ordinateur portable</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Supports pour écran</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Tapis de souris</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Câbles et adaptateurs</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                </NavDropdown>
+                 <div className={`dropdown-menu ${showDropdown3 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter3} onMouseLeave={handleDropdownLeave3}>
+                 <NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-2">Supports pour ordinateur portable</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Supports pour écran</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Tapis de souris</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Câbles et adaptateurs</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                 </div>
+               </Nav>
+               </Navbar.Collapse>
+
+
+
+               
+
+
+
+
+
+
+
+                {isLoggedIn ? (
+                    <Navbar.Collapse className='navdropdown'>
+                    <DropdownButton
+                     title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} />}
+                      variant="light"
+                      >
+                   <Dropdown.Item href="#action-3" >
+                   <Logout/>
+                       </Dropdown.Item>
+                    </DropdownButton>
+                    </Navbar.Collapse>
+                    ) : (
+                    <Navbar.Collapse className='navdropdown'>
+                    <DropdownButton
+                     title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} />}
+                      variant="light"
+                      >
+                   <Dropdown.Item href="#action-3">
+                     <p onClick={handleShowSecond}>Se connecter</p>
+                       </Dropdown.Item>
+                       <Dropdown.Item href="#action-3">
+                     <p onClick={handleShowThird}>S'inscrire</p>
+                    </Dropdown.Item>
+                    </DropdownButton>
+                    </Navbar.Collapse>
+
+                  )} 
+
+
+                <div className="justify-content-end" >
+                    <Button onClick={handleShow} className='cart-button'><h4> <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' /> <span className='nb-products'>{productsCount}</span></h4>  </Button>
+                </div>
             </Navbar>
-            <Modal show={show} onHide={handleClose}>
+
+
+
+            <Modal show={showThird} onHide={handleCloseThird}  >
+                <Modal.Header closeButton className='login-modal'>
+                    <Modal.Title className='modal-logint'>mon compte</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className='signupF'>
+                 <SignupForm />
+                 <Button onClick={handleShowSecond} className='buttonlink'>Vous avez deja un compte ?</Button>            
+                </Modal.Body>
+            </Modal>
+
+            
+             <Modal show={showSecond} onHide={handleCloseSecond}>
+             <Modal.Header closeButton className='login-modal'>
+            <Modal.Title className='modal-logint'>mon compte</Modal.Title>
+            </Modal.Header>
+              <Modal.Body className='loginF'>
+               <LoginForm />
+                <br /> 
+                <Button onClick={handleShowThird} className='buttonlink'>Pas de compte ?</Button>         
+            </Modal.Body>
+            </Modal>
+
+
+
+        
+           <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Shopping Cart</Modal.Title>
+                    <Modal.Title>mon panier</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {productsCount > 0 ?
                         <>
-                            <p>Items in your cart:</p>
+                            <p>Articles dans votre panier:</p>
                             {cart.items.map( (currentProduct, idx) => (
                                 <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartProduct>
                             ))}
@@ -52,11 +281,11 @@ function NavbarComponent() {
                             <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
 
                             <Button variant="success" onClick={checkout}>
-                                Purchase items!
+                                passer la commande
                             </Button>
                         </>
                     :
-                        <h5>There are no items in your cart!</h5>
+                        <h5>votre panier est vide !<br/><br/> {<h1>😞</h1>} </h5>
                     }
                 </Modal.Body>
             </Modal>
@@ -69,7 +298,6 @@ export default NavbarComponent;
 
 
 
-
 // let create a function with rfce into return we set the navbar with <Navbar></Navbar>
 // <Navbar.Brand></Navbar.Brand> is where we usualy put the name the site or Home, notice that everything is capital that is react-bootstrap
 // <Navbar.Togle></Navbar.Togle> is the one that make the navbar responsive it allows it to collapse, inside it we put the element that we want to be into the collapse we use <Navbar.Collapse></Navbar.Collapse>
@@ -77,4 +305,5 @@ export default NavbarComponent;
 // we need event onClick  that will handle showing the modal we have to define the function in the event as usual, we have event onHide that will handle the closeButton we must also define the function on the event. 
 // to define these function that hide and show modal let simply import useState as we are into a function, const [show, setShow] = useState(false); we set show to false meaning that if we don't press it shouldn't show the modal content, handleClose is also false and handleShow is true
 // the rest will be explain in other files the checkout is at the end only when the cart is ready and we want to link it to stripe with our checkout controller in rails API, we will then make a fetch and it is linked on the event onClick on the button  Purchase items!
+
 

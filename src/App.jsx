@@ -1,11 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import NavbarComponent from './components/Navbar'
 import { Container } from 'react-bootstrap'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Store from './pages/Store'
 import Cancel from './pages/Cancel'
 import Paid from './pages/Paid'
 import CartProvider from './CardContext'
+/* import SearchBar from './components/SearchBar' */
+import ItemDetails from './pages/ItemDetails'
+import ConfirmationSuccessPage from './pages/ConfirmationSuccessPage'
+
 
 
 
@@ -15,17 +19,21 @@ function App() {
   return (
     <div className="App">
       <CartProvider>
+      <NavbarComponent />
+      {/*<SearchBar />*/}
+      <br/>
       <Container>
-      <NavbarComponent></NavbarComponent>
       <BrowserRouter>
-        <Routes>
+       <Routes>
            <Route index element={<Store />}/>
            <Route path='/paid' element={<Paid />}/>
            <Route path='/cancel' element={<Cancel />}/>
-        </Routes>
+           <Route path='/details' element={<ItemDetails />}/>
+           <Route  path="/confirmation" element={<ConfirmationSuccessPage/>} />
+        </Routes>  
       </BrowserRouter>
       </Container>
-      </CartProvider>  
+      </CartProvider> 
     </div>
   )
 }
