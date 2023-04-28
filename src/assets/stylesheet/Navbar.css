@@ -3,13 +3,19 @@
     border-color: white;
 }
 
+.img-cart-n-product{
+    display: flex;
+    flex-direction: row;
+}
+
 .nb-products{
     color: red;
+
 }
 
 
 .networkleed-img{
-    width: 400px;
+    width: 350px;
 }
 
 .cart-image{
@@ -33,7 +39,7 @@ width: 30px;
 .modal-for-login{
     width: 100%;
     margin: auto;
-}
+} 
 
 .modal-logint{
     color: white;

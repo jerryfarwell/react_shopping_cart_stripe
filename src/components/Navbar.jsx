@@ -170,7 +170,7 @@ useEffect(() => {
                </Navbar.Collapse>
 
                <Navbar.Collapse className='modal-for-login'>
-               <Nav className='navdropdown'>
+               <Nav >
              <NavDropdown 
                 title="Accessoires" 
                 id="basic-nav-dropdown"
@@ -204,10 +204,9 @@ useEffect(() => {
 
 
 
-
                 {isLoggedIn ? (
-                    <Navbar.Collapse className='navdropdown'>
-                    <DropdownButton
+               <Navbar.Collapse className='navdropdown'>
+               <DropdownButton
                      title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} />}
                       variant="light"
                       >
@@ -230,12 +229,10 @@ useEffect(() => {
                     </Dropdown.Item>
                     </DropdownButton>
                     </Navbar.Collapse>
-
                   )} 
 
-
-                <div className="justify-content-end" >
-                    <Button onClick={handleShow} className='cart-button'><h4> <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' /> <span className='nb-products'>{productsCount}</span></h4>  </Button>
+                <div >
+                    <Button onClick={handleShow} className='cart-button'><h4 className='img-cart-n-product'> <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' /> <span className='nb-products'>{productsCount}</span></h4>  </Button>
                 </div>
             </Navbar>
 
