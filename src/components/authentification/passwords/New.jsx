@@ -17,4 +17,4 @@ const ResetPassword = async (email) => {
   }
 };
 
-export default ResetPassword
+export default ResetPassword  

@@ -1,12 +1,14 @@
 
 
 .logout-img{
-    width: 20px;
+    width: 50px;
 }
 
 
 .logout-button{
-    color: red;
+    width: 100%;
+    border-color: transparent;
+    background: rgb(168, 82, 82);
 }
 
 .logout-return{

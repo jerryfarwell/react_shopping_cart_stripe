@@ -1,16 +1,22 @@
 import {Button, Container, Navbar, Modal, DropdownButton, Dropdown, Nav, NavDropdown} from 'react-bootstrap';   // by importing this we simply put for example <Button></Button> we have to use the capital letter for react-bootstrap
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect, useRef } from 'react';
 import { CartContext } from '../CardContext';
 import CartProduct from './CartProduct';
 import '../assets/stylesheet/Navbar.css'
 import networkleed from '../assets/images/networkleed.jpg';
+import loading_img from '../assets/images/loading_img.gif'
 import LoginForm from './authentification/sessions/New';
 import SignupForm from './authentification/registrations/New';
 import Cookies from 'js-cookie';
-import Logout from './authentification/sessions/Logout';
+import UserProfilePage from './UserProfilePage';
+import jwt_decode from 'jwt-decode';
+
+
 
 
 function NavbarComponent() {
+
+  
 
 //-- this belongs to the dropdown using onMousse------------------------//
 
@@ -65,33 +71,83 @@ useEffect(() => {
 // here we simply create cart to be able to use our cart context set into src/CardContext.jsx
     const cart = useContext(CartContext);
 
-
-// here creating useSate to be able to show and close modal this one is for the cart 
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+// here creating useSate to be able to show and close modal this one is for the cart
+// we also set conditions that when this modal is open the others should be closed we did the same for all
+const [show, setShow] = useState(false);
+const handleClose = () => setShow(false);
+const handleShow = () => {
+  setShow(true);
+  setShowSecond(false);
+  setShowThird(false);
+  setShowFourth(false);
+};
 
 
 // here creating useSate to be able to show and close modal this one is for LoginForm 
-    const [showSecond, setShowSecond] = useState(false);
-    const handleCloseSecond = () => setShowSecond(false);
-    const handleShowSecond = () => setShowSecond(true);
-
+const [showSecond, setShowSecond] = useState(false);
+const handleCloseSecond = () => setShowSecond(false);
+const handleShowSecond = () => {
+  setShow(false);
+  setShowSecond(true);
+  setShowThird(false);
+  setShowFourth(false);
+};
 
 // here creating useSate to be able to show and close modal this one is for SignupForm 
-    const [showThird, setShowThird] = useState(false);
-    const handleCloseThird = () => setShowThird(false);
-    const handleShowThird = () => setShowThird(true);
+const [showThird, setShowThird] = useState(false);
+const handleCloseThird = () => setShowThird(false);
+const handleShowThird = () => {
+  setShow(false);
+  setShowSecond(false);
+  setShowThird(true);
+  setShowFourth(false);
+};
+
+// here creating useSate to be able to show and close modal this one is for user profil 
+const [showFourth, setShowFourth] = useState(false);
+const handleCloseFourth = () => setShowFourth(false);
+const handleShowFourth = () => {
+  setShow(false);
+  setShowSecond(false);
+  setShowThird(false);
+  setShowFourth(true);
+};
+
+
+
+
+// this is for setting message base on the fetch
+const [message, setMessage] = useState('')
+
+
+//this is for the loading button
+const [loading, setLoading] = useState(false);
+
     
 
 // here this is set to fech our backend data for stripe -----------
     const checkout = async () => {
-        await fetch('http://localhost:3000/checkout', {
+      setLoading(true);
+
+     // here we simply set a condition that will allow user to be redirected to stripe if he is signin else the message will invite him to do so
+      const token = getCookie('token');
+      if (!token) {
+        setMessage("Nous vous invitons à vous connecter avant de procéder à votre achat."); // Show a message to the user to sign in first
+         setLoading(false);
+        return;
+      }
+
+      // here we are decoding the token to be able to send any information to the backend about the user sending the request
+       if (token) {
+        const decodedToken = jwt_decode(token);
+        const userId = decodedToken.user_id;
+
+        await fetch('http://localhost:3000/checkout', { 
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({items: cart.items})
+            body: JSON.stringify({items: cart.items, user_id: userId })
         }).then((response) => {
             return response.json();
         }).then((response) => {
@@ -100,6 +156,24 @@ useEffect(() => {
             }
         });
     }
+  }
+
+
+    // this is for the token inside the checkout "const token = getCookie('token');"  The function first gets all the cookies stored by the browser using the document.cookie property.
+    // It then adds a semicolon to the beginning of the string, so that the cookie name can be easily extracted.       It splits the string using the cookie name as the separator, which creates an array with two elements: the text before the cookie name, and the text after the cookie name.
+    // If the array has two elements, it means that the cookie was found. The function then extracts the value of the cookie by taking the second element of the array, splitting it again using a semicolon as the separator, and returning the first element of the resulting array (which should be the cookie value).
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) {
+        return parts.pop().split(';').shift();
+      }
+    }
+
+  // this is to be able to open a modal as window location
+  // const modalRef = useRef(null);
+
+
 
 
     // this is set to calculate the total into our cart, our cart is modal into navbar that is why this is set here
@@ -115,8 +189,6 @@ useEffect(() => {
 
 
 
-
-
               <Navbar.Collapse className='modal-for-login'>
                 <Nav className='navdropdown'>
              <NavDropdown 
@@ -125,13 +197,14 @@ useEffect(() => {
                onMouseEnter={handleDropdownEnter}
                onMouseLeave={handleDropdownLeave}
                >
-                <NavDropdown.Item href="#action-1" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
+                {/*<NavDropdown.Item href="#action-1" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
                  <NavDropdown.Item href="#action-2">Telephones portables</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Enceinte Bleutooth</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Casque audio</NavDropdown.Item>
-                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                 </NavDropdown>
+
                  <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`} onMouseEnter={handleDropdownEnter} onMouseLeave={handleDropdownLeave}>
                 <NavDropdown.Item href="#action-1" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
                 <NavDropdown.Item href="#action-2">Telephones portables</NavDropdown.Item>
@@ -151,12 +224,12 @@ useEffect(() => {
                onMouseEnter={handleDropdownEnter2}
                onMouseLeave={handleDropdownLeave2}
                >
-                <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
+                {/*<NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
                  <NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Cartes mémoire</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Mémoire RAM</NavDropdown.Item>
-                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                 </NavDropdown>
                  <div className={`dropdown-menu ${showDropdown2 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter2} onMouseLeave={handleDropdownLeave2}>
                 <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
@@ -177,12 +250,12 @@ useEffect(() => {
                onMouseEnter={handleDropdownEnter3}
                onMouseLeave={handleDropdownLeave3}
                >
-                <NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
+                {/*<NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
                  <NavDropdown.Item href="#action-2">Supports pour ordinateur portable</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Supports pour écran</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Tapis de souris</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Câbles et adaptateurs</NavDropdown.Item>
-                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                 </NavDropdown>
                  <div className={`dropdown-menu ${showDropdown3 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter3} onMouseLeave={handleDropdownLeave3}>
                  <NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
@@ -201,18 +274,15 @@ useEffect(() => {
 
 
 
-
-
-
                 {isLoggedIn ? (
                <Navbar.Collapse className='navdropdown'>
                <DropdownButton
                      title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} />}
                       variant="light"
+                      onClick={handleShowFourth}
                       >
-                   <Dropdown.Item href="#action-3" >
-                   <Logout/>
-                       </Dropdown.Item>
+                   {/*<Dropdown.Item href="#action-3" >
+                       </Dropdown.Item>*/}
                     </DropdownButton>
                     </Navbar.Collapse>
                     ) : (
@@ -238,34 +308,45 @@ useEffect(() => {
 
 
 
+            <Modal show={showFourth} onHide={handleCloseFourth}  className='modal-for-login'>
+                <Modal.Header closeButton className='login-modal'>
+                    <Modal.Title className='modal-logint'>Mon Profil</Modal.Title>
+                </Modal.Header>
+                <Modal.Body > 
+                <UserProfilePage/>   
+                </Modal.Body>
+            </Modal>
+
+
+
+
             <Modal show={showThird} onHide={handleCloseThird}  className='modal-for-login'>
                 <Modal.Header closeButton className='login-modal'>
-                    <Modal.Title className='modal-logint'>mon compte</Modal.Title>
+                    <Modal.Title className='modal-logint'>Mon compte</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className='signupF'>
+                <Modal.Body className='signupF'> 
                  <SignupForm />
                  <Button onClick={handleShowSecond} className='buttonlink'>Vous avez deja un compte ?</Button>            
                 </Modal.Body>
             </Modal>
 
             
-             <Modal show={showSecond} onHide={handleCloseSecond} className='modal-for-login'>
+             <Modal show={showSecond} onHide={handleCloseSecond} className='modal-for-login'  id="my-modal">
              <Modal.Header closeButton className='login-modal'>
-            <Modal.Title className='modal-logint'>mon compte</Modal.Title>
+            <Modal.Title className='modal-logint'>Mon compte</Modal.Title>
             </Modal.Header>
               <Modal.Body className='loginF'>
                <LoginForm />
                 <br /> 
                 <Button onClick={handleShowThird} className='buttonlink'>Pas de compte ?</Button>         
-            </Modal.Body>
+            </Modal.Body> 
             </Modal>
-
 
 
         
            <Modal show={show} onHide={handleClose} className='modal-for-login'>
                 <Modal.Header closeButton>
-                    <Modal.Title>mon panier</Modal.Title>
+                    <Modal.Title>Mon panier</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {productsCount > 0 ?
@@ -275,7 +356,22 @@ useEffect(() => {
                                 <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartProduct>
                             ))}
 
-                            <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
+                            <h1>Total: {cart.getTotalCost().toFixed(2)} €</h1>
+                            
+                            {loading && <img src={loading_img} alt="" /> }
+                            <br/>
+                             
+                            {message && (
+                              <div className='message'>
+                                <br/>
+                              <h6 style={{marginLeft: '10px', marginRight: '10px'}}>{message}</h6>
+                              <Button onClick={handleShowSecond} >Se connecter</Button>            
+                                <br/>
+                                <br/>
+                              </div>
+                             )}
+                             <br/>
+
 
                             <Button variant="success" onClick={checkout}>
                                 passer la commande
@@ -291,7 +387,8 @@ useEffect(() => {
     )
 }
 
-export default NavbarComponent;
+export default  NavbarComponent;
+
 
 
 
@@ -303,5 +400,3 @@ export default NavbarComponent;
 // we need event onClick  that will handle showing the modal we have to define the function in the event as usual, we have event onHide that will handle the closeButton we must also define the function on the event. 
 // to define these function that hide and show modal let simply import useState as we are into a function, const [show, setShow] = useState(false); we set show to false meaning that if we don't press it shouldn't show the modal content, handleClose is also false and handleShow is true
 // the rest will be explain in other files the checkout is at the end only when the cart is ready and we want to link it to stripe with our checkout controller in rails API, we will then make a fetch and it is linked on the event onClick on the button  Purchase items!
-
-

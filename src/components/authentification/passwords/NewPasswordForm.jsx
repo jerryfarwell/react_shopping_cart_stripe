@@ -1,67 +1,147 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from "react";
+import "../../../assets/stylesheet/NewPasswordForm.css";
+import { Alert, Button } from "react-bootstrap";
+import lock from '../../../assets/images/lock.png'
+import loading_img from '../../../assets/images/loading_img.gif'
+
+
+
+const ResetPassword = async (
+  resetPasswordToken,
+  password,
+  passwordConfirmation
+) => {
+  try {
+    const response = await fetch(
+      `http://localhost:3000/password?reset_password_token=${resetPasswordToken}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          password,
+          password_confirmation: passwordConfirmation,
+        }),
+      }
+    );
+    const data = await response.json();
+    console.log(data); // should print { message: "Password updated successfully" } if successful
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 function NewPasswordForm() {
-  const [password, setPassword] = useState('');
-  const [passwordConfirmation, setPasswordConfirmation] = useState('');
-  const [resetToken, setResetToken] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const searchParams = new URLSearchParams(window.location.search);
+  const reset_password_token = searchParams.get("reset_password_token");
 
-  const location = useLocation();
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const token = params.get('reset_password_token');
-    setResetToken(token);
-  }, [location.search]);
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [message, setMessage] = useState("");
+  const [passwordMatchError, setPasswordMatchError] = useState("");
+  const [passwordFormatError, setPasswordFormatError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
+    console.log(reset_password_token);
+
+    if (password !== passwordConfirmation) {
+      setPasswordMatchError("Les mots de passe ne correspondent pas.");
+      setLoading(false);
+      return;
+    }
+
+    if (!/^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])[a-zA-Z0-9]{6,}$/.test(password)) {
+      setPasswordFormatError(
+        "Le mot de passe doit comporter au moins 6 caractères, dont au moins une lettre majuscule, une lettre minuscule et un chiffre."
+      );
+      setLoading(false);
+      return; // return here to prevent further execution of the function
+    }
+
     try {
-      const response = await axios.put('http://localhost:3000/password', {
-        reset_password_token: resetToken,
-        password: password,
-        password_confirmation: passwordConfirmation,
-      });
-      console.log(response.data); // should print { message: "Password updated successfully" } if successful
-      // redirect user to login page or some other page after successful password reset
+      await ResetPassword(
+        reset_password_token,
+        password,
+        passwordConfirmation
+      );
+      setMessage("Le mot de passe a été mis à jour avec succès.");
+      setLoading(false);
     } catch (error) {
       console.error(error);
-      setErrorMessage(error.response.data.errors.full_messages[0]);
+      setMessage("La mise à jour du mot de passe a échoué.");
     }
   };
 
   return (
-    <div>
-      <h1>Reset Password</h1>
-      {errorMessage && <div className="error">{errorMessage}</div>}
+    <div className="new-password">
+      <br />
+      <br />
+      <h2 style={{color: 'white'}}>Redéfinir votre mot de passe</h2>
+      <br />
+      <br />
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="password">New Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="password-confirmation">Confirm New Password:</label>
-          <input
-            type="password"
-            id="password-confirmation"
-            name="password-confirmation"
-            value={passwordConfirmation}
-            onChange={(event) => setPasswordConfirmation(event.target.value)}
-          />
-        </div>
-        <button type="submit">Reset Password</button>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Nouveau mot de passe"
+          className="inputF"
+          required
+        />
+        <br />
+        <br />
+        <input
+          type="password"
+          value={passwordConfirmation}
+          onChange={(e) => setPasswordConfirmation(e.target.value)}
+          placeholder="Confirmation du mot de passe"
+          className="inputF"
+          required
+        />
+        <br />
+        <br />
+
+        {message && (
+          <Alert variant="success">
+            <div>{message}</div>
+          </Alert>
+        )}
+
+        {loading && <img src={loading_img} alt="" /> }
+        
+
+        <Button type="submit">Réinitialiser le mot de passe</Button>
+        <br />
+        <br />
+        {passwordMatchError && (
+          <Alert variant="danger">{passwordMatchError}</Alert>
+        )}
+        {passwordFormatError && (
+          <Alert variant="danger">{passwordFormatError}</Alert>
+        )}
       </form>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <h5 >Nous prenons votre vie privée et votre sécurité très au sérieux.</h5>
+      <img src={lock} alt="" style={{ width: "200px" }} />
+      <br/>
+      <br/>
+
+      <Alert variant="secondary">
+        <p>Veuillez entrer votre nouveau mot de passe dans le champ prévu à cet effet. Assurez-vous qu'il est sécurisé en utilisant au moins 6 caractères spéciaux , dont au moins une lettre majuscule, une lettre minuscule et un chiffre. Entrez à nouveau votre nouveau mot de passe dans le champ de confirmation pour éviter les erreurs de saisie. Cliquez sur "Réinitialiser le mot de passe" pour enregistrer les modifications.</p>
+        <p>Attention, ce lien de réinitialisation de mot de passe n'est utilisable qu'une seule fois. Si vous avez déjà changé votre mot de passe à l'aide de ce lien, veuillez demander un nouveau lien pour réinitialiser votre mot de passe.</p>
+      </Alert>
     </div>
   );
-}
+} 
 
 export default NewPasswordForm;
-
-

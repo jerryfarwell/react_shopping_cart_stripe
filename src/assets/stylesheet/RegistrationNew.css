@@ -8,27 +8,38 @@
 }
 
 
+.diptS{
+  margin-top: 20px;
+}
+
+
 
 .flash-message{
-  background: rgb(159, 231, 50);
+  /* background: rgb(159, 231, 50); */
   border-style: solid;
   border-color: transparent;
   padding: auto;
+  margin-top: 10px;
 }
 
 .form{
+  border-style: solid;
+  border-color: transparent;
+  margin: auto;
+  width: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  margin-left: 18%;
+  justify-content: center;
 }
 
 .wdSignup{
   color: white;
-  margin-left: 11%;
 }
 
-.inputbtn{
- margin-left: 10%;
+.loading{
+  color: white;
 }
+
 
 

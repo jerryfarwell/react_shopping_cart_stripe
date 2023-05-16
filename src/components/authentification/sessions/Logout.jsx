@@ -16,7 +16,7 @@ function Logout() {
 
   return (
     <div >
-      <button onClick={handleLogout} className='logout-button'>{<img className='logout-img' src={logout} alt="" />} {<br/>} <small>Se déconnecter</small></button>
+      <button onClick={handleLogout} className='logout-button'>{<img className='logout-img' src={logout} alt="" />} <small>Se déconnecter</small></button>
     </div>
   );
 }

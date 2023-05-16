@@ -43,7 +43,8 @@
 }
 
 .img-congrat{
-    width: 220px;
+    width: 150px;
+    margin-top: 20px;
 }
 
 
@@ -51,3 +52,4 @@
     margin: auto;
     width: 100%;
 }
+

@@ -11,7 +11,7 @@
 
 .paragraph2{
     border-style: solid;
-    background: linear-gradient(#64e6ae, #646aa7);
+    background: rgb(207, 122, 197);
     padding: 20px;
     border-color: transparent;
     width: 100%;
@@ -22,7 +22,7 @@
 
 .paragraph3{
     border-style: solid;
-    background: linear-gradient(#69b8cc, #ec92bb);
+    background: rgb(207, 122, 197);
     padding: 20px;
     border-color: transparent;
     width: 100%;

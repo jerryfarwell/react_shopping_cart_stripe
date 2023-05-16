@@ -9,6 +9,11 @@ import CartProvider from './CardContext'
 /* import SearchBar from './components/SearchBar' */
 import ItemDetails from './pages/ItemDetails'
 import ConfirmationSuccessPage from './pages/ConfirmationSuccessPage'
+import NewPasswordForm from './components/authentification/passwords/NewPasswordForm'
+import ResetPasswordForm from './components/authentification/passwords/RessetPasswordForm'
+
+
+
 
 
 
@@ -28,8 +33,10 @@ function App() {
            <Route index element={<Store />}/>
            <Route path='/paid' element={<Paid />}/>
            <Route path='/cancel' element={<Cancel />}/>
-           <Route path='/details' element={<ItemDetails />}/>
+           <Route path='/details/:id' element={<ItemDetails />}/>
            <Route  path="/confirmation" element={<ConfirmationSuccessPage/>} />
+           <Route path='/password' element={<ResetPasswordForm/>}/>
+           <Route path='/new_password/:id' element={<NewPasswordForm/>}/> 
         </Routes>  
       </BrowserRouter>
       </Container>

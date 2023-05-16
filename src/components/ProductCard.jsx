@@ -2,6 +2,7 @@ import { Card, Button, Form, Row, Col, DropdownButton } from 'react-bootstrap';
 import { CartContext } from '../CardContext';
 import { useContext } from 'react';
 import '../assets/stylesheet/ProductCard.css';
+import { Link } from 'react-router-dom';
 
 
 function ProductCard(props) { // props.product is the product we are selling
@@ -12,7 +13,9 @@ function ProductCard(props) { // props.product is the product we are selling
     return (
         <Card>
             <Card.Body>
+            <Link to={`/details/${product.id}`}>
                <img src={product.imageSrc} alt={product.title} className='images-main'/>
+               </Link>
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text>{product.price} €</Card.Text>
                 { productQuantity > 0 ?
@@ -24,7 +27,7 @@ function ProductCard(props) { // props.product is the product we are selling
                                 <Button sm="6" onClick={() => cart.removeOneFromCart(product.id)} className="mx-2">-</Button>
                             </Col>
                         </Form>
-                        <Button variant="danger" onClick={() => cart.deleteFromCart(product.id)} className="my-2">Retirer du panier</Button>
+                        {/*<Button variant="danger" onClick={() => cart.deleteFromCart(product.id)} className="my-2">Retirer du panier</Button>*/}
                     </>
                     :
                     <Button variant="primary" onClick={() => cart.addOneToCart(product.id)}>Ajouter au panier</Button>

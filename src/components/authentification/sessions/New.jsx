@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../../assets/stylesheet/SessionNew.css';
+import { Alert, Button, Modal } from 'react-bootstrap';
 import Cookies from 'js-cookie';
+import loading_img from '../../../assets/images/loading_img.gif'
+import ResetPasswordForm from '../passwords/RessetPasswordForm';
 
 function LoginForm() {
   const [formData, setFormData] = useState({
@@ -9,29 +12,34 @@ function LoginForm() {
   });
   const [flashMessage, setFlashMessage] = useState('');
   const [SecondflashMessage, setSecondFlashMessage] = useState('');
+  const [loading, setLoading] = useState(false); // this is to be able to display loading spinner when data loading
 
+// this is to be able to open the modal to resset the password
+  const [showSecond, setShowSecond] = useState(false);
+  const handleCloseSecond = () => setShowSecond(false);
+  const handleShowSecond = () => setShowSecond(true);
+  
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const [token, setToken] = useState('');
+  useEffect(() => {
+    const tokenFromCookie = Cookies.get('token');
+    if (tokenFromCookie) {
+      setToken(tokenFromCookie);
+    }
+  }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Check if the user has a token stored
-    const token = localStorage.getItem('token');
-    if (!token) {
-      setFlashMessage('Token not found. Please sign up first.');
-      return;
-    }
-
-    // Verify the user's token
-    fetch('http://localhost:3000/login', {
-      method: 'post',
+    setLoading(true); // set loading to true when form is submitted
+    fetch("http://localhost:3000/login", {
+      method: "post",
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': token,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         user: {
@@ -42,38 +50,33 @@ function LoginForm() {
     })
       .then((res) => {
         if (res.ok) {
-          // Store the user's token in a cookie
-          Cookies.set('token', token);
-
-          setFlashMessage('Félicitations, connexion réussie 😍!');
-          setTimeout(() => {
-            window.location.href = 'http://localhost:5173/';
-          }, 5000);
-    
-
-          return res.json();
+          setFlashMessage('Félicitations, connexion réussie !');
+            return res.json();
         } else {
-          throw new Error(res);
+          setFlashMessage("Identifiant ou Mot de passe incorrect ");
+          setSecondFlashMessage(' Nouveau compte ? veuillez confirmer votre adresse mail en cliquant sur le lien de confirmation avant de continuer.');
+            throw new Error(res);
         }
       })
-      .then((json) => console.dir(json))
-      .catch((err) => {
-        console.error(err);
-        setFlashMessage('Adresse mail ou Mot de passe incorrect');
-        setSecondFlashMessage('Nouveau compte ? Veuillez confirmer votre e-mail avant de continuer.');
-      });
+      .then((json) => {
+        Cookies.set("token", json.token, { expires: 7 }); // set the token cookie to expire after 7 days
+        setToken(json.token); // set the token state
+        //Cookies.set("userFirstName", json.user.first_name); // geting the user first_name from rails api
+        setTimeout(() => {
+          window.location.href = 'http://localhost:5173/'; // redirect to the homepage
+        }, 3000); // close the parentheses for the setTimeout function here
+      })
+      .catch((err) => console.error(err))
+      .finally(() => setLoading(false)); // set loading to false after the response is received      
   };
 
   return (
-    <div> 
-
-      <form onSubmit={handleSubmit}>
-
-      <div className="form">
+    <div className='form'>
       <div>
         <h2 className='wdConnexion'>Connexion</h2>
       </div>
 
+      <form onSubmit={handleSubmit}>
         <br />
         <br />
         <input
@@ -87,6 +90,7 @@ function LoginForm() {
         />
         <br />
         <br />
+        <div className="password">
         <input
           type='password'
           name='password'
@@ -96,33 +100,46 @@ function LoginForm() {
           className='inputF'
           required
         />
-        <br />
-        <br />
-        <div >
-          <input type='submit' value='Se connecter'  className='inputbutton'/>
+        <button  onClick={handleShowSecond} className='forgot'> <span style={{color: 'white'}}>Oublié ?</span> </button>
+        </div>
+
+        <br/>
+        {loading && <img src={loading_img} alt="" /> }
+
+        <div className='diptS'>
+          <input type='submit' value='Se connecter' className='inputbtn' />
         </div>
         <br />
         <br />
-        </div>
-
-
         {flashMessage && (
           <div className='flash-message'>
-            <h5>{flashMessage}</h5>
-          </div>
-        )}
-        <br/><br/>
-
-        {SecondflashMessage && (
-          <div className='flash-message'>
-            <h5>{SecondflashMessage}</h5>
+            <br/>
+            <Alert variant="danger">
+            <h6>{flashMessage}</h6>
+            <br/>
+            <p>{SecondflashMessage}</p>
+            </Alert>
           </div>
         )}
 
         <br />
+        <br />
       </form>
+
+
+          <Modal show={showSecond} onHide={handleCloseSecond} className='modal-for-login'>
+             <Modal.Header closeButton className='login-modal'>
+            <Modal.Title className='modal-logint'>mon compte</Modal.Title>
+            </Modal.Header>
+              <Modal.Body className='loginF'>
+               <ResetPasswordForm />
+            </Modal.Body> 
+            </Modal>
+
     </div>
   );
 }
 
 export default LoginForm;
+
+

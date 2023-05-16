@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../../assets/stylesheet/RegistrationNew.css';
-import Cookies from 'js-cookie';
+import { Alert } from 'react-bootstrap';
+import loading_img from '../../../assets/images/loading_img.gif'
 
 function SignupForm() {
   const [formData, setFormData] = useState({
@@ -10,19 +11,39 @@ function SignupForm() {
     password_confirmation: '',
   });
   const [flashMessage, setFlashMessage] = useState('');
-  const [passwordError, setPasswordError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [passwordError, setPasswordError] = useState('');
+  const [disableButton, setDisableButton] = useState(true);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
+    if (name === 'password') {
+      if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.{6,})/.test(value)) {
+        setPasswordError('Le mot de passe doit comporter au moins 6 caractères, dont au moins une lettre majuscule, une lettre minuscule et un chiffre.');
+        setDisableButton(true);
+      } else {
+        setPasswordError('');
+        setDisableButton(formData.password !== formData.password_confirmation);
+      }
+    } else if (name === 'password_confirmation') {
+      setDisableButton(formData.password !== value || passwordError);
+    } else {
+      setDisableButton(false);
+    }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setLoading(true);
     if (formData.password !== formData.password_confirmation) {
-      setPasswordError(true);
+      setPasswordError('Veuillez également vous assurer que le mot de passe et sa confirmation sont identiques.');
       setFlashMessage('');
-    } else {
+      setDisableButton(true);
+    } else if (!/^(?=.*[A-Z])(?=.*[0-9])(?=.{6,})/.test(formData.password)) {
+      setPasswordError('Le mot de passe doit comporter au moins 6 caractères, dont au moins une lettre majuscule, une lettre minuscule et un chiffre.');
+      setDisableButton(true);
+    } else { 
       fetch("http://localhost:3000/signup", {
         method: "post",
         headers: {
@@ -38,24 +59,19 @@ function SignupForm() {
       })
         .then((res) => {
           if (res.ok) {
-            console.log(res.headers.get("Authorization"));
-            localStorage.setItem("token", res.headers.get("Authorization"));
-
-            setFlashMessage(
-              'Félicitations ! Un lien de confirmation a été envoyé à votre adresse e-mail pour finaliser votre inscription.'
-            );
+            setFlashMessage('Félicitations ! Un lien de confirmation a été envoyé à votre adresse mail pour finaliser votre inscription.');
             setTimeout(() => {
               window.location.href = 'http://localhost:5173/';
             }, 9000);
-  
-
             return res.json();
           } else {
+            setFlashMessage('Un compte est déjà enregistré avec cette adresse mail.');
             throw new Error(res);
           }
         })
         .then((json) => console.dir(json))
-        .catch((err) => console.error(err));
+        .catch((err) => console.error(err))
+        .finally(() => setLoading(false));
     }
   };
 
@@ -64,7 +80,6 @@ function SignupForm() {
       <div>
         <h2 className='wdSignup'>S'inscrire</h2>
       </div>
-
       <form onSubmit={handleSubmit}>
         <br />
         <br />
@@ -110,25 +125,40 @@ function SignupForm() {
           className='inputF'
           required
         />
-        {passwordError && (
-          <div className='flash-message'>
-            <h5 style={{ color: 'red' }}>Les mots de passe ne correspondent pas</h5>
+        {flashMessage && (
+          <Alert variant='success' className='flash-message'>
+          <div > 
+            <h6>{flashMessage}</h6>
           </div>
+          </Alert>
         )}
-        <br />
-        <br />
+
+        <br/>
+        {loading && <img src={loading_img} alt="" /> }
+
+        
         <div className='diptS'>
-          <input type='submit' value='Créer mon compte' className='inputbtn' />
+          <input type='submit' value='Créer mon compte' className='inputbtn' disabled={loading || disableButton} />
         </div>
         <br />
         <br />
 
-        {flashMessage && (
+        {/*passwordError && (
           <div className='flash-message'>
-            <h5>{flashMessage}</h5>
+          <h5 className='passwordError'>{passwordError}</h5>
           </div>
+        )*/} 
+        
+        {passwordError && (
+          <Alert variant='danger'>
+          <div className='flash-message'>
+            <h6 /*style={{ color: 'red' }}*/>Le mot de passe doit comporter au moins 6 caractères, dont au moins une lettre majuscule, une lettre minuscule et un chiffre. <br/> Veuillez également vous assurer que le mot de passe et sa confirmation sont identiques.</h6>
+          </div>
+          </Alert>
         )}
 
+        <br />
+        <br />
         <br />
         <br />
         <br />
@@ -139,3 +169,5 @@ function SignupForm() {
 }
 
 export default SignupForm;
+
+

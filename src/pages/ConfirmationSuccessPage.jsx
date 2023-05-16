@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../assets/stylesheet/ConfirmationSuccessPage.css'
 import fille_pc from '../assets/images/fille_pc.jpeg';
 import homme_casque from '../assets/images/homme_casque.webp';
 import disque_dur from '../assets/images/disque_dur.webp';
+import congrat from '../assets/images/congrat.gif';
+import { Button, Modal } from 'react-bootstrap';
+import '../assets/stylesheet/Navbar.css'
+import LoginForm from '../components/authentification/sessions/New';
 
 
 function ConfirmationSuccessPage() {
+
+// here creating useSate to be able to show and close modal this one is for LoginForm 
+const [showSecond, setShowSecond] = useState(false);
+const handleCloseSecond = () => setShowSecond(false);
+const handleShowSecond = () => setShowSecond(true);
 
   return (
     <div className='confirm-main'>
@@ -14,11 +23,23 @@ function ConfirmationSuccessPage() {
              <div className='confirm-msg'>
                <h1 className='congrat-word'>Félicitations! </h1>
                <h5 className='congrat-firstS'>Vous avez confirmé avec succès votre adresse mail .</h5><br/><br/>
-                 <img src="https://cliply.co/wp-content/uploads/2021/09/CLIPLY_372109170_FREE_FIREWORKS_400.gif" alt="" className='img-congrat'/>
+               <Button variant="light" onClick={handleShowSecond} >Se connecter</Button>
+               <br/>
+                 <img src={congrat} alt="" className='img-congrat'/>
                <h6 className='congrat-firstS'>Nous sommes ravis de vous compter parmi nos utilisateurs actifs et nous avons hâte de vous proposer les meilleurs services. <br/>
                   N'hésitez pas à nous contacter si vous avez des questions ou des préoccupations. Merci de votre confiance!</h6>
              </div>
           </div>
+
+          <Modal show={showSecond} onHide={handleCloseSecond} className='modal-for-login'>
+             <Modal.Header closeButton className='login-modal'>
+            <Modal.Title className='modal-logint'>mon compte</Modal.Title>
+            </Modal.Header>
+              <Modal.Body className='loginF'>
+               <LoginForm />
+            </Modal.Body> 
+            </Modal>
+
 
           <br/><br/>
 

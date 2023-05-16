@@ -49,17 +49,10 @@ width: 30px;
 
 .loginF{
     background-image: url(https://images.pexels.com/photos/672111/pexels-photo-672111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
 }
 
 
 .signupF{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     background-image: url(https://cdn.pixabay.com/photo/2013/05/09/09/06/waves-circles-109964_960_720.jpg);
 }
 
@@ -72,6 +65,8 @@ width: 30px;
   .buttonlink{
     background-color: transparent;
     border-color: transparent;
+    display: flex;
+    justify-content: center;
   }
 
   .navdropdown{
@@ -79,4 +74,13 @@ width: 30px;
   }
 
   
+.btn-logout{
+    margin-left: 20px;
+}
 
+
+
+.message{
+ background: #FFA07A;
+ text-align: center;
+}
