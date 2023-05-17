@@ -11,6 +11,7 @@ import ItemDetails from './pages/ItemDetails'
 import ConfirmationSuccessPage from './pages/ConfirmationSuccessPage'
 import NewPasswordForm from './components/authentification/passwords/NewPasswordForm'
 import ResetPasswordForm from './components/authentification/passwords/RessetPasswordForm'
+import NotFoundPage from './pages/NotFoundPage'
 
 
 
@@ -31,12 +32,13 @@ function App() {
       <BrowserRouter>
        <Routes>
            <Route index element={<Store />}/>
-           <Route path='/paid' element={<Paid />}/>
+           <Route path='/paid_cxwvh1&hhskow&&&0gskohjdkyuizoxssaxtTl' element={<Paid />}/>
            <Route path='/cancel' element={<Cancel />}/>
            <Route path='/details/:id' element={<ItemDetails />}/>
            <Route  path="/confirmation" element={<ConfirmationSuccessPage/>} />
            <Route path='/password' element={<ResetPasswordForm/>}/>
-           <Route path='/new_password/:id' element={<NewPasswordForm/>}/> 
+           <Route path='/new_password/:id' element={<NewPasswordForm/>}/>
+           <Route path='*' element={<NotFoundPage />} />
         </Routes>  
       </BrowserRouter>
       </Container>

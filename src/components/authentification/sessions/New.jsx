@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import '../../../assets/stylesheet/SessionNew.css';
-import { Alert, Button, Modal } from 'react-bootstrap';
+import { Alert, Button} from 'react-bootstrap';
 import Cookies from 'js-cookie';
 import loading_img from '../../../assets/images/loading_img.gif'
-import ResetPasswordForm from '../passwords/RessetPasswordForm';
+//import ResetPasswordForm from '../passwords/RessetPasswordForm';
 
 function LoginForm() {
   const [formData, setFormData] = useState({
@@ -14,10 +14,6 @@ function LoginForm() {
   const [SecondflashMessage, setSecondFlashMessage] = useState('');
   const [loading, setLoading] = useState(false); // this is to be able to display loading spinner when data loading
 
-// this is to be able to open the modal to resset the password
-  const [showSecond, setShowSecond] = useState(false);
-  const handleCloseSecond = () => setShowSecond(false);
-  const handleShowSecond = () => setShowSecond(true);
   
 
   const handleChange = (event) => {
@@ -90,7 +86,6 @@ function LoginForm() {
         />
         <br />
         <br />
-        <div className="password">
         <input
           type='password'
           name='password'
@@ -100,14 +95,13 @@ function LoginForm() {
           className='inputF'
           required
         />
-        <button  onClick={handleShowSecond} className='forgot'> <span style={{color: 'white'}}>Oublié ?</span> </button>
-        </div>
 
         <br/>
         {loading && <img src={loading_img} alt="" /> }
 
         <div className='diptS'>
-          <input type='submit' value='Se connecter' className='inputbtn' />
+          {/*<input type='submit' value='Se connecter' className='inputbtn' />*/}
+          <Button type='submit' className='btn-signin'>Se connecter</Button>
         </div>
         <br />
         <br />
@@ -127,14 +121,6 @@ function LoginForm() {
       </form>
 
 
-          <Modal show={showSecond} onHide={handleCloseSecond} className='modal-for-login'>
-             <Modal.Header closeButton className='login-modal'>
-            <Modal.Title className='modal-logint'>mon compte</Modal.Title>
-            </Modal.Header>
-              <Modal.Body className='loginF'>
-               <ResetPasswordForm />
-            </Modal.Body> 
-            </Modal>
 
     </div>
   );

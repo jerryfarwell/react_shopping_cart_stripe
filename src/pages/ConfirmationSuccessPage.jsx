@@ -7,6 +7,7 @@ import congrat from '../assets/images/congrat.gif';
 import { Button, Modal } from 'react-bootstrap';
 import '../assets/stylesheet/Navbar.css'
 import LoginForm from '../components/authentification/sessions/New';
+import { Alert } from 'bootstrap';
 
 
 function ConfirmationSuccessPage() {
@@ -62,7 +63,7 @@ const handleShowSecond = () => setShowSecond(true);
           <img src={homme_casque} alt="" className='img-womanpc'/>
           <br/><br/>
 
-          <div className='thirdconfirm-return'>
+          <div className='secondconfirm-return'>
              <div className='confirm-msg'>
              <h6 > Les ordinateurs de Networkleed sont conçus pour offrir une performance de pointe. Leurs processeurs de dernière génération, leurs cartes graphiques puissantes et leur mémoire vive importante garantissent une vitesse 
               de traitement rapide et une expérience utilisateur fluide. De plus, les ordinateurs de Networkleed sont équipés de composants de qualité supérieure, ce qui garantit une longue durée de vie et une fiabilité exceptionnelle.

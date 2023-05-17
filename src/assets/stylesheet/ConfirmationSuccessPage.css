@@ -25,14 +25,10 @@
 .secondconfirm-return{
     display: flex;
     justify-content: center;
-    background: linear-gradient(#64e6ae, #646aa7);
+    background: gray;
+    color: whitesmoke;
 }
 
-.thirdconfirm-return{
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(#e664ac, #8e6041);
-}
 
 .congrat-word{
     color: yellow;

@@ -6,8 +6,6 @@
     border-bottom-right-radius: 10px;
     text-align: center;
   }
-  
-  
 
   .wdConnexion{
     color: white;
@@ -25,15 +23,16 @@
   justify-content: center;
 }
 
-.password{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 .forgot{
  border-color: transparent;
  background-color: transparent;
+}
+
+
+.btn-signin{
+  background: white;
+  color: black;
 }
   
   

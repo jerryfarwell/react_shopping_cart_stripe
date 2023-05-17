@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../../../assets/stylesheet/RegistrationNew.css';
-import { Alert } from 'react-bootstrap';
+import { Alert, Button } from 'react-bootstrap';
 import loading_img from '../../../assets/images/loading_img.gif'
 
 function SignupForm() {
@@ -138,7 +138,8 @@ function SignupForm() {
 
         
         <div className='diptS'>
-          <input type='submit' value='Créer mon compte' className='inputbtn' disabled={loading || disableButton} />
+          {/*<input type='submit' value='Créer mon compte' className='inputbtn' disabled={loading || disableButton} />*/}
+          <Button type='submit' className='btn-signup' disabled={loading || disableButton}>Créer mon compte</Button>
         </div>
         <br />
         <br />

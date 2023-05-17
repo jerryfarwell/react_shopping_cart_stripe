@@ -1,0 +1,29 @@
+
+
+
+
+.payment-top{
+    text-align: center;
+    background: rgb(42, 42, 135);
+    color: white;
+}
+
+
+.paid-img{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.payment{
+    text-align: center;
+}
+
+.words{
+    margin-bottom: 50px;
+}
+
+.btn-payment{
+    background: green;
+    margin-bottom: 60px;
+}

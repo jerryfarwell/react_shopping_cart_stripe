@@ -1,6 +1,6 @@
 .cart-button{
-    background-color: white;
-    border-color: white;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .img-cart-n-product{
@@ -67,6 +67,7 @@ width: 30px;
     border-color: transparent;
     display: flex;
     justify-content: center;
+    color: white;
   }
 
   .navdropdown{
@@ -83,4 +84,11 @@ width: 30px;
 .message{
  background: #FFA07A;
  text-align: center;
+}
+
+
+.signup_ressetpassword{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
 }

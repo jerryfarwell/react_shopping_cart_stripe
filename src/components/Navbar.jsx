@@ -10,6 +10,7 @@ import SignupForm from './authentification/registrations/New';
 import Cookies from 'js-cookie';
 import UserProfilePage from './UserProfilePage';
 import jwt_decode from 'jwt-decode';
+import ResetPasswordForm from './authentification/passwords/RessetPasswordForm';
 
 
 
@@ -80,6 +81,7 @@ const handleShow = () => {
   setShowSecond(false);
   setShowThird(false);
   setShowFourth(false);
+  setShowFive(false);
 };
 
 
@@ -91,6 +93,7 @@ const handleShowSecond = () => {
   setShowSecond(true);
   setShowThird(false);
   setShowFourth(false);
+  setShowFive(false);
 };
 
 // here creating useSate to be able to show and close modal this one is for SignupForm 
@@ -101,6 +104,7 @@ const handleShowThird = () => {
   setShowSecond(false);
   setShowThird(true);
   setShowFourth(false);
+  setShowFive(false);
 };
 
 // here creating useSate to be able to show and close modal this one is for user profil 
@@ -111,7 +115,20 @@ const handleShowFourth = () => {
   setShowSecond(false);
   setShowThird(false);
   setShowFourth(true);
+  setShowFive(false);
 };
+
+
+// here creating useSate to be able to show and close modal this one is for resset password form 
+const [showFive, setShowFive] = useState(false);
+const handleCloseFive = () => setShowFive(false);
+const handleShowFive = () => {
+  setShow(false);
+  setShowSecond(false);
+  setShowThird(false);
+  setShowFive(true);
+};
+
 
 
 
@@ -142,7 +159,7 @@ const [loading, setLoading] = useState(false);
         const decodedToken = jwt_decode(token);
         const userId = decodedToken.user_id;
 
-        await fetch('http://localhost:3000/checkout', { 
+       await fetch('http://localhost:3000/checkout', { 
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -154,7 +171,7 @@ const [loading, setLoading] = useState(false);
             if(response.url) {
                 window.location.assign(response.url); // Forwarding user to Stripe
             }
-        });
+        }); 
     }
   }
 
@@ -290,6 +307,7 @@ const [loading, setLoading] = useState(false);
                     <DropdownButton
                      title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} />}
                       variant="light"
+                     
                       >
                    <Dropdown.Item href="#action-3">
                      <p onClick={handleShowSecond}>Se connecter</p>
@@ -301,9 +319,20 @@ const [loading, setLoading] = useState(false);
                     </Navbar.Collapse>
                   )} 
 
-                <div >
+                {/*<div >
                     <Button onClick={handleShow} className='cart-button'><h4 className='img-cart-n-product'> <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' /> <span className='nb-products'>{productsCount}</span></h4>  </Button>
-                </div>
+                </div>*/}
+                <div>
+                <button onClick={handleShow} className='cart-button'>
+                 <h4 className='img-cart-n-product'>
+                 <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' />
+                  <span className='nb-products'>
+                  {productsCount > 0 ? productsCount : null}
+                 </span>
+                </h4>
+               </button>
+                 </div>
+
             </Navbar>
 
 
@@ -326,7 +355,7 @@ const [loading, setLoading] = useState(false);
                 </Modal.Header>
                 <Modal.Body className='signupF'> 
                  <SignupForm />
-                 <Button onClick={handleShowSecond} className='buttonlink'>Vous avez deja un compte ?</Button>            
+                 <button onClick={handleShowSecond} className='buttonlink'>Vous avez deja un compte ?</button>            
                 </Modal.Body>
             </Modal>
 
@@ -337,10 +366,26 @@ const [loading, setLoading] = useState(false);
             </Modal.Header>
               <Modal.Body className='loginF'>
                <LoginForm />
-                <br /> 
-                <Button onClick={handleShowThird} className='buttonlink'>Pas de compte ?</Button>         
+                <br />
+                <div className='signup_ressetpassword'>
+                <button onClick={handleShowThird} className='buttonlink'>Pas de compte ?</button> 
+                <button  onClick={handleShowFive} className='forgot'> <span style={{color: 'red'}}>Mot de passe oublié ?</span> </button>        
+                </div>
             </Modal.Body> 
             </Modal>
+
+
+            <Modal show={showFive} onHide={handleCloseFive} className='modal-for-login'>
+             <Modal.Header closeButton className='login-modal'>
+            <Modal.Title className='modal-logint'>mon compte</Modal.Title>
+            </Modal.Header>
+              <Modal.Body className='loginF'>
+               <ResetPasswordForm />
+               <br/>
+               <button onClick={handleShowThird} className='buttonlink'>Pas de compte ?</button> 
+            </Modal.Body> 
+            </Modal>
+
 
 
         
