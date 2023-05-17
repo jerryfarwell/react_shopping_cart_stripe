@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import paid from '../assets/images/paid.png'
-import '../assets/stylesheet/paid.css'
+//import '../assets/stylesheet/paid.css'
 import jwt_decode from 'jwt-decode'
 import Cookies from 'js-cookie'
 import { Button } from 'react-bootstrap';
