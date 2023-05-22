@@ -21,8 +21,8 @@ function CartProduct(props) {
             {/*<Button variant="danger" size="sm" onClick={() => cart.deleteFromCart(id)} style={{ marginRight: '10px' }}>Retirer du panier</Button>*/}
             <div className="all-btn">
                 <div>
-                <Button size="sm" onClick={() => cart.addOneToCart(id)} style={{ marginRight: '10px' }}>+</Button>
-                <Button size="sm" onClick={() => cart.removeOneFromCart(id)}>-</Button>
+                <Button size="sm" onClick={() => cart.removeOneFromCart(id)} style={{ marginRight: '10px' }}>-</Button>
+                <Button size="sm" onClick={() => cart.addOneToCart(id)} >+</Button>
                 </div>
                 <div>
                 <img src={trash} alt=""  onClick={() => cart.deleteFromCart(id)} style={{ marginRight: '10px', width: '20px' }}/> 
