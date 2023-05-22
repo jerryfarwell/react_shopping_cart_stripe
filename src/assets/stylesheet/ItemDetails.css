@@ -3,20 +3,10 @@
 }
 
 
-.item-return{
-    border-style: solid;
-    border-width: 2px;
-    margin: 20px;
-    padding: 20px;
-    width: 100%;
-    border-color: transparent;
-    display: flex;
-    flex-direction: row;
-}
 
 
 .item-img{
-    border-style: solid;
+    border-style: solid; 
     border-width: 2px;
     margin: 20px;
     padding: 20px;
@@ -38,4 +28,8 @@
 
 .img-delivry{
     width: 100px;
+}
+
+.btn-addtocart-itemdetails{
+    width: 100%;
 }

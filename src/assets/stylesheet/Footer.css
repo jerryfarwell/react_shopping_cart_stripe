@@ -1,0 +1,39 @@
+
+
+.footer{
+    background: black;
+    color: rgb(239, 238, 238);
+}
+
+.row-footer{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.logo-footer{
+    width: 40px;
+}
+
+.socialmedia-icon{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+}
+
+.creditcard{
+    width: 70px;
+    height: 60px;
+}
+
+.creditcard-div{
+    text-align: center;
+    background: white;
+    color: black;
+
+}
+

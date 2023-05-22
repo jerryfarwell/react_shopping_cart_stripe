@@ -15,9 +15,10 @@ import ResetPasswordForm from './authentification/passwords/RessetPasswordForm';
 
 
 
+
+
 function NavbarComponent() {
 
-  
 
 //-- this belongs to the dropdown using onMousse------------------------//
 
@@ -159,6 +160,7 @@ const [loading, setLoading] = useState(false);
         const decodedToken = jwt_decode(token);
         const userId = decodedToken.user_id;
 
+
        await fetch('http://localhost:3000/checkout', { 
             method: "POST",
             headers: {
@@ -225,15 +227,15 @@ const [loading, setLoading] = useState(false);
                  <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`} onMouseEnter={handleDropdownEnter} onMouseLeave={handleDropdownLeave}>
                 <NavDropdown.Item href="#action-1" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
                 <NavDropdown.Item href="#action-2">Telephones portables</NavDropdown.Item>
-                <NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>
+                {/*<NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>*/}
                  <NavDropdown.Item href="#action-1">Enceinte Bleutooth</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-1">Casque audio</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                 {/*<NavDropdown.Item href="#action-1">Casque audio</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>
                </Navbar.Collapse>
 
-              <Navbar.Collapse className='modal-for-login'>
+              {/*<Navbar.Collapse className='modal-for-login'>
                <Nav className='navdropdown'>
              <NavDropdown 
                 title="Stockage et mémoire" 
@@ -241,12 +243,12 @@ const [loading, setLoading] = useState(false);
                onMouseEnter={handleDropdownEnter2}
                onMouseLeave={handleDropdownLeave2}
                >
-                {/*<NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
+                <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
                  <NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Cartes mémoire</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Mémoire RAM</NavDropdown.Item>
-                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
                 </NavDropdown>
                  <div className={`dropdown-menu ${showDropdown2 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter2} onMouseLeave={handleDropdownLeave2}>
                 <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
@@ -257,7 +259,7 @@ const [loading, setLoading] = useState(false);
                  <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
                  </div>
                </Nav>
-               </Navbar.Collapse>
+               </Navbar.Collapse>*/}
 
                <Navbar.Collapse className='modal-for-login'>
                <Nav >
@@ -277,10 +279,10 @@ const [loading, setLoading] = useState(false);
                  <div className={`dropdown-menu ${showDropdown3 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter3} onMouseLeave={handleDropdownLeave3}>
                  <NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
                  <NavDropdown.Item href="#action-2">Supports pour ordinateur portable</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-1">Supports pour écran</NavDropdown.Item>
+                 {/*<NavDropdown.Item href="#action-1">Supports pour écran</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Tapis de souris</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Câbles et adaptateurs</NavDropdown.Item>
-                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>
                </Navbar.Collapse>
@@ -389,24 +391,19 @@ const [loading, setLoading] = useState(false);
 
 
         
-           <Modal show={show} onHide={handleClose} className='modal-for-login'>
-                <Modal.Header closeButton>
+           <Modal show={show} onHide={handleClose} className='modal-for-login' >
+                <Modal.Header  closeButton className='cart-header'>
                     <Modal.Title>Mon panier</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {productsCount > 0 ?
                         <>
-                            <p>Articles dans votre panier:</p>
                             {cart.items.map( (currentProduct, idx) => (
                                 <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartProduct>
                             ))}
 
-                            <h1>Total: {cart.getTotalCost().toFixed(2)} €</h1>
-                            
-                            {loading && <img src={loading_img} alt="" /> }
-                            <br/>
-                             
-                            {message && (
+
+                              {message && (
                               <div className='message'>
                                 <br/>
                               <h6 style={{marginLeft: '10px', marginRight: '10px'}}>{message}</h6>
@@ -418,12 +415,22 @@ const [loading, setLoading] = useState(false);
                              <br/>
 
 
-                            <Button variant="success" onClick={checkout}>
+                            <h3>Total: {cart.getTotalCost().toFixed(2)} €</h3>
+                            
+                            {loading && <img src={loading_img} alt="" /> }
+                             
+
+                             <Button variant="success" onClick={checkout} className='checkout-btn'>
                                 passer la commande
                             </Button>
+                            
+
                         </>
                     :
-                        <h5>votre panier est vide !<br/><br/> {<h1>😞</h1>} </h5>
+                    <div className='cart-empty'>
+                        <h5>votre panier est vide ! </h5><br/> 
+                        <h1>😞</h1>
+                    </div>
                     }
                 </Modal.Body>
             </Modal>

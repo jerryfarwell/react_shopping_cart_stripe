@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { ProdutcsArray, GetProductData } from "./productStore";
+import { Button } from "react-bootstrap";
 
 export const CartContext = createContext({
     items: [],
@@ -12,8 +13,8 @@ export const CartContext = createContext({
 
 export function CartProvider({children}) {
     const [cartProducts, setCartProducts] = useState([]);
-    const CartData = localStorage.getItem('cart') || []
-    
+
+
     
     // [ { id: 1 , quantity: 3 }, { id: 2, quantity: 1 } ]
 
@@ -64,11 +65,12 @@ export function CartProvider({children}) {
                     product =>
                     product.id === id                                // if condition
                     ? { ...product, quantity: product.quantity - 1 } // if statement is true
-                    : product                                        // if statement is false
-                )
-            )
-        }
-    }
+                    : product                                        // if statement is false 
+
+               )
+            ) 
+         }
+       }
 
     function deleteFromCart(id) {
         // [] if an object meets a condition, add the object to array
@@ -82,15 +84,15 @@ export function CartProvider({children}) {
         )
     }
 
-    function getTotalCost() {
+     function getTotalCost() {
         let totalCost = 0;
         cartProducts.map((cartItem) => {
             const productData = GetProductData(cartItem.id);
             totalCost += (productData.price * cartItem.quantity);
         });
         return totalCost;
-    }
-
+    } 
+       
     const contextValue = {
         items: cartProducts,
         getProductQuantity,
@@ -98,6 +100,7 @@ export function CartProvider({children}) {
         removeOneFromCart,
         deleteFromCart,
         getTotalCost
+        
     }
 
 

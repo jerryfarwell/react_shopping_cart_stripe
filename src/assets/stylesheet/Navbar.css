@@ -39,6 +39,7 @@ width: 30px;
 .modal-for-login{
     width: 100%;
     margin: auto;
+    margin-left: 20px;
 } 
 
 .modal-logint{
@@ -91,4 +92,21 @@ width: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;  
+}
+
+
+.cart-empty{
+    text-align: center;
+}
+
+
+.checkout-btn{
+    width: 100%;
+}
+
+.cart-header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
 }

@@ -12,6 +12,7 @@ import ConfirmationSuccessPage from './pages/ConfirmationSuccessPage'
 import NewPasswordForm from './components/authentification/passwords/NewPasswordForm'
 import ResetPasswordForm from './components/authentification/passwords/RessetPasswordForm'
 import NotFoundPage from './pages/NotFoundPage'
+import Footer from './components/Footer'
 
 
 
@@ -42,6 +43,7 @@ function App() {
         </Routes>  
       </BrowserRouter>
       </Container>
+      <Footer/>
       </CartProvider> 
     </div>
   )

@@ -8,3 +8,9 @@
     width: 100%;
     margin: auto;
 }
+
+.all-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

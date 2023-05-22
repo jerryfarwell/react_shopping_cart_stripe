@@ -11,16 +11,26 @@ import femme_disque_dur from '../assets/images/femme_disque_dur.jpeg';
 
 
 const Store = () => {
+
+  const filteredProducts = ProdutcsArray.filter(product => product.id !== "fake_xxxxxxxxxxx"); // this will remove a specific product with this id
+  // const filteredProducts = ProdutcsArray.slice(5);  this will remove the five first products in productStore     ProdutcsArray.slice(-5); will remove the fith last one
+ 
+
   return (
     <div>
       <CarouselMainPage />
       <Paragraphs />
         <Row xs={1} md={3} className='g-4'>
-            {ProdutcsArray.map((product, idx) => (
+            {/*{ProdutcsArray.map((product, idx) => (
                     <Col align="center" key={idx}>
                         <ProductCard product={product} className="productcard"/>
-                    </Col>        
-            ))}
+            </Col>*/} 
+             {filteredProducts.map((product, idx) => (
+          <Col align="center" key={idx}>
+            <ProductCard product={product} className="productcard" />
+          </Col> 
+
+            ))} 
 
         </Row>
         <br/>
@@ -31,6 +41,9 @@ const Store = () => {
         <Paragraphthird/>
         <br/><br/>
         <img src={femme_disque_dur} alt="" className='img-womanpc'/>
+        <br/>
+        <br/>
+        <br/>
     </div>
   )
 }

@@ -5,6 +5,9 @@ import { CartContext } from '../CardContext';
 import { useContext } from 'react';
 import '../assets/stylesheet/ItemDetails.css';
 import delivry from '../assets/images/delivry.jpg';
+import { ProdutcsArray } from '../productStore'
+import ProductCard from '../components/ProductCard'
+
 
 function ItemDetails(props) {
   const { id } = useParams();
@@ -18,6 +21,11 @@ function ItemDetails(props) {
   const handleAddToCart = () => {
     cart.addOneToCart(product.id);    // this allows us to use the cart context here 
   };
+
+
+  const filteredProducts = ProdutcsArray.filter(product => product.id !== "fake_xxxxxxxxxxx" ); // this will remove a specific product with this id
+  // const filteredProducts = ProdutcsArray.slice(5);  this will remove the five first products in productStore     ProdutcsArray.slice(-5); will remove the fith last one
+
 
 
 
@@ -95,9 +103,8 @@ function ItemDetails(props) {
             {product.price} €{' '}
             <img src={delivry} alt='' className='img-delivry' /> Livraison express
           </h4>
-          <hr />
-          <Button onClick={handleAddToCart}>Ajouter au panier</Button>
-          <hr />
+          <Button variant='success' onClick={handleAddToCart} className='btn-addtocart-itemdetails'>Ajouter au panier</Button>
+          <hr/>
           <h5>Description</h5>
           <h6>{product.description}</h6>
           <hr />
@@ -118,8 +125,30 @@ function ItemDetails(props) {
           <hr />
           <h5 className='item-guarantee'>garantie : 1 an</h5>
           <hr />
+           <br/>
+           <br/>
         </Col>
       </Row>
+      <br/>
+
+      <Row xs={1} md={3} className='g-4'>
+            {/*{ProdutcsArray.map((product, idx) => (
+                    <Col align="center" key={idx}>
+                        <ProductCard product={product} className="productcard"/>
+            </Col>*/} 
+             {filteredProducts.map((product, idx) => (
+          <Col align="center" key={idx}>
+            <ProductCard product={product} className="productcard" />
+          </Col> 
+
+            ))} 
+
+        </Row>
+        <br/>
+        <br/>
+        <br/>
+
+
     </div>
   );
 }

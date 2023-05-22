@@ -30,7 +30,7 @@ function ProductCard(props) { // props.product is the product we are selling
                         {/*<Button variant="danger" onClick={() => cart.deleteFromCart(product.id)} className="my-2">Retirer du panier</Button>*/}
                     </>
                     :
-                    <Button variant="primary" onClick={() => cart.addOneToCart(product.id)}>Ajouter au panier</Button>
+                    <Button variant="success" onClick={() => cart.addOneToCart(product.id)}>Ajouter au panier</Button>
                 }
             </Card.Body>
         </Card>
