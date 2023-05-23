@@ -44,7 +44,7 @@ function Footer() {
           <div className='after-footer'>
             <div >
               <br/>
-              <h6>livraison rapide garantie</h6>
+              <h6>livraison rapide</h6>
               <img src={delivery_after_footer} alt="" className='creditcard'/>
             </div>
           <div >
