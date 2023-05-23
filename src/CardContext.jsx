@@ -1,6 +1,5 @@
-import { createContext, useState } from "react";
-import { ProdutcsArray, GetProductData } from "./productStore";
-import { Button } from "react-bootstrap";
+import { createContext, useEffect, useState } from "react";
+import { GetProductData } from "./productStore";
 
 export const CartContext = createContext({
     items: [],
@@ -14,6 +13,29 @@ export const CartContext = createContext({
 export function CartProvider({children}) {
     const [cartProducts, setCartProducts] = useState([]);
 
+
+
+
+    //-------------------------------------------------------------
+
+// Load cart data from browser storage on component mount
+useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      try {
+        setCartProducts(JSON.parse(storedCart));
+      } catch (error) {
+        console.error("Error parsing cart data:", error);
+      }
+    }
+  }, []);
+
+  // Save cart data to browser storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartProducts));
+  }, [cartProducts]);
+      
+  //-------------------------------------------------------------
 
     
     // [ { id: 1 , quantity: 3 }, { id: 2, quantity: 1 } ]
@@ -104,7 +126,6 @@ export function CartProvider({children}) {
     }
 
 
-
     return (
         <CartContext.Provider value={contextValue}>
             {children}
@@ -118,4 +139,5 @@ export default CartProvider;
 
 // Context (cart, addToCart, removeCart)
 // Provider -> gives your React app access to all the things in your context
+
 

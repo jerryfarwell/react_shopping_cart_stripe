@@ -200,12 +200,11 @@ const [loading, setLoading] = useState(false);
     
     return (
         
-        <>
+        <> 
             <Navbar expand="sm" className="navb" >
-            <Navbar.Brand href="/"><h4></h4></Navbar.Brand>
+              <Navbar.Brand> <h4> </h4> </Navbar.Brand>
                 <Navbar.Brand href="/"><img src={logo_with_name} alt="My Image" className='networkleed-img' /></Navbar.Brand>
                 <Navbar.Toggle />
-
 
 
               <Navbar.Collapse className='modal-for-login'>
@@ -319,7 +318,7 @@ const [loading, setLoading] = useState(false);
                     </Dropdown.Item>
                     </DropdownButton>
                     </Navbar.Collapse>
-                  )} 
+                  )}
 
                 {/*<div >
                     <Button onClick={handleShow} className='cart-button'><h4 className='img-cart-n-product'> <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' /> <span className='nb-products'>{productsCount}</span></h4>  </Button>
@@ -334,7 +333,6 @@ const [loading, setLoading] = useState(false);
                 </h4>
                </button>
                  </div>
-
             </Navbar>
 
 
