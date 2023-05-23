@@ -3,7 +3,7 @@ import { useState, useContext, useEffect, useRef } from 'react';
 import { CartContext } from '../CardContext';
 import CartProduct from './CartProduct';
 import '../assets/stylesheet/Navbar.css'
-import networkleed from '../assets/images/networkleed.jpg';
+import logo_with_name from '../assets/images/logo_with_name.png';
 import loading_img from '../assets/images/loading_img.gif'
 import LoginForm from './authentification/sessions/New';
 import SignupForm from './authentification/registrations/New';
@@ -203,7 +203,7 @@ const [loading, setLoading] = useState(false);
         <>
             <Navbar expand="sm" className="navb" >
             <Navbar.Brand href="/"><h4></h4></Navbar.Brand>
-                <Navbar.Brand href="/"><img src={networkleed} alt="My Image" className='networkleed-img' /></Navbar.Brand>
+                <Navbar.Brand href="/"><img src={logo_with_name} alt="My Image" className='networkleed-img' /></Navbar.Brand>
                 <Navbar.Toggle />
 
 

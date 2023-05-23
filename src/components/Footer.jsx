@@ -4,6 +4,8 @@ import '../assets/stylesheet/Footer.css'
 import facebook from '../assets/images/facebook.png'
 import instagram from '../assets/images/instagram.png'
 import twitter from '../assets/images/twitter.png'
+import logo from '../assets/images/logo.png'
+import delivery_after_footer from '../assets/images/delivery_after_footer.png'
 import creditcard from '../assets/images/creditcard.png'
 
 
@@ -23,7 +25,7 @@ function Footer() {
               <h6>À propos </h6>
               <h6>Mentions Légales</h6>
               <h6>protection des données personnelles</h6>
-              <h6>CGU</h6>
+              <h6>Paiement très sécurisé</h6>
             </Col>
             <Col>
             <h6>Nous contacter</h6>
@@ -39,10 +41,22 @@ function Footer() {
             </Col>
           </Row>
           <br/>
-          <div className='creditcard-div'>
-            <br/>
-                <h6>Paiement très sécurisé</h6>
-                <img src={creditcard} alt="" className='creditcard'/>
+          <div className='after-footer'>
+            <div >
+              <br/>
+              <h6>livraison rapide garantie</h6>
+              <img src={delivery_after_footer} alt="" className='creditcard'/>
+            </div>
+          <div >
+          <br/>
+                <h6>Votre satisfaction notre priorité</h6>
+                <img src={logo} alt="" className='creditcard'/>
+          </div>
+          <div >
+          <br/>
+            <h6>Transactions Sécurisées</h6>
+            <img src={creditcard} alt="" className='creditcard'/>
+          </div>
           </div>
        </div>
     </div>

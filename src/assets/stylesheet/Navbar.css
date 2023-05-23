@@ -16,7 +16,9 @@
 
 
 .networkleed-img{
-    width: 350px;
+    width: 300px;
+    margin-right: 100px;
+    margin-left: 50px;
 }
 
 .cart-image{
@@ -41,6 +43,7 @@ width: 30px;
     width: 100%;
     margin: auto;
 } 
+
 
 .modal-logint{
     color: white;

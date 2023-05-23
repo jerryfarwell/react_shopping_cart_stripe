@@ -28,10 +28,15 @@
     height: 60px;
 }
 
-.creditcard-div{
-    text-align: center;
+
+.after-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     background: white;
+    text-align: center;
     color: black;
+
 
 }
 
