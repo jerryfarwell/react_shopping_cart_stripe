@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../assets/stylesheet/Paragraphs.css';
-import Typed from "react-typed";
 
 
 function Paragraphs() {
@@ -9,16 +8,7 @@ function Paragraphs() {
     <div>
       <div className="paragraph">
         <h5 align="center" className="p-3">
-        <Typed
-          strings={[
-            "Nous offrons une sélection de matériel informatique à des prix imbattables.",
-            "Explorez l'innovation avec notre matériel informatique de qualité.",
-            "Votre satisfaction est notre priorité"
-          ]}
-          typeSpeed={100}
-          showCursor={false}
-          loop
-        />
+          Nous offrons une sélection de matériel informatique à des prix imbattables.
         </h5>
       </div>
     </div>

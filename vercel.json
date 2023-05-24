@@ -4,13 +4,6 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "build": {
-    "env": {
-      "CI": "1"
-    },
-    "scripts": {
-      "postinstall": "npm install react-typed@1.1.0 --legacy-peer-deps"
-    }
-  }
+  ]
 }
+
