@@ -1,23 +1,40 @@
-import React from 'react'
-import '../assets/stylesheet/Paragraphs.css'
+import React, { useEffect, useState } from 'react';
+import '../assets/stylesheet/Paragraphs.css';
+import Typed from "react-typed";
+
 
 function Paragraphs() {
+
   return (
     <div>
-        <div className='paragraph1'>
- <h5 align="center" className='p-3'>Nous offrons une sélection de matériel informatique à des prix imbattables pour vous aider à concrétiser vos projets avec les outils les plus performants.</h5>
+      <div className="paragraph">
+        <h5 align="center" className="p-3">
+        <Typed
+          strings={[
+            "Nous offrons une sélection de matériel informatique à des prix imbattables.",
+            "Explorez l'innovation avec notre matériel informatique de qualité.",
+            "Votre satisfaction est notre priorité"
+          ]}
+          typeSpeed={100}
+          showCursor={false}
+          loop
+        />
+        </h5>
       </div>
     </div>
-  )
+  );
 }
 
-export default Paragraphs
+export default Paragraphs;
+
 
 function Paragraphsecond() {
   return (
     <div>
-        <div className='paragraph2'>
-             <h5 align="center" className='p-3'> Nous vous garantissons une satisfaction totale en vous offrant la possibilité de retourner tout article acheté dans les deux semaines suivant votre achat, afin de vous assurer une tranquillité d'esprit absolue.</h5>
+        <div className='paragraph'>
+             <h5 align="center" className='p-3'> 
+             Notre politique de retour sous deux semaines vous garantit une tranquillité absolue.
+            </h5>
       </div>
     </div>
   )
@@ -29,9 +46,9 @@ export  {Paragraphsecond}
 function Paragraphthird() {
   return (
     <div>
-        <div className='paragraph3'>
+        <div className='paragraph'>
         <h5 align="center" className='p-3'> 
-            Les produits de Networkleed sont synonymes de qualité, de fiabilité et de performance. Si vous êtes à la recherche d'équipements informatiques de qualité supérieure, les produits de cette entreprise sont certainement un excellent choix.
+            Les produits de Networkleed sont synonymes de qualité, de fiabilité et de performance.
         </h5>
       </div>
     </div>

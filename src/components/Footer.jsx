@@ -49,7 +49,7 @@ function Footer() {
             </div>
           <div >
           <br/>
-                <h6>Votre satisfaction notre priorité</h6>
+                <h6>Votre satisfaction est notre priorité</h6>
                 <img src={logo} alt="" className='creditcard'/>
           </div>
           <div >

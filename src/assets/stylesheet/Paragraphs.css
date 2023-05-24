@@ -1,6 +1,6 @@
-.paragraph1{
+.paragraph{
     border-style: solid;
-    background: rgb(207, 122, 197);
+    background: rgb(114, 144, 226);
     padding: 20px;
     border-color: transparent;
     width: 100%;
@@ -8,24 +8,26 @@
 
 }
 
+@keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  .text-animation {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+    
 
-.paragraph2{
-    border-style: solid;
-    background: rgb(207, 122, 197);
-    padding: 20px;
-    border-color: transparent;
-    width: 100%;
-    margin: auto;
-
-}
-
-
-.paragraph3{
-    border-style: solid;
-    background: rgb(207, 122, 197);
-    padding: 20px;
-    border-color: transparent;
-    width: 100%;
-    margin: auto;
-
-}

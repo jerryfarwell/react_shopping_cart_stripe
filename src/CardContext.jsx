@@ -16,7 +16,8 @@ export function CartProvider({children}) {
 
 
 
-    //-------------------------------------------------------------
+//----------------this is set to store the cart into local storage so that even if user refresh page he still find his cart -----------------------------------
+// this usualy works in production and sometimes in localhost
 
 // Load cart data from browser storage on component mount
 useEffect(() => {
@@ -37,6 +38,8 @@ useEffect(() => {
       
   //-------------------------------------------------------------
 
+
+  
     
     // [ { id: 1 , quantity: 3 }, { id: 2, quantity: 1 } ]
 

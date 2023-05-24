@@ -35,11 +35,9 @@ const Store = () => {
         </Row>
         <br/>
         <Paragraphsecond/>
-        <br/><br/>
         <img src={jeune_femme_pc} alt="" className='img-womanpc'/>
         <br/><br/>
         <Paragraphthird/>
-        <br/><br/>
         <img src={femme_disque_dur} alt="" className='img-womanpc'/>
         <br/>
         <br/>
