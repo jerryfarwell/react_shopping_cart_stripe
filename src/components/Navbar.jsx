@@ -11,6 +11,8 @@ import Cookies from 'js-cookie';
 import UserProfilePage from './UserProfilePage';
 import jwt_decode from 'jwt-decode';
 import ResetPasswordForm from './authentification/passwords/RessetPasswordForm';
+import FavoritesPage from './FavoritesPage';
+
 
 
 
@@ -73,6 +75,7 @@ useEffect(() => {
 // here we simply create cart to be able to use our cart context set into src/CardContext.jsx
     const cart = useContext(CartContext);
 
+
 // here creating useSate to be able to show and close modal this one is for the cart
 // we also set conditions that when this modal is open the others should be closed we did the same for all
 const [show, setShow] = useState(false);
@@ -83,6 +86,7 @@ const handleShow = () => {
   setShowThird(false);
   setShowFourth(false);
   setShowFive(false);
+  setShowSix(false);
 };
 
 
@@ -95,6 +99,8 @@ const handleShowSecond = () => {
   setShowThird(false);
   setShowFourth(false);
   setShowFive(false);
+  setShowSix(false);
+
 };
 
 // here creating useSate to be able to show and close modal this one is for SignupForm 
@@ -106,6 +112,8 @@ const handleShowThird = () => {
   setShowThird(true);
   setShowFourth(false);
   setShowFive(false);
+  setShowSix(false);
+
 };
 
 // here creating useSate to be able to show and close modal this one is for user profil 
@@ -117,6 +125,7 @@ const handleShowFourth = () => {
   setShowThird(false);
   setShowFourth(true);
   setShowFive(false);
+  setShowSix(false);
 };
 
 
@@ -128,7 +137,22 @@ const handleShowFive = () => {
   setShowSecond(false);
   setShowThird(false);
   setShowFive(true);
+  setShowSix(false);
+
 };
+
+
+// here creating useSate to be able to show and close modal this one is for favorites 
+const [showSix, setShowSix] = useState(false);
+const handleCloseSix = () => setShowSix(false);
+const handleShowSix = () => {
+  setShow(false);
+  setShowSecond(false);
+  setShowThird(false);
+  setShowSix(true);
+};
+
+
 
 
 
@@ -197,6 +221,8 @@ const [loading, setLoading] = useState(false);
 
     // this is set to calculate the total into our cart, our cart is modal into navbar that is why this is set here
     const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
+
+    const favoriteProductsCount = cart.favoriteProducts.length; // allow to count into heart for fav
     
     return (
         
@@ -228,13 +254,13 @@ const [loading, setLoading] = useState(false);
                 <NavDropdown.Item href="#action-2">Telephones portables</NavDropdown.Item>
                 {/*<NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>*/}
                  <NavDropdown.Item href="#action-1">Enceinte Bleutooth</NavDropdown.Item>
-                 {/*<NavDropdown.Item href="#action-1">Casque audio</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
+                 <NavDropdown.Item href="#action-1">Casque audio</NavDropdown.Item>
+                 {/*<NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>
                </Navbar.Collapse>
 
-              {/*<Navbar.Collapse className='modal-for-login'>
+              <Navbar.Collapse className='modal-for-login'>
                <Nav className='navdropdown'>
              <NavDropdown 
                 title="Stockage et mémoire" 
@@ -242,23 +268,23 @@ const [loading, setLoading] = useState(false);
                onMouseEnter={handleDropdownEnter2}
                onMouseLeave={handleDropdownLeave2}
                >
-                <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item>
+                {/*<NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item> 
                  <NavDropdown.Item href="#action-1">Cartes mémoire</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Mémoire RAM</NavDropdown.Item>
-                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                 </NavDropdown>
                  <div className={`dropdown-menu ${showDropdown2 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter2} onMouseLeave={handleDropdownLeave2}>
                 <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
-                <NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item>
+                {/*<NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item>
                 <NavDropdown.Item href="#action-1">Cartes mémoire</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>
+              <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>*/}
                  <NavDropdown.Item href="#action-1">Mémoire RAM</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>
+                 {/*<NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>
-               </Navbar.Collapse>*/}
+               </Navbar.Collapse>
 
                <Navbar.Collapse className='modal-for-login'>
                <Nav >
@@ -286,16 +312,37 @@ const [loading, setLoading] = useState(false);
                </Nav>
                </Navbar.Collapse>
 
+                
+               <Navbar.Collapse className='navdropdown'>
+               {/*<DropdownButton
+                     title={
+                      <div className='favHeart-count'>
+                      <img src="https://cdn-icons-png.flaticon.com/512/130/130195.png" width={"30px"} title='Mes favoris'/>
+                      {favoriteProductsCount > 0 && <span className='nb-favorites'>{favoriteProductsCount}</span>}
+                      </div>
+                     }
+                      variant="light"
+                      onClick={handleShowSix}
+                      >
+                    </DropdownButton>*/}
+
+                    <button onClick={handleShowSix} className='cart-button'>
+                 <div className='favHeart-count'>
+                      <img src="https://cdn-icons-png.flaticon.com/512/130/130195.png" width={"40px"} title='Mes favoris'/>
+                      {favoriteProductsCount > 0 && <span className='nb-favorites'>{favoriteProductsCount}</span>}
+                      </div>
+                </button>
+
+                    </Navbar.Collapse>
 
 
-               
 
 
 
                 {isLoggedIn ? (
                <Navbar.Collapse className='navdropdown'>
                <DropdownButton
-                     title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} />}
+                     title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} title='Mon profil'/>}
                       variant="light"
                       onClick={handleShowFourth}
                       >
@@ -306,7 +353,7 @@ const [loading, setLoading] = useState(false);
                     ) : (
                     <Navbar.Collapse className='navdropdown'>
                     <DropdownButton
-                     title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} />}
+                     title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} title='Authentification'/>}
                       variant="light"
                      
                       >
@@ -320,13 +367,19 @@ const [loading, setLoading] = useState(false);
                     </Navbar.Collapse>
                   )}
 
+
+
+
+
+
+
                 {/*<div >
                     <Button onClick={handleShow} className='cart-button'><h4 className='img-cart-n-product'> <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' /> <span className='nb-products'>{productsCount}</span></h4>  </Button>
                 </div>*/}
                 <div>
                 <button onClick={handleShow} className='cart-button'>
                  <h4 className='img-cart-n-product'>
-                 <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' />
+                 <img src="https://cdn-icons-png.flaticon.com/512/8865/8865579.png" className='cart-image' title='Mon panier'/>
                   <span className='nb-products'>
                   {productsCount > 0 ? productsCount : null}
                  </span>
@@ -377,7 +430,7 @@ const [loading, setLoading] = useState(false);
 
             <Modal show={showFive} onHide={handleCloseFive} className='modal-for-login'>
              <Modal.Header closeButton className='login-modal'>
-            <Modal.Title className='modal-logint'>mon compte</Modal.Title>
+            <Modal.Title className='modal-logint'>Mon compte</Modal.Title>
             </Modal.Header>
               <Modal.Body className='loginF'>
                <ResetPasswordForm />
@@ -385,6 +438,16 @@ const [loading, setLoading] = useState(false);
                <button onClick={handleShowThird} className='buttonlink'>Pas de compte ?</button> 
             </Modal.Body> 
             </Modal>
+
+            <Modal show={showSix} onHide={handleCloseSix} >
+             <Modal.Header closeButton className='cart-header'>
+            <Modal.Title >Mes favoris</Modal.Title>
+            </Modal.Header>
+              <Modal.Body >
+                 <FavoritesPage/>
+              </Modal.Body> 
+              </Modal>
+
 
 
 

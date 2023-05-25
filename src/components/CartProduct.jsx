@@ -25,7 +25,7 @@ function CartProduct(props) {
                 <Button size="sm" onClick={() => cart.addOneToCart(id)} >+</Button>
                 </div>
                 <div>
-                <img src={trash} alt=""  onClick={() => cart.deleteFromCart(id)} style={{ marginRight: '10px', width: '20px' }}/> 
+                <img src={trash} alt=""  onClick={() => cart.deleteFromCart(id)} style={{ marginRight: '10px', width: '20px' }} title="retirer du panier"/> 
                 </div>
             </div>
             <hr></hr>

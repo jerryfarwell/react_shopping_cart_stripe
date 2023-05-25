@@ -1,0 +1,29 @@
+
+
+.favorite-main{
+    width: 100%;
+    height: 50%;
+}
+
+
+.close-icon{
+    width: 30px;
+    position: absolute;
+    top: 10%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+}
+
+.img-and-close-btn{
+    position: relative;
+}
+
+.fav-addToCart{
+    width: 100%;
+}
+
+.addAndRemove-fromCard{
+   text-align: center;
+}

@@ -12,7 +12,7 @@ export const CartContext = createContext({
 
 export function CartProvider({children}) {
     const [cartProducts, setCartProducts] = useState([]);
-
+    const [favoriteProducts, setFavoriteProducts] = useState([]);  // this is set to add products to favorites
 
 
 
@@ -38,7 +38,54 @@ useEffect(() => {
       
   //-------------------------------------------------------------
 
+  
 
+  //-----------------------------------------------------------------
+
+
+  // Load favorites from browser storage on component mount
+  useEffect(() => {
+    const storedfavoriteProducts = localStorage.getItem("favoriteProducts");
+    if (storedfavoriteProducts) {
+      try {
+        setfavoriteProducts(JSON.parse(storedfavoriteProducts));
+      } catch (error) {
+        console.error("Error parsing favorite data:", error);
+      }
+    }
+  }, []);
+
+  // Save favorite to browser storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("favorite", JSON.stringify(favoriteProducts));
+  }, [favoriteProducts]);
+  //------------------------------------------------------------------
+
+
+
+  //----------favorites------------------------------------------------
+
+
+  function addProductToFavorites(id) {
+    const isProductInFavorites = favoriteProducts.some((product) => product.id === id);
+  
+    if (!isProductInFavorites) {
+      setFavoriteProducts([...favoriteProducts, { id }]);
+    }
+  }
+  
+  function removeProductFromFavorites(id) {
+    setFavoriteProducts(favoriteProducts.filter((product) => product.id !== id));
+  }
+  
+  function isProductInFavorites(id) {
+    return favoriteProducts.some((product) => product.id === id);
+  }
+  
+
+
+
+  //-------------end favorites-----------------------------------------
   
     
     // [ { id: 1 , quantity: 3 }, { id: 2, quantity: 1 } ]
@@ -124,8 +171,13 @@ useEffect(() => {
         addOneToCart,
         removeOneFromCart,
         deleteFromCart,
-        getTotalCost
-        
+        getTotalCost,
+
+        // this is for favorites
+        favoriteProducts,
+        addProductToFavorites,
+        removeProductFromFavorites,
+        isProductInFavorites, 
     }
 
 
