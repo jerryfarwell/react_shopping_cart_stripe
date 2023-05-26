@@ -14,21 +14,28 @@ function CartProduct(props) {
 
     return (
         <div className='cartProduct'>
-            {/*<p>{productData.title}</p>*/}
+            <div className="titleAndPrice"> 
+            <small style={{textAlign: "center"}}>{productData.title}</small>
+            <p >{ (quantity * productData.price).toFixed(2) } €</p>
+            </div>
             {/*<small>Quantité: {quantity} </small>*/}
             {/*<p>{ (quantity * productData.price).toFixed(2) }€</p>*/}
-            <h5><img src={productData.imageSrc} alt={productData.title} className='image-cart'/> <span style={{marginLeft: "20px"}}>{ (quantity * productData.price).toFixed(2) } €</span> <small style={{marginLeft: "50px"}}>{productData.title}</small></h5>
+            <h5 >
+                <img src={productData.imageSrc} alt={productData.title} className='image-cart'/>  
+            </h5>
+                <div className="all-btn">
+                   <div style={{marginLeft: "7px"}} >
+                    <Button size="sm" onClick={() => cart.removeOneFromCart(id)} >-</Button>
+                    <small style={{marginLeft: "2px", marginRight: "2px"}}>{quantity}</small>
+                     <Button size="sm" onClick={() => cart.addOneToCart(id)} >+</Button>
+                   </div>
+
+                   <div>
+                     <img src={trash} alt=""  onClick={() => cart.deleteFromCart(id)} style={{ marginRight: '10px', width: '20px' }} title="retirer du panier"/> 
+                    </div>
+               </div>
+
             {/*<Button variant="danger" size="sm" onClick={() => cart.deleteFromCart(id)} style={{ marginRight: '10px' }}>Retirer du panier</Button>*/}
-            <div className="all-btn">
-                <div style={{marginLeft: "7px"}}>
-                <Button size="sm" onClick={() => cart.removeOneFromCart(id)} >-</Button>
-                 <small style={{marginLeft: "2px", marginRight: "2px"}}>{quantity}</small>
-                <Button size="sm" onClick={() => cart.addOneToCart(id)} >+</Button>
-                </div>
-                <div>
-                <img src={trash} alt=""  onClick={() => cart.deleteFromCart(id)} style={{ marginRight: '10px', width: '20px' }} title="retirer du panier"/> 
-                </div>
-            </div>
             <hr></hr>
         </div>
     )
