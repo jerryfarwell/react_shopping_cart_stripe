@@ -57,7 +57,7 @@ useEffect(() => {
 
   // Save favorite to browser storage whenever it changes
   useEffect(() => {
-    localStorage.setItem("favorite", JSON.stringify(favoriteProducts));
+    localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
   }, [favoriteProducts]);
   //------------------------------------------------------------------
 
