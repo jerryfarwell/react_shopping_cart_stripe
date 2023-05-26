@@ -51,12 +51,16 @@ width: 30px;
 
 
 .loginF{
-    background-image: url(https://images.pexels.com/photos/672111/pexels-photo-672111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url("src/assets/images/background_login.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 
 .signupF{
-    background-image: url(https://cdn.pixabay.com/photo/2013/05/09/09/06/waves-circles-109964_960_720.jpg);
+    background-image: url("src/assets/images/background_signup.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 
@@ -71,6 +75,15 @@ width: 30px;
     display: flex;
     justify-content: center;
     color: white;
+  }
+
+  .buttonlink_inSignupModal{
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    color: black;
+
   }
 
   .navdropdown{
@@ -115,7 +128,7 @@ width: 30px;
 }
 
 .nb-favorites{
-    width: 50px;
+    width: 100px;
     position: absolute;
     top: 50%;
     left: 47%;
@@ -127,6 +140,10 @@ width: 30px;
 
 .favHeart-count{
     position: relative;
+}
+
+.empty_favorites{
+    text-align: center;
 }
 
   

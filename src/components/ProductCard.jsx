@@ -28,10 +28,14 @@ function ProductCard(props) { // props.product is the product we are selling
         
     //-------------------------------------------------------------------------------------------
 
+    const handleClick = () => {
+      window.scrollTo(0, 0); // Scrolls to the top of the page when using Link without it when we get to the new page we stay at the same level
+    };
+
     return (
         <Card>
             <Card.Body>
-            <Link to={`/details/${product.id}`}>
+            <Link to={`/details/${product.id}`} onClick={handleClick}>
                 <div className="image-wrapper">
                <img src={product.imageSrc} alt={product.title} className='images-main'/>
                </div>

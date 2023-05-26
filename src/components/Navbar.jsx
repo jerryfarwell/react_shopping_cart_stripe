@@ -5,6 +5,7 @@ import CartProduct from './CartProduct';
 import '../assets/stylesheet/Navbar.css'
 import logo_with_name from '../assets/images/logo_with_name.png';
 import loading_img from '../assets/images/loading_img.gif'
+import sad from '../assets/images/sad.png'
 import LoginForm from './authentification/sessions/New';
 import SignupForm from './authentification/registrations/New';
 import Cookies from 'js-cookie';
@@ -408,7 +409,7 @@ const [loading, setLoading] = useState(false);
                 </Modal.Header>
                 <Modal.Body className='signupF'> 
                  <SignupForm />
-                 <button onClick={handleShowSecond} className='buttonlink'>Vous avez deja un compte ?</button>            
+                 <button onClick={handleShowSecond} className='buttonlink_inSignupModal'>Vous avez deja un compte ?</button>            
                 </Modal.Body>
             </Modal>
 
@@ -422,7 +423,7 @@ const [loading, setLoading] = useState(false);
                 <br />
                 <div className='signup_ressetpassword'>
                 <button onClick={handleShowThird} className='buttonlink'>Pas de compte ?</button> 
-                <button  onClick={handleShowFive} className='forgot'> <span style={{color: 'red'}}>Mot de passe oublié ?</span> </button>        
+                <button  onClick={handleShowFive} className='forgot'> <span style={{color: "white"}}>Mot de passe oublié ?</span> </button>        
                 </div>
             </Modal.Body> 
             </Modal>
@@ -444,7 +445,19 @@ const [loading, setLoading] = useState(false);
             <Modal.Title >Mes favoris</Modal.Title>
             </Modal.Header>
               <Modal.Body >
-                 <FavoritesPage/>
+                 
+                 {favoriteProductsCount > 0 ?
+                 <>
+                  <FavoritesPage/>
+                 </>
+                 :
+                 <div className='empty_favorites'>
+                  <h5 >Vous n'avez pas de favori</h5>
+                  <br/>
+                  <br/>
+                   <img src={sad} alt='' style={{width: "80px"}}/>
+                 </div>
+                 }
               </Modal.Body> 
               </Modal>
 
@@ -490,7 +503,7 @@ const [loading, setLoading] = useState(false);
                     :
                     <div className='cart-empty'>
                         <h5>votre panier est vide ! </h5><br/> 
-                        <h1>😞</h1>
+                        <img src={sad} alt='' style={{width: "80px"}}/>
                     </div>
                     }
                 </Modal.Body>

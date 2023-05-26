@@ -139,7 +139,7 @@ function SignupForm() {
         
         <div className='diptS'>
           {/*<input type='submit' value='Créer mon compte' className='inputbtn' disabled={loading || disableButton} />*/}
-          <Button type='submit' className='btn-signup' disabled={loading || disableButton}>Créer mon compte</Button>
+          <Button type='submit' className='btn-signup' disabled={loading || disableButton} >Créer mon compte</Button>
         </div>
         <br />
         <br />

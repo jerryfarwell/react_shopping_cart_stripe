@@ -48,7 +48,7 @@ useEffect(() => {
     const storedfavoriteProducts = localStorage.getItem("favoriteProducts");
     if (storedfavoriteProducts) {
       try {
-        setfavoriteProducts(JSON.parse(storedfavoriteProducts));
+        setFavoriteProducts(JSON.parse(storedfavoriteProducts));
       } catch (error) {
         console.error("Error parsing favorite data:", error);
       }
@@ -60,6 +60,7 @@ useEffect(() => {
     localStorage.setItem("favorite", JSON.stringify(favoriteProducts));
   }, [favoriteProducts]);
   //------------------------------------------------------------------
+
 
 
 
