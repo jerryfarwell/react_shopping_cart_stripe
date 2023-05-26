@@ -14,14 +14,15 @@ function CartProduct(props) {
 
     return (
         <div className='cartProduct'>
-            <h5>{productData.title}</h5>
-            <small>Quantité: {quantity} </small>
-            <p>{ (quantity * productData.price).toFixed(2) }€</p>
-            <p><img src={productData.imageSrc} alt={productData.title} className='image-cart'/></p>
+            {/*<p>{productData.title}</p>*/}
+            {/*<small>Quantité: {quantity} </small>*/}
+            {/*<p>{ (quantity * productData.price).toFixed(2) }€</p>*/}
+            <h5><img src={productData.imageSrc} alt={productData.title} className='image-cart'/> <span style={{marginLeft: "20px"}}>{ (quantity * productData.price).toFixed(2) } €</span> <small style={{marginLeft: "50px"}}>{productData.title}</small></h5>
             {/*<Button variant="danger" size="sm" onClick={() => cart.deleteFromCart(id)} style={{ marginRight: '10px' }}>Retirer du panier</Button>*/}
             <div className="all-btn">
-                <div>
-                <Button size="sm" onClick={() => cart.removeOneFromCart(id)} style={{ marginRight: '10px' }}>-</Button>
+                <div style={{marginLeft: "7px"}}>
+                <Button size="sm" onClick={() => cart.removeOneFromCart(id)} >-</Button>
+                 <small style={{marginLeft: "2px", marginRight: "2px"}}>{quantity}</small>
                 <Button size="sm" onClick={() => cart.addOneToCart(id)} >+</Button>
                 </div>
                 <div>
