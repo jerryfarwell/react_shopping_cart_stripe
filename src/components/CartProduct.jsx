@@ -14,7 +14,7 @@ function CartProduct(props) {
 
     return (
         <div className='cartProduct'>
-            <h3>{productData.title}</h3>
+            <h5>{productData.title}</h5>
             <small>Quantité: {quantity} </small>
             <p>{ (quantity * productData.price).toFixed(2) }€</p>
             <p><img src={productData.imageSrc} alt={productData.title} className='image-cart'/></p>
