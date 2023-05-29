@@ -14,6 +14,7 @@ import ResetPasswordForm from './components/authentification/passwords/RessetPas
 import NotFoundPage from './pages/NotFoundPage'
 import Footer from './components/Footer'
 import Laptop from './pages/pagesDetails/Laptop'
+import Telephone from './pages/pagesDetails/Telephone'
 
 
 
@@ -41,6 +42,7 @@ function App() {
            <Route path='/password' element={<ResetPasswordForm/>}/>
            <Route path='/new_password/:id' element={<NewPasswordForm/>}/>
            <Route path='/laptops' element={<Laptop/>}/>
+           <Route path='/phones' element={<Telephone/>}/>
            <Route path='*' element={<NotFoundPage />} />
         </Routes>  
       </BrowserRouter>

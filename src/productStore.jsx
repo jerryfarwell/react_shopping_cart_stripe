@@ -79,7 +79,8 @@ const ProdutcsArray = [
         price: 17.99,
         imageSrc: "https://e2r-paris.com/4566-product_large/sac-ordinateur-15-pouces-tissu-gris-et-cuir-homme-enzo.jpg",
     },
-    // laptops  from id 8
+
+    // laptops  from id 8------------------------------------------------------------------------------
 
     
     {
@@ -147,7 +148,77 @@ const ProdutcsArray = [
         image3Src: "https://www.grosbill.com/images_produits/d0e2f90c-0293-4968-b57a-8a78741ffa88.png",
 
     },
-    
+    //--------End laptops-----------------------------------------------------------------------------------------
+
+    //----------------------------------------phones --------------------------------------------------------------
+    {
+        id: "price_phones1",   // id 14
+        title: "Samsung A54",
+        price: 180.99,
+        description: "Ce Samsung A54 est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
+        imageSrc: "https://images.frandroid.com/wp-content/uploads/2023/03/samsung-galaxy-a54-frandroid-2023.png",
+        image1Src: "https://cdn.mos.cms.futurecdn.net/qDd34LdJoX2mJiKgkvCQyN-320-80.jpg",
+        image2Src: "https://img.global.news.samsung.com/co/wp-content/uploads/2023/03/Samsung_Galaxy-A34-54-5G_Combo-KV-1-e1679943089361.jpg",        
+        image3Src: "https://www.trustedreviews.com/wp-content/uploads/sites/54/2023/03/Samsung-Galaxy-A54-14-1024x580.jpg",
+    },
+    {
+        id: "price_phones2",  // id 15
+        title: "Apple iphone 12 124Go",
+        price: 254.99,
+        description: "Ce Apple iphone 12 124 Giga est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
+        imageSrc: "https://cf.shopee.tw/file/2ba4c52e5b1082f93f0f2d595358ea83",
+        image1Src: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-black-2020_AV1?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1635202728000",
+        image2Src: "https://www.phonewarehouse.ie/wp-content/uploads/2021/02/iphone12promax_all-min.png",        
+        image3Src: "https://media.gqmagazine.fr/photos/5f44ccb1effa3c62eaf2a9a6/16:9/w_1280,c_limit/iPhone12-prix.jpg",
+
+    },
+    {
+        id: "price_phones3",   // id 16
+        title: "Oukitel WP21 256Go",
+        price: 358.99,
+        description: "Ce Oukitel WP21 256 Go est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
+        imageSrc: "https://www.powerplanetonline.com/cdnassets/oukitel_wp21_negro_02_ad_l.jpg",
+        image1Src: "https://c.aligator.cz/files/Products/product_199/S60_2-1638874054.png",
+        image2Src: "https://www.powerplanetonline.com/cdnassets/blackview_oscal_s60_naranja_01_m.jpg",        
+        image3Src: "https://cdn.weasy.io/users/clinks-pt/catalog/clinks_-_blackview_oscal_s60_3gb_16gb_laranja_-_telem_vel_-_1.jpg",
+
+    },
+    {
+        id: "price_phones4",  // id 17
+        title: "Wiko sunny3",
+        price: 144.99,
+        description: "Ce Wiko sunny 3 est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
+        imageSrc: "https://media1.bazile.fr/3378-thickbox_default/wiko-sunny-3.jpg",
+        image1Src: "https://img.phonandroid.com/2017/10/LD0003678908_2.jpg",
+        image2Src: "https://www.lacentraledutek.com/1655-large_default/wiko-lenny-5-gold.jpg",        
+        image3Src: "https://de.wikomobile.com/documents/template/lenny5/assets/media/img/lenny5-phone-2.png",
+
+    },
+    {
+        id: "price_phones5",  // id 18
+        title: "Huawei P30 Pro 128 Go",
+        price: 541.99,
+        description: "Cet ordinateur portable Huawei est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
+        imageSrc: "https://www.idboox.com/wp-content/uploads/2019/04/Huawei-P30-Pro-4-cameras.jpg",
+        image1Src: "https://www.rueducommerce.fr/medias/5486e152bb923f27923fa2b9ee184d40/p_1000x1000/11317712551966.jpg",
+        image2Src: "https://slach.fr/img/p/2/2/9/229-large_default.jpg",        
+        image3Src: "https://francerenew.com/11380-medium_default/huawei-p30-pro-128-go-noir-debloque.jpg",
+
+    },
+    {
+        id: "price_phones6",   // id 19
+        title: "Samsung Galaxi S215Go ",
+        price: 329.99,
+        description: "Ce Samsung Galaxi S215Go allie à la fois style et fonctionnalité. Conçu en tissu gris et en cuir, il est à la fois robuste et élégant. Avec sa capacité de 15 pouces, il peut contenir un ordinateur portable ainsi que d'autres accessoires tels que des documents, des stylos ou des chargeurs. Sa bandoulière réglable assure un port confortable, tandis que ses poches zippées permettent un accès facile aux objets. Que vous alliez au travail, à l'université ou en voyage, ce sac ordinateur sera votre compagnon idéal pour transporter vos affaires en toute sécurité et avec style.",
+        imageSrc: "https://www.cdiscount.com/pdt2/2/8/v/1/700x700/samgalaxs21128v/rw/samsung-galaxy-s21-128go-violet.jpg",
+        image1Src: "https://fr.shopping.rakuten.com/photo/1958774445_L.jpg",
+        image2Src: "https://media.veepee.com/v1/media/69fa023f-9a4a-4f6c-bf85-98e8660c1172",        
+        image3Src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1loxNRNeGB4n3BceA-7V3d0zpE1eA4knzwxNiEdv9fsvvi71nyE2olYTYOU9M_E6BcUs&usqp=CAU",
+
+    },
+
+         
+    //------End phones-----------------------------------------------------------------------------------------------
 
 
 
@@ -172,6 +243,6 @@ function GetProductData (id) {
 export {ProdutcsArray, GetProductData};
 
 
-// let create a const where are going to define all aour products let put this into an array so that we can later call it wit array.map()
+// let create a const where are going to define all our products let put this into an array so that we can later call it wit array.map()
 // the id for each product is the link that is generated by stripe after a product is create so we can start by simply using numbers or we can directly create products and get the id
 // the const GetProductData here will let us go to every product it is better to use .find instead of .map for this step
