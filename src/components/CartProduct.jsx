@@ -24,9 +24,9 @@ function CartProduct(props) {
                 <img src={productData.imageSrc} alt={productData.title} className='image-cart'/>  
             </h5>
                 <div className="all-btn">
-                   <div style={{marginLeft: "7px"}} >
+                   <div  >
                     <Button size="sm" onClick={() => cart.removeOneFromCart(id)} >-</Button>
-                    <small style={{marginLeft: "2px", marginRight: "2px"}}>{quantity}</small>
+                    <span style={{marginLeft: "10px", marginRight: "10px"}}>{quantity}</span>
                      <Button size="sm" onClick={() => cart.addOneToCart(id)} >+</Button>
                    </div>
 

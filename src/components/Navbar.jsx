@@ -224,6 +224,7 @@ const [loading, setLoading] = useState(false);
     const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
     const favoriteProductsCount = cart.favoriteProducts.length; // allow to count into heart for fav
+    //const favoriteProductsCount = cart.favorites.length; // allow to count into heart for fav
     
     return (
         
@@ -251,7 +252,7 @@ const [loading, setLoading] = useState(false);
                 </NavDropdown>
 
                  <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`} onMouseEnter={handleDropdownEnter} onMouseLeave={handleDropdownLeave}>
-                <NavDropdown.Item href="#action-1" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
+                <NavDropdown.Item href="/laptops" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
                 <NavDropdown.Item href="#action-2">Telephones portables</NavDropdown.Item>
                 {/*<NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>*/}
                  <NavDropdown.Item href="#action-1">Enceinte Bleutooth</NavDropdown.Item>

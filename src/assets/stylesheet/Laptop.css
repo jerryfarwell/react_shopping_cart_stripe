@@ -1,0 +1,29 @@
+
+
+.laptop-space{
+    margin-bottom: 2%;
+}
+
+
+.laptop-topTextTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.laptop-testyAndPic{
+    background: rgb(160, 145, 79);
+    padding: 3%;
+}
+
+.words_first{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.man_standingRow{
+    background: rgb(160, 145, 79);
+    padding: 3%;
+
+}

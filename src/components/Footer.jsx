@@ -25,7 +25,7 @@ function Footer() {
               <h6>À propos </h6>
               <h6>Mentions Légales</h6>
               <h6>protection des données personnelles</h6>
-              <h6>Paiement très sécurisé</h6>
+              <h6>Paiement 100% sécurisé</h6>
             </Col>
             <Col>
             <h6>Nous contacter</h6>

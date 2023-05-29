@@ -7,14 +7,18 @@ export const CartContext = createContext({
     addOneToCart: () => {},
     removeOneFromCart: () => {},
     deleteFromCart: () => {},
-    getTotalCost: () => {}
+    getTotalCost: () => {},
+    // for favorites
+    favorites: [],
+    toggleFavorite: () => {}
+    //addProductToFavorites: () => {},
+    //removeProductFromFavorites: () => {}
+
 });
 
 export function CartProvider({children}) {
     const [cartProducts, setCartProducts] = useState([]);
     const [favoriteProducts, setFavoriteProducts] = useState([]);  // this is set to add products to favorites
-
-
 
 //----------------this is set to store the cart into local storage so that even if user refresh page he still find his cart -----------------------------------
 // this usualy works in production and sometimes in localhost
@@ -40,7 +44,7 @@ useEffect(() => {
 
   
 
-  //-----------------------------------------------------------------
+  //-------------------------this is set to store the favoriteProducts into local storage----------------------------------------
 
 
   // Load favorites from browser storage on component mount
@@ -167,7 +171,7 @@ useEffect(() => {
     } 
        
     const contextValue = {
-        items: cartProducts,
+        items: cartProducts, 
         getProductQuantity,
         addOneToCart,
         removeOneFromCart,
@@ -175,6 +179,7 @@ useEffect(() => {
         getTotalCost,
 
         // this is for favorites
+        //favoriteProducts,
         favoriteProducts,
         addProductToFavorites,
         removeProductFromFavorites,
@@ -183,9 +188,12 @@ useEffect(() => {
 
 
     return (
-        <CartContext.Provider value={contextValue}>
+      <div>
+        <CartContext.Provider value={contextValue} >
             {children}
         </CartContext.Provider>
+      </div>
+
     )
 }
 

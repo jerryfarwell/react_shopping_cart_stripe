@@ -24,7 +24,7 @@ function ItemDetails(props) {
 
 
   const filteredProducts = ProdutcsArray.filter(product => product.id !== "fake_xxxxxxxxxxx" ); // this will remove a specific product with this id
-  // const filteredProducts = ProdutcsArray.slice(5);  this will remove the five first products in productStore     ProdutcsArray.slice(-5); will remove the fith last one
+  // const filteredProducts = ProdutcsArray.slice();  this will remove the five first products in productStore     ProdutcsArray.slice(-5); will remove the fith last one
 
 
 
@@ -106,10 +106,10 @@ function ItemDetails(props) {
           <Button variant='success' onClick={handleAddToCart} className='btn-addtocart-itemdetails'>Ajouter au panier</Button>
           <hr/>
           <h5>Description</h5>
-          <h6>{product.description}</h6>
+          <p>{product.description}</p>
           <hr />
           <h5>Garantie de satisfaction</h5>
-          <h6>Si vous n'êtes pas entièrement satisfait de votre achat, vous avez jusqu'à deux semaines après la réception pour demander un remboursement.</h6>
+          <p>Si vous n'êtes pas entièrement satisfait de votre achat, vous avez jusqu'à deux semaines après la réception pour demander un remboursement.</p>
           <hr />
            <h5>Délais de Livraison</h5>
            <ul>

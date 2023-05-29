@@ -4,7 +4,6 @@ import { CartContext } from '../CardContext';
 import { GetProductData } from '../productStore';
 import '../assets/stylesheet/ProductCard.css';
 import '../assets/stylesheet/FavoriteProduct.css';
-import trash from '../assets/images/trash.png';
 import close from '../assets/images/close.png';
 
 

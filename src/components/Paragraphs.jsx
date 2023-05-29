@@ -46,3 +46,35 @@ function Paragraphthird() {
 }
 
 export  {Paragraphthird}
+
+
+
+function Paragraphfourth() {
+  return (
+    <div>
+        <div className='paragraph'>
+        <h5 align="center" className='p-3'> 
+            Les 3 produits les plus vendus de la semaine.
+        </h5>
+      </div>
+    </div>
+  )
+}
+
+export  {Paragraphfourth}
+
+
+
+function Paragraphfive() {
+  return (
+    <div>
+        <div className='paragraph'>
+        <h5 align="center" className='p-3'> 
+        N'hésitez pas à saisir cette occasion et à faire votre achat dès maintenant !
+        </h5>
+      </div>
+    </div>
+  )
+}
+
+export  {Paragraphfive}

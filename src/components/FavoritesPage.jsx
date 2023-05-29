@@ -5,6 +5,7 @@ import { CartContext } from "../CardContext";
 function FavoritesPage() {
   const cart = useContext(CartContext);
   const { favoriteProducts } = cart;
+  
 
   return (
     <div>
@@ -14,7 +15,7 @@ function FavoritesPage() {
           id={product.id}
           removeFromFavorites={() => cart.removeProductFromFavorites(product.id)}
         />
-      ))}
+      ))} 
     </div>
   );
 }

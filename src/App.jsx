@@ -13,6 +13,7 @@ import NewPasswordForm from './components/authentification/passwords/NewPassword
 import ResetPasswordForm from './components/authentification/passwords/RessetPasswordForm'
 import NotFoundPage from './pages/NotFoundPage'
 import Footer from './components/Footer'
+import Laptop from './pages/pagesDetails/Laptop'
 
 
 
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <CartProvider>
+      <CartProvider >
       <NavbarComponent />
       {/*<SearchBar />*/}
       <br/>
@@ -39,6 +40,7 @@ function App() {
            <Route  path="/confirmation" element={<ConfirmationSuccessPage/>} />
            <Route path='/password' element={<ResetPasswordForm/>}/>
            <Route path='/new_password/:id' element={<NewPasswordForm/>}/>
+           <Route path='/laptops' element={<Laptop/>}/>
            <Route path='*' element={<NotFoundPage />} />
         </Routes>  
       </BrowserRouter>

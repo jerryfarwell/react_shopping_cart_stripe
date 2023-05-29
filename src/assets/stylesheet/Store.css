@@ -10,3 +10,14 @@
     width: 100%;
 
 }
+
+.man_standingRow{
+    background: rgb(160, 145, 79);
+    padding: 3%;
+
+}
+
+.man_standingRowtwo{
+    width: 100%;
+    margin: auto;
+}

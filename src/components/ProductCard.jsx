@@ -1,10 +1,9 @@
-import { Card, Button, Form, Row, Col, DropdownButton } from 'react-bootstrap';
+import { Card, Button, Form, Row, Col } from 'react-bootstrap';
 import { CartContext } from '../CardContext';
 import { useContext, useState } from 'react';
 import '../assets/stylesheet/ProductCard.css';
 import { Link } from 'react-router-dom';
 import { BsHeartFill, BsHeart } from 'react-icons/bs';
-import FavoriteProduct from './FavoriteProduct';
 
 
 function ProductCard(props) { // props.product is the product we are selling
@@ -14,9 +13,10 @@ function ProductCard(props) { // props.product is the product we are selling
     console.log(cart.items);
     
     //--this for the favorite button to be able to add and remove at the same changing colors---
+    
     const [isFavorite, setIsFavorite] = useState(false);  
 
-    const toggleFavorite = () => {
+     const toggleFavorite = () => {
       if (isFavorite) {
         cart.removeProductFromFavorites(product.id);
       } else {
@@ -26,6 +26,7 @@ function ProductCard(props) { // props.product is the product we are selling
     }; 
 
         
+        
     //-------------------------------------------------------------------------------------------
 
     const handleClick = () => {
@@ -33,6 +34,7 @@ function ProductCard(props) { // props.product is the product we are selling
     };
 
     return (
+
         <Card>
             <Card.Body>
             <Link to={`/details/${product.id}`} onClick={handleClick}>
@@ -82,6 +84,7 @@ function ProductCard(props) { // props.product is the product we are selling
                 }
             </Card.Body>
         </Card>
+    
     )
 }
 
