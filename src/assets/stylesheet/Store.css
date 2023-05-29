@@ -4,6 +4,11 @@
     width: 100%;
 }
 
+.img-phoneHand{
+    margin: auto;
+    width: 50%;
+}
+
 
 .productcard{
     margin: auto;
@@ -11,13 +16,7 @@
 
 }
 
-.man_standingRow{
-    background: rgb(160, 145, 79);
-    padding: 3%;
 
-}
-
-.man_standingRowtwo{
-    width: 100%;
-    margin: auto;
+.phone_handWords{
+text-align: center;
 }

@@ -70,7 +70,7 @@ function Paragraphfive() {
     <div>
         <div className='paragraph'>
         <h5 align="center" className='p-3'> 
-        N'hésitez pas à saisir cette occasion et à faire votre achat dès maintenant !
+        Plongez dans l'innovation sans limite en explorant la gamme de produits Networkleed !
         </h5>
       </div>
     </div>
