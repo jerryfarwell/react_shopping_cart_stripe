@@ -207,7 +207,7 @@ const ProdutcsArray = [
     },
     {
         id: "price_phones6",   // id 19
-        title: "Samsung Galaxi S215Go ",
+        title: "Samsung Galaxi S215Go",
         price: 329.99,
         description: "Ce Samsung Galaxi S215Go allie à la fois style et fonctionnalité. Conçu en tissu gris et en cuir, il est à la fois robuste et élégant. Avec sa capacité de 15 pouces, il peut contenir un ordinateur portable ainsi que d'autres accessoires tels que des documents, des stylos ou des chargeurs. Sa bandoulière réglable assure un port confortable, tandis que ses poches zippées permettent un accès facile aux objets. Que vous alliez au travail, à l'université ou en voyage, ce sac ordinateur sera votre compagnon idéal pour transporter vos affaires en toute sécurité et avec style.",
         imageSrc: "https://www.cdiscount.com/pdt2/2/8/v/1/700x700/samgalaxs21128v/rw/samsung-galaxy-s21-128go-violet.jpg",
@@ -216,6 +216,18 @@ const ProdutcsArray = [
         image3Src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1loxNRNeGB4n3BceA-7V3d0zpE1eA4knzwxNiEdv9fsvvi71nyE2olYTYOU9M_E6BcUs&usqp=CAU",
 
     },
+    {
+        id: "price_phones7",   // id 20
+        title: "Motorola moto G7 32Gb",
+        price: 429.99,
+        description: "Ce Motorola moto G7 32Gb allie à la fois style et fonctionnalité. Conçu en tissu gris et en cuir, il est à la fois robuste et élégant. Avec sa capacité de 15 pouces, il peut contenir un ordinateur portable ainsi que d'autres accessoires tels que des documents, des stylos ou des chargeurs. Sa bandoulière réglable assure un port confortable, tandis que ses poches zippées permettent un accès facile aux objets. Que vous alliez au travail, à l'université ou en voyage, ce sac ordinateur sera votre compagnon idéal pour transporter vos affaires en toute sécurité et avec style.",
+        imageSrc: "https://http2.mlstatic.com/D_NQ_NP_867764-MLA42074214584_062020-O.webp",
+        image1Src: "https://media.solotodo.com/media/products/889773_picture_1551325407.png",
+        image2Src: "https://motorolanz.vtexassets.com/arquivos/ids/155397/g7-white.png?v=637202311078700000",        
+        image3Src: "https://http2.mlstatic.com/D_NQ_NP_629818-MLA31273777942_062019-O.jpg",
+
+    },
+
 
          
     //------End phones-----------------------------------------------------------------------------------------------

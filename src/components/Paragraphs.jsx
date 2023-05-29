@@ -54,7 +54,7 @@ function Paragraphfourth() {
     <div>
         <div className='paragraph'>
         <h5 align="center" className='p-3'> 
-            Les 3 produits les plus vendus de la semaine.
+            Les 3 meilleures ventes du mois.
         </h5>
       </div>
     </div>
@@ -70,7 +70,7 @@ function Paragraphfive() {
     <div>
         <div className='paragraph'>
         <h5 align="center" className='p-3'> 
-        Plongez dans l'innovation sans limite en explorant la gamme de produits Networkleed !
+        Plongez dans l'innovation sans limite en explorant la gamme de produits Networkleed.
         </h5>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 import { ProdutcsArray } from '../productStore'
 import ProductCard from '../components/ProductCard'
 import CarouselMainPage from '../components/CarouselMainPage'
@@ -8,6 +8,7 @@ import '../assets/stylesheet/Store.css'
 import jeune_femme_pc from '../assets/images/jeune_femme_pc.jpeg';
 import black_jeune_femme_pc from '../assets/images/black_jeune_femme_pc.jpeg';
 import femme_disque_dur from '../assets/images/femme_disque_dur.jpeg';
+import sitted_black_manpc from '../assets/images/sitted_black_manpc.png';
 import phone_hand from '../assets/images/phone_hand.png';
 
 
@@ -42,7 +43,7 @@ const Store = () => {
         <br/>
         <br/>
         <Paragraphthird/>
-        <img src={femme_disque_dur} alt="" className='img-womanpc'/>
+        <img src={black_jeune_femme_pc} alt="" className='img-womanpc'/>
         <br/>
         <br/>
         <Paragraphfourth/>
@@ -55,17 +56,25 @@ const Store = () => {
             ))} 
 
         </Row>
-        <br/>
-        <br/>
-        <Paragraphfive/>
-        <img src={black_jeune_femme_pc} alt="" className='img-womanpc'/>
-       <br/><br/>
-
-       <div className='phone_handWords'>
-       <h6 >Ne laissez pas passer cette opportunité ! Saisissez votre chance avec les téléphones de Networkleed.</h6>
-        <p >Chez Networkleed, nous vous offrons une sélection exceptionnelle de téléphones haut de gamme, conçus pour répondre à tous vos besoins et vous offrir une expérience technologique sans pareille. Que vous recherchiez les dernières innovations, des performances optimales ou un design élégant, nos téléphones sauront vous combler.</p>
+        <br/><br/>
+        <div className='phone_handWords'>
+       <h5 >Ne laissez pas passer cette opportunité ! Saisissez votre chance avec les téléphones de Networkleed.</h5>
+        <p >Nous vous offrons une sélection exceptionnelle de téléphones haut de gamme, conçus pour répondre à tous vos besoins.</p>
+        <a href="/phones" className="button">Nos téléphones</a>
+        <br/><br/>
         <img src={phone_hand} alt="" className='img-phoneHand'/>
        </div>
+       <br/><br/>
+        <Paragraphfive/>
+        <img src={femme_disque_dur} alt="" className='img-womanpc'/>
+       <br/><br/>
+       <div className='phone_handWords'>
+       <h5>Transformez votre productivité et libérez votre créativité avec nos ordinateurs de pointe, conçus pour inspirer des performances extraordinaires.</h5>
+       <a href="/laptops" className="button">Nos Ordinateurs</a>
+        <br/><br/>
+       <img src={sitted_black_manpc} alt="" className='img-phoneHand'/>
+       </div>
+       <br/><br/>
 
 
 

@@ -253,10 +253,10 @@ const [loading, setLoading] = useState(false);
 
                  <div className={`dropdown-menu ${showDropdown ? 'show' : ''}`} onMouseEnter={handleDropdownEnter} onMouseLeave={handleDropdownLeave}>
                 <NavDropdown.Item href="/laptops" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
-                <NavDropdown.Item href="/phones">Telephones portables</NavDropdown.Item>
+                <NavDropdown.Item href="/phones">Téléphones portables</NavDropdown.Item>
                 {/*<NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>*/}
-                 <NavDropdown.Item href="#action-1">Enceinte Bleutooth</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-1">Casque audio</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Enceintes Bleutooth</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Casques audio</NavDropdown.Item>
                  {/*<NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>

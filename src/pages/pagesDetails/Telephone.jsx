@@ -9,20 +9,10 @@ import young_black_man from '../../assets/images/young_black_man.jpeg'
 
 
 function Telephone() {
-    const filteredPhones = ProdutcsArray.slice(14, 19);
+    const filteredPhones = ProdutcsArray.slice(14, 20);
 
   return (
     <div>
-        <div className='laptop-testyAndPic'>
-        <div className='laptop-topTextTwo'>
-        <img src={bruno_testimony} alt="" className='img-fluid rounded-pill'style={{width: "10rem", height: "10rem"}}/>
-         <span >Bruno</span>
-        </div>
-        <br/>
-         <div className='words_first'>
-         <p >"Lorsque j'ai acheté mon ordinateur Networkeed, j'étais un peu sceptique quant à sa qualité et à ses performances. Cependant, dès que j'ai commencé à l'utiliser, j'ai été agréablement surpris. Non seulement l'ordinateur était extrêmement puissant et réactif, mais il a également dépassé mes attentes en termes de durabilité et de fiabilité. De plus, la garantie satisfaction offerte par Networkeed m'a apporté une tranquillité d'esprit supplémentaire. Savoir que je pouvais compter sur le support et l'engagement de l'entreprise pour s'assurer de ma satisfaction totale a renforcé ma confiance dans mon choix d'achat. Je recommande vivement Networkeed à tous ceux qui recherchent des ordinateurs de qualité supérieure et un service client exceptionnel."</p>
-         </div>
-         </div>
        <Row xs={1} md={3} className='g-4'>
         {
             filteredPhones.map((product, idx) => (
