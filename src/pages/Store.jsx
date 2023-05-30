@@ -3,13 +3,15 @@ import { Row, Col, Button } from 'react-bootstrap'
 import { ProdutcsArray } from '../productStore'
 import ProductCard from '../components/ProductCard'
 import CarouselMainPage from '../components/CarouselMainPage'
-import Paragraphs, { Paragraphfive, Paragraphfourth, Paragraphsecond, Paragraphthird } from '../components/Paragraphs'
+import Paragraphs, { Paragraphfive, Paragraphfourth, Paragraphsecond, Paragraphsix, Paragraphthird } from '../components/Paragraphs'
 import '../assets/stylesheet/Store.css'
 import jeune_femme_pc from '../assets/images/jeune_femme_pc.jpeg';
 import black_jeune_femme_pc from '../assets/images/black_jeune_femme_pc.jpeg';
 import femme_disque_dur from '../assets/images/femme_disque_dur.jpeg';
 import sitted_black_manpc from '../assets/images/sitted_black_manpc.png';
 import phone_hand from '../assets/images/phone_hand.png';
+import slide_left_and_right from '../assets/images/slide_left_and_right.png';
+import CarouselAllItems from '../components/CarouselAllItems'
 
 
 
@@ -46,17 +48,14 @@ const Store = () => {
         <img src={black_jeune_femme_pc} alt="" className='img-womanpc'/>
         <br/>
         <br/>
-        <Paragraphfourth/>
-        <Row xs={1} md={3} className='g-4'>
-             {filteredThreeMostSold.map((product, idx) => (
-          <Col align="center" key={idx}>
-            <ProductCard product={product} className="productcard" />
-          </Col> 
-
-            ))} 
-
-        </Row>
-        <br/><br/>
+        <Paragraphsix/>
+        <CarouselAllItems/>
+        <br/>
+        <div className='div_slide_left_and_right'>
+          <small>swipe auto et manuel</small>
+        <img src={slide_left_and_right} alt="" className='slide_left_and_right'/>
+        </div>
+       <br/><br/>
         <div className='phone_handWords'>
        <h5 >Ne laissez pas passer cette opportunité ! Saisissez votre chance avec les téléphones de Networkleed.</h5>
         <p >Nous vous offrons une sélection exceptionnelle de téléphones haut de gamme, conçus pour répondre à tous vos besoins.</p>
@@ -68,6 +67,17 @@ const Store = () => {
         <Paragraphfive/>
         <img src={femme_disque_dur} alt="" className='img-womanpc'/>
        <br/><br/>
+       <Paragraphfourth/>
+        <Row xs={1} md={3} className='g-4'>
+             {filteredThreeMostSold.map((product, idx) => (
+          <Col align="center" key={idx}>
+            <ProductCard product={product} className="productcard" />
+          </Col> 
+
+            ))} 
+
+        </Row>
+        <br/><br/>
        <div className='phone_handWords'>
        <h5>Transformez votre productivité et libérez votre créativité avec nos ordinateurs de pointe, conçus pour inspirer des performances extraordinaires.</h5>
        <a href="/laptops" className="button">Nos Ordinateurs</a>

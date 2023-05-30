@@ -23,7 +23,7 @@ function FavoriteProduct(props) {
                  <p>prix unitaire : {productData.price} €</p>
                  </div>  
                   <div className="img-and-close-btn">
-                  <img src={productData.imageSrc} alt={productData.title} className='favorite-main'/>
+                  <a href={`/details/${productData.id}`}><img src={productData.imageSrc} alt={productData.title} className='favorite-main' title="voir cet article"/></a>
                  <img src={close} onClick={props.removeFromFavorites} alt="" className="close-icon" title="Retirer des favoris"/>
                  </div>
 
