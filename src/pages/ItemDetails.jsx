@@ -98,11 +98,6 @@ function ItemDetails(props) {
           </h5>
           <Button variant='success' onClick={handleAddToCart} className='btn-addtocart-itemdetails'>Ajouter au panier</Button>
 
-
-
-
-
-
         </Col>
 
         <Col>

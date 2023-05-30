@@ -257,6 +257,7 @@ const [loading, setLoading] = useState(false);
                 {/*<NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>*/}
                  <NavDropdown.Item href="#action-1">Enceintes Bleutooth</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Casques audio</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Tous les Articles</NavDropdown.Item>
                  {/*<NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>
@@ -283,6 +284,7 @@ const [loading, setLoading] = useState(false);
                 <NavDropdown.Item href="#action-1">Cartes mémoire</NavDropdown.Item>
               <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>*/}
                  <NavDropdown.Item href="#action-1">Mémoire RAM</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Tous les Articles</NavDropdown.Item>
                  {/*<NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>
@@ -306,6 +308,7 @@ const [loading, setLoading] = useState(false);
                  <div className={`dropdown-menu ${showDropdown3 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter3} onMouseLeave={handleDropdownLeave3}>
                  <NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
                  <NavDropdown.Item href="#action-2">Supports pour ordinateur portable</NavDropdown.Item>
+                 <NavDropdown.Item href="#action-1">Tous les Articles</NavDropdown.Item>
                  {/*<NavDropdown.Item href="#action-1">Supports pour écran</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Tapis de souris</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Câbles et adaptateurs</NavDropdown.Item>
