@@ -36,8 +36,7 @@ function ItemDetails(props) {
           {/*<img src={product.imageSrc} alt={product.title} className='img-item-details' />
           <img src={product.image1Src} alt={product.title} className='img-item-details' />*/}
 
-
-          <Carousel fade interval={3000} pause="hover">
+          <Carousel fade interval={3000} pause="hover" className='my-carousel'>
            <Carousel.Item>
            <img
           className="d-block carousel-img"
@@ -88,7 +87,17 @@ function ItemDetails(props) {
           </Carousel.Caption>
           </Carousel.Item>
 
-          </Carousel> 
+          </Carousel>
+          <h5 className='item-title'>{product.title}</h5>
+           <br/>
+          
+
+          <h4>
+            {product.price} €{' '}
+            <img src={delivry} alt='' className='img-delivry' /> Livraison express
+          </h4>
+          <Button variant='success' onClick={handleAddToCart} className='btn-addtocart-itemdetails'>Ajouter au panier</Button>
+
 
 
 
@@ -97,14 +106,6 @@ function ItemDetails(props) {
         </Col>
 
         <Col>
-          <h5 className='item-title'>{product.title}</h5>
-          <hr />
-          <h4>
-            {product.price} €{' '}
-            <img src={delivry} alt='' className='img-delivry' /> Livraison express
-          </h4>
-          <Button variant='success' onClick={handleAddToCart} className='btn-addtocart-itemdetails'>Ajouter au panier</Button>
-          <hr/>
           <h5>Description</h5>
           <p>{product.description}</p>
           <hr />
@@ -113,8 +114,7 @@ function ItemDetails(props) {
           <hr />
            <h5>Délais de Livraison</h5>
            <ul>
-            <li>France (métropolitaine) 2 à 3 jours maximum.</li>
-            <li>Livraison Express 24h seulement.</li>
+            <li>{product.delivryTime}</li>
            </ul>
           <hr />
              <h5>État actuel de l'article</h5>

@@ -86,7 +86,7 @@ function Paragraphsix() {
     <div>
         <div className='paragraph'>
         <h5 align="center" className='p-3'> 
-        Trouvez votre produit idéal d'un simple swipe et laissez-vous emporter par une expérience de shopping sans effort avec Networkleed.        </h5>
+        Trouvez votre produit idéal d'un simple swipe et laissez-vous emporter.</h5>
       </div>
     </div>
   )

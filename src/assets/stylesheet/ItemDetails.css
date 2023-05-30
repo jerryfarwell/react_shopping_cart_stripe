@@ -33,3 +33,9 @@
 .btn-addtocart-itemdetails{
     width: 100%;
 }
+
+
+.my-carousel .carousel-control-prev-icon,
+.my-carousel .carousel-control-next-icon {
+  background-color: red; /* Change to your desired color */
+}

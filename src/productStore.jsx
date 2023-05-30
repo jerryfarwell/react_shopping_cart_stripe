@@ -12,6 +12,7 @@ const ProdutcsArray = [
         id: "price_1N89G6FrCY7e7e3NGWzB3bTI",  // id 1
         title: "Souris",
         price: 24.99,
+        delivryTime: "2 à 3 jours maximum.",
         description: "La souris que nous vous proposons est le compagnon idéal pour tous vos besoins informatiques. Avec sa conception ergonomique, elle offre une prise en main confortable et une utilisation facile et précise grâce à sa sensibilité réglable. Son design élégant s'intégrera parfaitement à votre espace de travail et son câble USB lui permet de se connecter à n'importe quel ordinateur. Que ce soit pour la navigation web, la création de contenu ou les jeux vidéo, cette souris est l'accessoire indispensable pour améliorer votre productivité et votre confort d'utilisation.",
         imageSrc: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
         image1Src: "https://www.grosbill-pro.com/images_produits/03cfa43b-771b-475f-86d1-7e6de332056d.jpg",
@@ -22,6 +23,7 @@ const ProdutcsArray = [
         id: "price_1MtvSbFrCY7e7e3NGMMEhPv6",  // id 2
         title: "Encre hp 302",
         price: 9.99,
+        delivryTime: "2 à 3 jours maximum.",
         description: "L'encre HP 302 est la solution idéale pour les impressions de qualité professionnelle à la maison. Cette encre est conçue pour offrir des résultats nets et précis à chaque impression. Grâce à la technologie d'encre à base de pigment, cette cartouche est capable de produire des textes nets et des graphismes de haute qualité qui résistent à l'eau et à la décoloration. Elle est facile à installer et compatible avec une large gamme d'imprimantes HP. Avec l'encre HP 302, vous pouvez être sûr que vos documents imprimés auront un aspect professionnel et soigné à chaque fois.",
         imageSrc: "https://media.auchan.fr/A0220170112000537293PRIMARY_512x512/B2CD/",
         image1Src: "https://fr.inkjet411.com/wp-content/uploads/2016/04/HP-302s_sm.jpg",
@@ -33,6 +35,7 @@ const ProdutcsArray = [
         id: "price_1N89MeFrCY7e7e3NuIMjaOoA",  // id 3
         title: "Tablette samsung",
         price: 139.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "La tablette Samsung est l'appareil idéal pour rester connecté et productif en déplacement. Avec son écran haute résolution, vous pouvez profiter d'une expérience visuelle incroyable pour regarder des vidéos, naviguer sur le web et travailler sur des documents importants. La tablette dispose également d'une batterie longue durée pour que vous puissiez rester productif toute la journée sans avoir à la recharger constamment. En outre, la tablette Samsung est équipée d'un processeur rapide qui permet de naviguer sur Internet, de diffuser du contenu et d'utiliser des applications sans ralentissement. Avec la tablette Samsung, vous pouvez travailler, jouer et rester connecté où que vous soyez.",
         imageSrc: "https://cdn.lesnumeriques.com/optim/produits/36/26915/samsung-galaxy-tab-e_5b9c69af8a471b5a__1200_1200__overflow.jpg",
         image1Src: "https://medias3-1.ubaldi.com/visuels/80185/pr_SMT819NZWEXEF-43.jpg",
@@ -44,6 +47,7 @@ const ProdutcsArray = [
         id: "price_1N89PhFrCY7e7e3NX5XJJz0A",  // id 4
         title: "Ordinateur portable hp",
         price: 244.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Cet ordinateur portable HP est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06927622_500x367.jpg",
         image1Src: "https://ivoirelite.net/797-large_default/ordinateur-portable-hp-core-i5-8go-ram-512go-ssd-ecran-156.jpg",
@@ -55,6 +59,7 @@ const ProdutcsArray = [
         id: "price_1N89RCFrCY7e7e3NoZM80yLG",  // id 5
         title: "Enceinte Bleutooth",
         price: 41.99,
+        delivryTime: "2 à 3 jours maximum.",
         description: "Cette enceinte Bluetooth est l'accessoire idéal pour profiter de votre musique préférée partout où vous allez. Avec sa connectivité sans fil, vous pouvez facilement diffuser de la musique depuis votre smartphone ou votre tablette, et profiter d'un son clair et puissant grâce à ses haut-parleurs stéréo. Compacte et portable, elle est facile à transporter et peut être utilisée à la maison, au bureau ou en déplacement. Avec sa batterie rechargeable, elle offre une autonomie de plusieurs heures pour vous accompagner tout au long de votre journée. De plus, son design élégant et moderne en fait un accessoire tendance qui se mariera parfaitement avec votre décoration intérieure.",
         imageSrc: "https://www.equip-eps.fr/1282-large_default/enceinte-bluetooth-jbl-xtrem-40w-.jpg",
         image1Src: "https://cdn.lesnumeriques.com/optim/produits/123/27373/jbl-xtreme_b939a7fddb7e3fd0__450_400.jpg",
@@ -66,6 +71,7 @@ const ProdutcsArray = [
         id: "price_1N89SfFrCY7e7e3Noum1aJVI",  // id 6
         title: "Sac ordinateur (homme)",
         price: 39.99,
+        delivryTime: "2 à 3 jours maximum.",
         description: "Ce sac ordinateur allie à la fois style et fonctionnalité. Conçu en tissu gris et en cuir, il est à la fois robuste et élégant. Avec sa capacité de 15 pouces, il peut contenir un ordinateur portable ainsi que d'autres accessoires tels que des documents, des stylos ou des chargeurs. Sa bandoulière réglable assure un port confortable, tandis que ses poches zippées permettent un accès facile aux objets. Que vous alliez au travail, à l'université ou en voyage, ce sac ordinateur sera votre compagnon idéal pour transporter vos affaires en toute sécurité et avec style.",
         imageSrc: "https://e2r-paris.com/4566-product_large/sac-ordinateur-15-pouces-tissu-gris-et-cuir-homme-enzo.jpg",
         image1Src: "https://dreamact-pro.eu/uploads/images/products/12522-sac-ordinateur-homme-15-pouces-alberto-nrb-1.jpg?width=714&height=714&scale=canvas",
@@ -87,6 +93,7 @@ const ProdutcsArray = [
         id: "price_laptops1",   // id 8
         title: "Ordinateur portable Accer",
         price: 489.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Cet ordinateur portable Accer est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://image.darty.com/informatique/ordinateur_portable-portable/portable/acer_a315-34_cel_4_28_s2202237048211A_152429273.png",
         image1Src: "https://media.ldlc.com/bo/images/fiches/pc_portables/acer/vero/acer_travelmate_vero_001.jpg",
@@ -97,6 +104,7 @@ const ProdutcsArray = [
         id: "price_laptops2",  // id 9
         title: "Ordinateur portable Apple",
         price: 793.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Cet ordinateur portable Apple est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://www.cdiscount.com/pdt2/0/9/6/1/350x350/APP3701073099096/rw/pc-portables-reconditionnee-apple-macbook-air-6-2.jpg",
         image1Src: "https://www.macnificos.com/sites/files/styles/post_full/public/macbook-pro-macbook_air_0.jpeg",
@@ -108,6 +116,7 @@ const ProdutcsArray = [
         id: "price_laptops3",   // id 10
         title: "Ordinateur portable Dell",
         price: 488.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Cet ordinateur portable Dell est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/media-gallery/peripherals_laptop_latitude_3420nt_gallery_3.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=573&qlt=100,1&resMode=sharp2&size=573,402&chrss=full",
         image1Src: "https://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/14-3420/global-spi/ng/notebook-latitude-14-3420-campaign-hero-504x350-ng.psd?fmt=jpg&wid=570&hei=400",
@@ -119,6 +128,7 @@ const ProdutcsArray = [
         id: "price_laptops4",  // id 11
         title: "Ordinateur portable hp",
         price: 244.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Cet ordinateur portable HP est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06927622_500x367.jpg",
         image1Src: "https://ivoirelite.net/797-large_default/ordinateur-portable-hp-core-i5-8go-ram-512go-ssd-ecran-156.jpg",
@@ -130,6 +140,7 @@ const ProdutcsArray = [
         id: "price_laptops5",  // id 12
         title: "Ordinateur portable Huawei",
         price: 541.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Cet ordinateur portable Huawei est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://www.leparisien.fr/resizer/O8z-VU6RDsCqpVBl7KI070ddVAY=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/lpguideshopping/CDCTPYPGUVQ4TGF2DSUTWTBIC4.jpg",
         image1Src: "https://duga.ma/4893-large_default/pc-portable-huawei-matebook-d14-a000002916.jpg",
@@ -141,6 +152,7 @@ const ProdutcsArray = [
         id: "price_laptops6",   // id 13
         title: "Ordinateur portable Lenovo",
         price: 539.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Ce sac ordinateur allie à la fois style et fonctionnalité. Conçu en tissu gris et en cuir, il est à la fois robuste et élégant. Avec sa capacité de 15 pouces, il peut contenir un ordinateur portable ainsi que d'autres accessoires tels que des documents, des stylos ou des chargeurs. Sa bandoulière réglable assure un port confortable, tandis que ses poches zippées permettent un accès facile aux objets. Que vous alliez au travail, à l'université ou en voyage, ce sac ordinateur sera votre compagnon idéal pour transporter vos affaires en toute sécurité et avec style.",
         imageSrc: "https://www.cdiscount.com/pdt2/6/4/0/1/350x350/LEN3701126400640/rw/lenovo-thinkpad-t450-i5.jpg",
         image1Src: "https://www.rueducommerce.fr/media/produits/lenovo/img//20a8s1pf00-b-9273527-24224587_1140x1140.jpg",
@@ -155,6 +167,7 @@ const ProdutcsArray = [
         id: "price_phones1",   // id 14
         title: "Samsung A54",
         price: 180.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Ce Samsung A54 est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://images.frandroid.com/wp-content/uploads/2023/03/samsung-galaxy-a54-frandroid-2023.png",
         image1Src: "https://cdn.mos.cms.futurecdn.net/qDd34LdJoX2mJiKgkvCQyN-320-80.jpg",
@@ -165,6 +178,7 @@ const ProdutcsArray = [
         id: "price_phones2",  // id 15
         title: "Apple iphone 12 124Go",
         price: 254.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Ce Apple iphone 12 124 Giga est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://cf.shopee.tw/file/2ba4c52e5b1082f93f0f2d595358ea83",
         image1Src: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-iphone-12-black-2020_AV1?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1635202728000",
@@ -176,6 +190,7 @@ const ProdutcsArray = [
         id: "price_phones3",   // id 16
         title: "Oukitel WP21 256Go",
         price: 358.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Ce Oukitel WP21 256 Go est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://www.powerplanetonline.com/cdnassets/oukitel_wp21_negro_02_ad_l.jpg",
         image1Src: "https://c.aligator.cz/files/Products/product_199/S60_2-1638874054.png",
@@ -187,6 +202,7 @@ const ProdutcsArray = [
         id: "price_phones4",  // id 17
         title: "Wiko sunny3",
         price: 144.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Ce Wiko sunny 3 est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://media1.bazile.fr/3378-thickbox_default/wiko-sunny-3.jpg",
         image1Src: "https://img.phonandroid.com/2017/10/LD0003678908_2.jpg",
@@ -198,6 +214,7 @@ const ProdutcsArray = [
         id: "price_phones5",  // id 18
         title: "Huawei P30 Pro 128 Go",
         price: 541.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Cet ordinateur portable Huawei est l'outil idéal pour les professionnels et les étudiants. Avec son design fin et élégant, il est facilement transportable et vous permet de travailler où que vous soyez. Doté d'un écran de haute qualité, vous pouvez profiter d'une expérience visuelle immersive tout en effectuant vos tâches. Son processeur puissant et sa mémoire RAM rapide vous permettent de travailler sans ralentissement, tandis que son disque dur de grande capacité vous offre suffisamment d'espace de stockage pour tous vos documents et fichiers. De plus, avec sa batterie longue durée, vous pouvez travailler toute la journée sans vous soucier de la recharge. Achetez cet ordinateur portable HP dès maintenant et augmentez votre productivité en déplacement !",
         imageSrc: "https://www.idboox.com/wp-content/uploads/2019/04/Huawei-P30-Pro-4-cameras.jpg",
         image1Src: "https://www.rueducommerce.fr/medias/5486e152bb923f27923fa2b9ee184d40/p_1000x1000/11317712551966.jpg",
@@ -209,6 +226,7 @@ const ProdutcsArray = [
         id: "price_phones6",   // id 19
         title: "Samsung Galaxi S215Go",
         price: 329.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Ce Samsung Galaxi S215Go allie à la fois style et fonctionnalité. Conçu en tissu gris et en cuir, il est à la fois robuste et élégant. Avec sa capacité de 15 pouces, il peut contenir un ordinateur portable ainsi que d'autres accessoires tels que des documents, des stylos ou des chargeurs. Sa bandoulière réglable assure un port confortable, tandis que ses poches zippées permettent un accès facile aux objets. Que vous alliez au travail, à l'université ou en voyage, ce sac ordinateur sera votre compagnon idéal pour transporter vos affaires en toute sécurité et avec style.",
         imageSrc: "https://www.cdiscount.com/pdt2/2/8/v/1/700x700/samgalaxs21128v/rw/samsung-galaxy-s21-128go-violet.jpg",
         image1Src: "https://fr.shopping.rakuten.com/photo/1958774445_L.jpg",
@@ -220,6 +238,7 @@ const ProdutcsArray = [
         id: "price_phones7",   // id 20
         title: "Motorola moto G7 32Gb",
         price: 429.99,
+        delivryTime: "Livraison Express 48h seulement.",
         description: "Ce Motorola moto G7 32Gb allie à la fois style et fonctionnalité. Conçu en tissu gris et en cuir, il est à la fois robuste et élégant. Avec sa capacité de 15 pouces, il peut contenir un ordinateur portable ainsi que d'autres accessoires tels que des documents, des stylos ou des chargeurs. Sa bandoulière réglable assure un port confortable, tandis que ses poches zippées permettent un accès facile aux objets. Que vous alliez au travail, à l'université ou en voyage, ce sac ordinateur sera votre compagnon idéal pour transporter vos affaires en toute sécurité et avec style.",
         imageSrc: "https://http2.mlstatic.com/D_NQ_NP_867764-MLA42074214584_062020-O.webp",
         image1Src: "https://media.solotodo.com/media/products/889773_picture_1551325407.png",
