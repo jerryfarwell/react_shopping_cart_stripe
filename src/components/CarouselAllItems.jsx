@@ -9,7 +9,7 @@ import ProductCard from './ProductCard';
 
 function CarouselAllItems() {
     const settings = {
-        dots: true,
+        //dots: true,
         infinite: true,
         speed: 800,
         autoplay: true,

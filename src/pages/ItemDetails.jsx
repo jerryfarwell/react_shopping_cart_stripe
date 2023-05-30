@@ -92,10 +92,10 @@ function ItemDetails(props) {
            <br/>
           
 
-          <h4>
+          <h5>
             {product.price} €{' '}
-            <img src={delivry} alt='' className='img-delivry' /> Livraison express
-          </h4>
+            <img src={delivry} alt='' className='img-delivry' /><small>Livraison express</small>
+          </h5>
           <Button variant='success' onClick={handleAddToCart} className='btn-addtocart-itemdetails'>Ajouter au panier</Button>
 
 
