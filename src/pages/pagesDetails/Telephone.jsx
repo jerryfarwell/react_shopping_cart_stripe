@@ -3,8 +3,7 @@ import { ProdutcsArray } from '../../productStore'
 import ProductCard from '../../components/ProductCard'
 import { Col, Row } from 'react-bootstrap';
 import '../../assets/stylesheet/Laptop.css'
-import bruno_testimony from '../../assets/images/bruno_testimony.webp'
-import young_black_man from '../../assets/images/young_black_man.jpeg'
+import phone from '../../assets/images/phone.webp'
 
 
 
@@ -25,13 +24,15 @@ function Telephone() {
        </Row>
        <div className='laptop-space'></div>
        <br/>
-        <div className='man_standingRow' >
-        <h6 >Networkeed redéfinit l'excellence en proposant des ordinateurs d'une qualité inégalée, au meilleur rapport qualité-prix du marché.</h6>
-        <p style={{color: "white"}}>Lorsque vous achetez un ordinateur Networkeed, vous bénéficiez de notre garantie satisfaction. Nous sommes tellement confiants dans la qualité et les performances de nos produits que nous offrons une garantie complète de satisfaction. Si vous n'êtes pas entièrement satisfait de votre achat, nous nous engageons à résoudre tous les problèmes et à vous offrir une expérience d'utilisation optimale. Votre satisfaction est notre priorité absolue, car nous croyons fermement en la qualité de nos ordinateurs et en la satisfaction de nos clients.</p>
+        <div className='man_standingRow'>
+        <h6 style={{color: "white"}}>Networkeed redéfinit l'excellence en proposant des ordinateurs d'une qualité inégalée, au meilleur rapport qualité-prix du marché.</h6>
+        <p style={{color: "white"}}>Les téléphones Networkleed se distinguent par leur excellente qualité et leur prix abordable. Conçus avec soin pour répondre aux exigences modernes, ces appareils offrent des performances exceptionnelles sans compromettre votre budget. Que vous souhaitiez un écran clair, une batterie durable ou un appareil photo haute résolution, Networkleed a tout prévu. Leur engagement à proposer des tarifs compétitifs fait de ces téléphones une option attrayante pour ceux qui recherchent une expérience haut de gamme sans se ruiner.</p>
        </div>
-       <img src={young_black_man} alt="" className='young_black_man'/>
+       <img src={phone} alt="" className='young_black_man'/>
        <br/><br/>
        <div className='laptop-space'></div>
+
+
 
 
     </div>

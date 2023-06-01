@@ -46,7 +46,7 @@ function ResetPasswordForm() {
     })
     .catch((err) => {
       console.error(err);
-      setSecondFlashMessage("Aucun compte n'est associé à l'adresse e-mail que vous avez renseignée.");
+      setSecondFlashMessage("Aucun compte n'est associé à cette adresse e-mail.");
     })
     .finally(() => setLoading(false)); // set loading to false after the response is received
   };
@@ -85,7 +85,7 @@ function ResetPasswordForm() {
 
       <br/>
       <Alert variant='secondary'>
-      <p >Pour réinitialiser votre mot de passe, veuillez saisir l'adresse e-mail que vous avez utilisée lors de votre inscription. Nous vous enverrons un lien de réinitialisation à cette adresse e-mail. Veuillez vérifier votre boîte de réception et votre dossier de courrier indésirable si vous ne voyez pas notre e-mail dans votre boîte de réception principale. Cliquez sur le lien fourni pour accéder à la page de réinitialisation de mot de passe et suivez les instructions pour créer un nouveau mot de passe.</p>
+      <p >Veuillez saisir l'adresse e-mail que vous avez utilisée lors de votre inscription.</p>
       </Alert>
     </div>
   );

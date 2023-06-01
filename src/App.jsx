@@ -15,6 +15,10 @@ import NotFoundPage from './pages/NotFoundPage'
 import Footer from './components/Footer'
 import Laptop from './pages/pagesDetails/Laptop'
 import Telephone from './pages/pagesDetails/Telephone'
+import BluetoothSpeaker from './pages/pagesDetails/BluetoothSpeaker'
+import Helmet from './pages/pagesDetails/Helmet'
+import AllArticles from './pages/pagesDetails/AllArticles'
+import ExternalHardDrive from './pages/pagesDetails/ExternalHardDrive'
 
 
 
@@ -43,6 +47,10 @@ function App() {
            <Route path='/new_password/:id' element={<NewPasswordForm/>}/>
            <Route path='/laptops' element={<Laptop/>}/>
            <Route path='/phones' element={<Telephone/>}/>
+           <Route path='/BluetoothSpeaker' element={<BluetoothSpeaker/>} />
+           <Route path='/Helmet' element={<Helmet/>} />
+           <Route path='/AllArticles' element={<AllArticles/>} />
+           <Route path='/ExternalHardDrive' element={<ExternalHardDrive/>} />
            <Route path='*' element={<NotFoundPage />} />
         </Routes>  
       </BrowserRouter>

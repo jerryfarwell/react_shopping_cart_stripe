@@ -255,9 +255,9 @@ const [loading, setLoading] = useState(false);
                 <NavDropdown.Item href="/laptops" className="dropdown-item">Ordinateurs portables</NavDropdown.Item>
                 <NavDropdown.Item href="/phones">Téléphones portables</NavDropdown.Item>
                 {/*<NavDropdown.Item href="#action-1">Souris</NavDropdown.Item>*/}
-                 <NavDropdown.Item href="#action-1">Enceintes Bleutooth</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-1">Casques audio</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-1">Tous les Articles</NavDropdown.Item>
+                 <NavDropdown.Item href="/BluetoothSpeaker">Enceintes Bleutooth</NavDropdown.Item>
+                 <NavDropdown.Item href="/Helmet">Casques audio</NavDropdown.Item>
+                 <NavDropdown.Item href="/AllArticles">Tous les Articles</NavDropdown.Item>
                  {/*<NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>
@@ -279,12 +279,12 @@ const [loading, setLoading] = useState(false);
                 <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                 </NavDropdown>
                  <div className={`dropdown-menu ${showDropdown2 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter2} onMouseLeave={handleDropdownLeave2}>
-                <NavDropdown.Item href="#action-1" className="dropdown-item">Disques durs externes</NavDropdown.Item>
+                <NavDropdown.Item href="/ExternalHardDrive" className="dropdown-item">Disques durs externes</NavDropdown.Item>
                 {/*<NavDropdown.Item href="#action-2">Clés USB</NavDropdown.Item>
                 <NavDropdown.Item href="#action-1">Cartes mémoire</NavDropdown.Item>
               <NavDropdown.Item href="#action-1">SSD (Solide State Drive)</NavDropdown.Item>*/}
                  <NavDropdown.Item href="#action-1">Mémoire RAM</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-1">Tous les Articles</NavDropdown.Item>
+                 <NavDropdown.Item href="/AllArticles">Tous les Articles</NavDropdown.Item>
                  {/*<NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                  </div>
                </Nav>
@@ -308,7 +308,7 @@ const [loading, setLoading] = useState(false);
                  <div className={`dropdown-menu ${showDropdown3 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter3} onMouseLeave={handleDropdownLeave3}>
                  <NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
                  <NavDropdown.Item href="#action-2">Supports pour ordinateur portable</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-1">Tous les Articles</NavDropdown.Item>
+                 <NavDropdown.Item href="/AllArticles">Tous les Articles</NavDropdown.Item>
                  {/*<NavDropdown.Item href="#action-1">Supports pour écran</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Tapis de souris</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Câbles et adaptateurs</NavDropdown.Item>
@@ -347,9 +347,9 @@ const [loading, setLoading] = useState(false);
                 {isLoggedIn ? (
                <Navbar.Collapse className='navdropdown'>
                <DropdownButton
-                     title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} title='Mon profil'/>}
-                      variant="light"
-                      onClick={handleShowFourth}
+                  title={<img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" width={"30px"} title='Mon profil'/>} 
+                   variant="light"
+                   onClick={handleShowFourth} 
                       >
                    {/*<Dropdown.Item href="#action-3" >
                        </Dropdown.Item>*/}

@@ -13,7 +13,7 @@ function CarouselAllItems() {
         infinite: true,
         speed: 800,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [

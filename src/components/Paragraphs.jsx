@@ -1,5 +1,7 @@
 import React from 'react';
 import '../assets/stylesheet/Paragraphs.css';
+import slide_left_and_right from '../assets/images/slide_left_and_right.png';
+
 
 
 function Paragraphs() {
@@ -86,7 +88,7 @@ function Paragraphsix() {
     <div>
         <div className='paragraph'>
         <h5 align="center" className='p-3'> 
-        Trouvez votre produit idéal d'un simple swipe et laissez-vous emporter.</h5>
+        Trouvez votre produit idéal d'un simple swipe <img src={slide_left_and_right} alt="" className='slide_left_and_right'/> et laissez-vous emporter.</h5>
       </div>
     </div>
   )

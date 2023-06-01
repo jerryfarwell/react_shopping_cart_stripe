@@ -13,7 +13,7 @@
 }
 
 .laptop-testyAndPic{
-    background: rgb(160, 145, 79);
+    /*background: rgb(160, 145, 79); */
     padding: 3%;
 }
 
@@ -34,3 +34,21 @@
     width: 100%;
     margin: auto;
 }
+
+.phone_handWords{
+    text-align: center;
+    background: rgb(160, 145, 79);
+    /*background: rgba(11, 80, 112, 0.719); */
+    color: white;
+    padding: 3%;
+    }
+
+    
+    .img-phoneHand{
+        margin: auto;
+        width: 50%;
+    }
+
+
+
+

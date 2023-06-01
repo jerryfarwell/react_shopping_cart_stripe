@@ -40,12 +40,3 @@ padding: 3%;
     color: white;
   }
   
-  .slide_left_and_right{
-    width: 10%;
-}
-
-.div_slide_left_and_right{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}

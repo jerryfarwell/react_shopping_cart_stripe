@@ -10,7 +10,6 @@ import black_jeune_femme_pc from '../assets/images/black_jeune_femme_pc.jpeg';
 import femme_disque_dur from '../assets/images/femme_disque_dur.jpeg';
 import sitted_black_manpc from '../assets/images/sitted_black_manpc.png';
 import phone_hand from '../assets/images/phone_hand.png';
-import slide_left_and_right from '../assets/images/slide_left_and_right.png';
 import CarouselAllItems from '../components/CarouselAllItems'
 
 
@@ -50,11 +49,6 @@ const Store = () => {
         <br/>
         <Paragraphsix/>
         <CarouselAllItems/>
-        <br/>
-        <div className='div_slide_left_and_right'>
-          <small>swipe auto et manuel</small>
-        <img src={slide_left_and_right} alt="" className='slide_left_and_right'/>
-        </div>
        <br/><br/>
         <div className='phone_handWords'>
        <h5 >Ne laissez pas passer cette opportunité ! Saisissez votre chance avec les téléphones de Networkleed.</h5>

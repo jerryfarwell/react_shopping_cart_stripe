@@ -5,6 +5,8 @@ import '../../assets/stylesheet/Laptop.css'
 import bruno_testimony from '../../assets/images/bruno_testimony.webp'
 import young_black_man from '../../assets/images/young_black_man.jpeg'
 import { Col, Row } from 'react-bootstrap';
+import phone_hand from '../../assets/images/phone_hand.png';
+
 
 function Laptop() {
 
@@ -15,7 +17,7 @@ function Laptop() {
         <div className='laptop-testyAndPic'>
         <div className='laptop-topTextTwo'>
         <img src={bruno_testimony} alt="" className='img-fluid rounded-pill'style={{width: "10rem", height: "10rem"}}/>
-         <span >Bruno</span>
+         <span >Bruno</span> 
         </div>
         <br/>
          <div className='words_first'>
@@ -33,7 +35,17 @@ function Laptop() {
          
        </Row>
        <div className='laptop-space'></div>
-       <br/>
+       <br/><br/>
+        <div className='phone_handWords'>
+       <h5 >Ne laissez pas passer cette opportunité ! Saisissez votre chance avec les téléphones de Networkleed.</h5>
+        <p >Nous vous offrons une sélection exceptionnelle de téléphones haut de gamme, conçus pour répondre à tous vos besoins.</p>
+        <a href="/phones" className="button">Nos téléphones</a>
+        <br/><br/>
+        <img src={phone_hand} alt="" className='img-phoneHand'/>
+       </div>
+       <br/><br/>
+
+
         <div className='man_standingRow' >
         <h6 >Networkeed redéfinit l'excellence en proposant des ordinateurs d'une qualité inégalée, au meilleur rapport qualité-prix du marché.</h6>
         <p style={{color: "white"}}>Lorsque vous achetez un ordinateur Networkeed, vous bénéficiez de notre garantie satisfaction. Nous sommes tellement confiants dans la qualité et les performances de nos produits que nous offrons une garantie complète de satisfaction. Si vous n'êtes pas entièrement satisfait de votre achat, nous nous engageons à résoudre tous les problèmes et à vous offrir une expérience d'utilisation optimale. Votre satisfaction est notre priorité absolue, car nous croyons fermement en la qualité de nos ordinateurs et en la satisfaction de nos clients.</p>
