@@ -6,7 +6,7 @@ import { Col, Row } from 'react-bootstrap';
 
 function ExternalHardDrive() {
 
-    const filteredPhones = ProdutcsArray.slice(35, 41);
+    const filteredPhones = ProdutcsArray.slice(34, 41);  // this will show from id 34 to id 40
 
   return (
     <div>

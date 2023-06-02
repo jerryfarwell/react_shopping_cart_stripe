@@ -6,7 +6,7 @@ import { Col, Row } from 'react-bootstrap';
 
 function Helmet() {
 
-    const filteredPhones = ProdutcsArray.slice(28, 34);
+    const filteredPhones = ProdutcsArray.slice(27, 34);
 
   return (
     <div>

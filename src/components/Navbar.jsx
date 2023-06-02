@@ -306,8 +306,8 @@ const [loading, setLoading] = useState(false);
                 <NavDropdown.Item href="#action-3">Encre d'imprimantes</NavDropdown.Item>*/}
                 </NavDropdown>
                  <div className={`dropdown-menu ${showDropdown3 ? 'show' : ''}`} onMouseEnter={handleDropdownEnter3} onMouseLeave={handleDropdownLeave3}>
-                 <NavDropdown.Item href="#action-1" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
-                 <NavDropdown.Item href="#action-2">Supports pour ordinateur portable</NavDropdown.Item>
+                 <NavDropdown.Item href="/LaptopBag" className="dropdown-item">Sacoches pour ordinateur portable</NavDropdown.Item>
+                 <NavDropdown.Item href="/LaptopBackBag">Sac à dos pour ordinateur portable</NavDropdown.Item>
                  <NavDropdown.Item href="/AllArticles">Tous les Articles</NavDropdown.Item>
                  {/*<NavDropdown.Item href="#action-1">Supports pour écran</NavDropdown.Item>
                  <NavDropdown.Item href="#action-1">Tapis de souris</NavDropdown.Item>

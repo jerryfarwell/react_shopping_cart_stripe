@@ -8,7 +8,7 @@ import phone from '../../assets/images/phone.webp'
 
 
 function Telephone() {
-    const filteredPhones = ProdutcsArray.slice(14, 20);
+    const filteredPhones = ProdutcsArray.slice(13, 20);  // this will show form 13 to 19
 
   return (
     <div>

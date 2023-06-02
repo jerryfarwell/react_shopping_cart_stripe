@@ -1,15 +1,18 @@
-import React from 'react'
+import React from 'react' 
 import { ProdutcsArray } from '../../productStore'
 import ProductCard from '../../components/ProductCard'
 import { Col, Row } from 'react-bootstrap';
 
 
-function BluetoothSpeaker() {
+function LaptopBackBag() {
 
-    const filteredPhones = ProdutcsArray.slice(20, 27);
+    const filteredPhones = ProdutcsArray.slice(46, 52);
 
-    return (
+
+
+  return (
     <div>
+
         <Row xs={1} md={3} className='g-4'>
         {
             filteredPhones.map((product, idx) => (
@@ -20,9 +23,8 @@ function BluetoothSpeaker() {
         }    
        </Row>
 
-
     </div>
   )
 }
 
-export default BluetoothSpeaker
+export default LaptopBackBag

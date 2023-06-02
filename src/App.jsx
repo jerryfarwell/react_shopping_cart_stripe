@@ -19,6 +19,8 @@ import BluetoothSpeaker from './pages/pagesDetails/BluetoothSpeaker'
 import Helmet from './pages/pagesDetails/Helmet'
 import AllArticles from './pages/pagesDetails/AllArticles'
 import ExternalHardDrive from './pages/pagesDetails/ExternalHardDrive'
+import LaptopBag from './pages/pagesDetails/LaptopBag'
+import LaptopBackBag from './pages/pagesDetails/LaptopBackBag'
 
 
 
@@ -51,6 +53,8 @@ function App() {
            <Route path='/Helmet' element={<Helmet/>} />
            <Route path='/AllArticles' element={<AllArticles/>} />
            <Route path='/ExternalHardDrive' element={<ExternalHardDrive/>} />
+           <Route path='/LaptopBag' element={<LaptopBag/>} />
+           <Route path='/LaptopBackBag' element={<LaptopBackBag/>} />
            <Route path='*' element={<NotFoundPage />} />
         </Routes>  
       </BrowserRouter>

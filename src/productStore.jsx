@@ -9,7 +9,7 @@ const ProdutcsArray = [
 
     // most bought 
     {
-        id: "price_1N89G6FrCY7e7e3NGWzB3bTI",  // id 1
+        id: "price_1N89G6FrCY7e7e3NGWzB3bTI",  // id 0    the first object is id 0 
         title: "Souris",
         price: 24.99,
         delivryTime: "2 à 3 jours maximum.",
@@ -20,7 +20,7 @@ const ProdutcsArray = [
         image3Src: "https://images.unsplash.com/photo-1544624181-624a42c38faa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
     {
-        id: "price_1MtvSbFrCY7e7e3NGMMEhPv6",  // id 2
+        id: "price_1MtvSbFrCY7e7e3NGMMEhPv6",  // id 1
         title: "Encre hp 302",
         price: 9.99,
         delivryTime: "2 à 3 jours maximum.",
@@ -32,7 +32,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_1N89MeFrCY7e7e3NuIMjaOoA",  // id 3
+        id: "price_1N89MeFrCY7e7e3NuIMjaOoA",  // id 2
         title: "Tablette samsung",
         price: 139.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -44,7 +44,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_1N89PhFrCY7e7e3NX5XJJz0A",  // id 4
+        id: "price_1N89PhFrCY7e7e3NX5XJJz0A",  // id 3
         title: "Ordinateur portable hp",
         price: 244.99,
         delivryTime: "Livraison Express 24h à 48h maximum.", 
@@ -56,7 +56,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_1N89RCFrCY7e7e3NoZM80yLG",  // id 5
+        id: "price_1N89RCFrCY7e7e3NoZM80yLG",  // id 4
         title: "Enceinte Bleutooth",
         price: 41.99,
         delivryTime: "2 à 3 jours maximum.",
@@ -68,7 +68,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_1N89SfFrCY7e7e3Noum1aJVI",  // id 6
+        id: "price_1N89SfFrCY7e7e3Noum1aJVI",  // id 5
         title: "Sac ordinateur (homme)",
         price: 39.99,
         delivryTime: "2 à 3 jours maximum.",
@@ -80,17 +80,20 @@ const ProdutcsArray = [
 
     },
     {
-        id: "fake_xxxxxxxxxxx",       // id 7
+        id: "fake_xxxxxxxxxxx",       // id 6
         title: "Livraison Express (24h)",
         price: 17.99,
         imageSrc: "https://e2r-paris.com/4566-product_large/sac-ordinateur-15-pouces-tissu-gris-et-cuir-homme-enzo.jpg",
     },
 
-    // laptops  from id 8------------------------------------------------------------------------------
+
+
+
+    // laptops  from id 7------------------------------------------------------------------------------
 
     
     {
-        id: "price_laptops1",   // id 8
+        id: "price_laptops1",   // id 7  
         title: "Ordinateur portable Accer",
         price: 489.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -101,7 +104,7 @@ const ProdutcsArray = [
         image3Src: "https://media.materiel.net/r900/products/MN0005473242_1.jpg",
     },
     {
-        id: "price_laptops2",  // id 9
+        id: "price_laptops2",  // id 8
         title: "Ordinateur portable Apple",
         price: 793.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -113,7 +116,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_laptops3",   // id 10
+        id: "price_laptops3",   // id 9
         title: "Ordinateur portable Dell",
         price: 488.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -125,7 +128,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_1N89PhFrCY7e7e3NX5XJJz0A",  // id 11
+        id: "price_1N89PhFrCY7e7e3NX5XJJz0A",  // id 10
         title: "Ordinateur portable hp",
         price: 244.99,
         delivryTime: "Livraison Express 24h à 48h maximum.", 
@@ -137,7 +140,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_laptops5",  // id 12
+        id: "price_laptops5",  // id 11
         title: "Ordinateur portable Huawei",
         price: 541.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -149,7 +152,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_laptops6",   // id 13
+        id: "price_laptops6",   // id 12
         title: "Ordinateur portable Lenovo",
         price: 539.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -164,7 +167,7 @@ const ProdutcsArray = [
 
     //----------------------------------------phones --------------------------------------------------------------
     {
-        id: "price_phones1",   // id 14
+        id: "price_phones1",   // id 13
         title: "Samsung A54",
         price: 180.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -175,7 +178,7 @@ const ProdutcsArray = [
         image3Src: "https://www.trustedreviews.com/wp-content/uploads/sites/54/2023/03/Samsung-Galaxy-A54-14-1024x580.jpg",
     },
     {
-        id: "price_phones2",  // id 15
+        id: "price_phones2",  // id 14
         title: "Apple iphone 12 124Go",
         price: 254.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -187,7 +190,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_phones3",   // id 16
+        id: "price_phones3",   // id 15
         title: "Oukitel WP21 256Go",
         price: 358.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -199,7 +202,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_phones4",  // id 17
+        id: "price_phones4",  // id 16
         title: "Wiko sunny3",
         price: 144.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -211,7 +214,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_phones5",  // id 18
+        id: "price_phones5",  // id 17
         title: "Huawei P30 Pro 128 Go",
         price: 541.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -223,7 +226,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_phones6",   // id 19
+        id: "price_phones6",   // id 18
         title: "Samsung Galaxi S215Go",
         price: 329.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -235,7 +238,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_phones7",   // id 20
+        id: "price_phones7",   // id 19
         title: "Motorola moto G7 32Gb",
         price: 429.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -259,7 +262,7 @@ const ProdutcsArray = [
     //----Enceinte bleutooth-----------------------------------------------------------------------------------------
     
     {
-        id: "price_1N89RCFrCY7e7e3NoZM80yLG",  // id 21
+        id: "price_1N89RCFrCY7e7e3NoZM80yLG",  // id 20
         title: "Enceinte Bleutooth JBL",
         price: 41.99,
         delivryTime: "2 à 3 jours maximum.",
@@ -271,7 +274,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_enceinte_bleutooth2",  // id 22
+        id: "price_enceinte_bleutooth2",  // id 21
         title: "Enceinte Bleutooth Marshall",
         price: 154.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -283,7 +286,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_enceinte_bleutooth3",   // id 23
+        id: "price_enceinte_bleutooth3",   // id 22
         title: "Enceinte Bleutooth Marley",
         price: 94.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -295,7 +298,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_enceinte_bleutooth4",  // id 24
+        id: "price_enceinte_bleutooth4",  // id 23
         title: "Enceinte Bleutooth JBL",
         price: 44.99,
         delivryTime: "2 à 3 jours maximum.",
@@ -307,7 +310,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_enceinte_bleutooth5",  // id 25
+        id: "price_enceinte_bleutooth5",  // id 24
         title: "Enceinte Bleutooth JBL",
         price: 441.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -319,7 +322,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_enceinte_bleutooth6",   // id 26
+        id: "price_enceinte_bleutooth6",   // id 25
         title: "Enceinte Bleutooth Luxe",
         price: 129.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -331,7 +334,7 @@ const ProdutcsArray = [
 
     },
     {
-        id: "price_enceinte_bleutooth7",   // id 27
+        id: "price_enceinte_bleutooth7",   // id 26
         title: "Enceinte Bleutooth Chargeur",
         price: 159.99,
         delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -357,7 +360,7 @@ const ProdutcsArray = [
 
        
    {
-    id: "price_casque_audio1",  // id 28
+    id: "price_casque_audio1",  // id 27
     title: "Casque Audio SONY",
     price: 64.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -369,7 +372,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_casque_audio2",  // id 29
+    id: "price_casque_audio2",  // id 28
     title: "Casque Audio GOBRO",
     price: 54.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -381,7 +384,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_casque_audio3",   // id 30
+    id: "price_casque_audio3",   // id 29
     title: "Casque Audio JAM",
     price: 94.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -393,7 +396,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_casque_audio4",  // id 31
+    id: "price_casque_audio4",  // id 30
     title: "Casque Audio BAMBU",
     price: 44.99,
     delivryTime: "2 à 3 jours maximum.",
@@ -405,7 +408,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_casque_audio5",  // id 32
+    id: "price_casque_audio5",  // id 31
     title: "Casque Audio Pour enfant",
     price: 441.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -417,7 +420,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_casque_audio6",   // id 33
+    id: "price_casque_audio6",   // id 32
     title: "Casque Audio BOSE",
     price: 129.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -429,7 +432,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_casque_audio7",   // id 34
+    id: "price_casque_audio7",   // id 33
     title: "Casque Audio HI-FI",
     price: 159.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -452,7 +455,7 @@ const ProdutcsArray = [
    //----Disque dur extern -----------------------------------------------------------------------------------------------------------------
 
    {
-    id: "price_disque_dur_extern1",  // id 35
+    id: "price_disque_dur_extern1",  // id 34
     title: "Disque dur externe INTENSO",
     price: 64.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -464,7 +467,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_disque_dur_extern2",  // id 36
+    id: "price_disque_dur_extern2",  // id 35
     title: "Disque dur externe SAMSUNG",
     price: 54.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -476,7 +479,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_disque_dur_extern3",   // id 37
+    id: "price_disque_dur_extern3",   // id 36
     title: "Disque dur externe SANDISK",
     price: 94.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -488,7 +491,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_disque_dur_extern4",  // id 38
+    id: "price_disque_dur_extern4",  // id 37
     title: "Disque dur externe TOSHIBA",
     price: 44.99,
     delivryTime: "2 à 3 jours maximum.",
@@ -500,7 +503,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_disque_dur_extern5",  // id 39
+    id: "price_disque_dur_extern5",  // id 38
     title: "Disque dur externe ADATA",
     price: 141.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -512,7 +515,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_disque_dur_extern6",   // id 40
+    id: "price_disque_dur_extern6",   // id 39
     title: "Disque dur externe SSD",
     price: 129.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -524,7 +527,7 @@ const ProdutcsArray = [
 
 },
 {
-    id: "price_disque_dur_extern7",   // id 41
+    id: "price_disque_dur_extern7",   // id 40
     title: "Disque dur externe HUAWEI",
     price: 89.99,
     delivryTime: "Livraison Express 24h à 48h maximum.",
@@ -537,6 +540,166 @@ const ProdutcsArray = [
 
 
    // --- End of Disque dur externe---------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+   //----- Sacoches pour ordinateur portable ------------------------------------------------------------------------------------------------------------
+    
+
+{
+    id: "price_sacoche_pc3",   // id 41    
+    title: "Sacoche pc QILIVE",
+    price: 54.99,
+    delivryTime: "Livraison Express 24h à 48h maximum.",
+    description: "Cette sacoche pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://www.cdiscount.com/pdt2/7/4/1/1/400x400/AIH9170352122741/rw/sacoche-etanche-pour-ordinateur-portable-pour-mac.jpg",
+    image1Src: "https://media.auchan.fr/39c0d3b4-2c54-48cd-a7a2-2dcd727e5a4b_1200x1200/B2CD/",
+    image2Src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJotHXHbcKTWpwh-wsib81JHOEZyPIDjQMYs_Yc5C4lMqIGAcrSBN9fatr1YfxqFH_Cbs&usqp=CAU",        
+    image3Src: "https://www.mies.ma/6208-home_default/sacoche-lenovo-t210-pour-ordinateurs-portables-156-gx40q17229.jpg",
+
+},
+{
+    id: "price_sacoche_pc4",  // id 42
+    title: "Sacoche pc HP",
+    price: 44.99,
+    delivryTime: "2 à 3 jours maximum.",
+    description: "Cette sacoche pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://medias3-1.ubaldi.com/visuels/5382245/MA14CA52SACOP6AJR-44d899a31d-43-nw.jpg",
+    image1Src: "https://www.hp.com/ca-en/shop/Html/Merch/Images/c07956158_500x367.jpg",
+    image2Src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7x2xLjOYnTp8TQpbMfIonQfkC1m3lKE4BMYdXjquFDEtHbz6YBPGllE36w0_bRyZEbhw&usqp=CAU",        
+    image3Src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTnESMUwSqmkgSzOtFi00n5hHiOdD-pozQ2brb9ZltM1967rDnLYlus0laROOznNm3QG4&usqp=CAU",
+
+},
+{
+    id: "price_sacoche_pc5",  // id 43
+    title: "Sacoche pc OMNPACK",
+    price: 41.99,
+    delivryTime: "Livraison Express 24h à 48h maximum.",
+    description: "Cette sacoche pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://m.media-amazon.com/images/I/7144NHRURcL._AC_UF1000,1000_QL80_.jpg",
+    image1Src: "https://images-eu.ssl-images-amazon.com/images/I/71JbxrTz1aL._AC_UL200_SR200,200_.jpg",
+    image2Src: "https://m.media-amazon.com/images/I/51qUjD7%2BdxL._AC_SY200_QL15_.jpg",        
+    image3Src: "https://m.media-amazon.com/images/I/41bLD3ZLa6L._AC_SY580_.jpg",
+
+},
+{
+    id: "price_sacoche_pc6",   // id 44
+    title: "Sacoche pc LOVE",
+    price: 59.99,
+    delivryTime: "Livraison Express 24h à 48h maximum.",
+    description: "Cette sacoche pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://res.cloudinary.com/subtel/image/upload/h_1000/q_auto,f_auto/v2hifbxrmgjy774mml9j.jpg",
+    image1Src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSykKKToFikVhcrpBWISQ9GmDlcAPwmAEQkbbLU3PqRgc7VsJm01P2zssbJcpRB0IX3lo4&usqp=CAU",        
+    image2Src: "https://www.rueducommerce.fr/medias/f2ce170e9f023312b7157024edbad3da/p_1000x1000/sacoche-ordinateur-portable-15-housse-macbook-pro-anti-poussiere-rose.jpg",        
+    image3Src: "https://www.rueducommerce.fr/media/produits/shot/img//pochette-avec-poignee-13-pour-macbook-air-protection-sacoche-housse-ordinateur-pc-portable-13-pouces-gris-8521869-21652937_1140x1140.jpg",
+
+},
+{
+    id: "price_sacoche_pc7",   // id 45
+    title: "Sacoche pc INESEON",
+    price: 89.99,
+    delivryTime: "Livraison Express 24h à 48h maximum.",
+    description: "Cette sacoche pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://m.media-amazon.com/images/I/91l1KSe6luL._AC_UF1000,1000_QL80_.jpg",
+    image1Src: "https://ae01.alicdn.com/kf/U67ed21dfc2df4104bfdd88b8d35e7b22K/Sacoche-pour-ordinateur-portable-d-affaires-de-Style-r-tro-pour-MacBook-Air-Pro-13-15.jpg_Q90.jpg_.webp",
+    image2Src: "https://ae04.alicdn.com/kf/U8210871689314df4bdc02b689048b99dX.jpg",        
+    image3Src: "https://ae01.alicdn.com/kf/U708ed1d18b1c412c94ca45dba45bd357R/Sacoche-pour-ordinateur-portable-d-affaires-de-Style-r-tro-pour-MacBook-Air-Pro-13-15.jpg",
+},
+
+
+   // ----- End of Sacoches pour ordinateur portable -----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+   //------ Sac à dos pour ordinateur portable --------------------------------------------------------------------------------------------------------------
+
+
+
+   {
+    id: "price_sacados_pc1",   // id 46   
+    title: "Sac à Dos pc CASELOGIC",
+    price: 59.99,
+    delivryTime: "Livraison Express 24h à 48h maximum.",
+    description: "Ce Sac à Dos pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://media.materiel.net/r550/oproducts/AR201012160021_g1.jpg",
+    image1Src: "https://promo-gift.eu/47712-large_default/sac-a-dos-pour-ordinateur-16.jpg",
+    image2Src: "https://media.materiel.net/r900/oproducts/AR201012160021_g3_0005139769.jpg",        
+    image3Src: "https://media.materiel.net/r900/oproducts/AR201012160021_g4_0005139770.jpg",
+
+},
+{
+    id: "price_sacados_pc2",  // id 47
+    title: "Sac à Dos pc WATERPROOF",
+    price: 42.99,
+    delivryTime: "2 à 3 jours maximum.",
+    description: "Ce Sac à Dos pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://cdn.shopify.com/s/files/1/0258/1358/1909/products/sac-a-dos-ordinateur-waterproof-384_800x.jpg?v=1623071467",
+    image1Src: "https://m.media-amazon.com/images/I/41rO-SvG5kL._SS200_.jpg",
+    image2Src: "https://m.media-amazon.com/images/I/419GtaTkiDL._AC_UF1000,1000_QL80_.jpg",        
+    image3Src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgOiXLt4MHCbaUSjdnOSCCQjdJpLTreqQBlSOcpMIX7DrzqRWqtUdB61iWV_g8-2FdBnI&usqp=CAU",
+
+},
+{
+    id: "price_sacados_pc3",  // id 48
+    title: "Sac à Dos pc LOOKS",
+    price: 47.99,
+    delivryTime: "Livraison Express 24h à 48h maximum.",
+    description: "Ce Sac à Dos pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://cache.natureetdecouvertes.com/Medias/Images/Articles/52147960/sac-dos-ordinateur-portable-52147960_4.jpg",
+    image1Src: "https://static.fnac-static.com/multimedia/Images/FR/MDM/bf/5c/b8/12082367/1520-1/tsp20220806151445/Sac-a-dos-ordinateur-portable.jpg",
+    image2Src: "https://static.fnac-static.com/multimedia/Images/FR/MDM/bf/5c/b8/12082367/1520-3/tsp20220806151445/Sac-a-dos-ordinateur-portable.jpg",        
+    image3Src: "https://cache.natureetdecouvertes.com/Medias/Images/Articles/52147960/52147960-sac-dos-ordinateur-portable_P1.jpg",
+
+},
+{
+    id: "price_sacados_pc4",   // id 49
+    title: "Sac à Dos pc CUIR",
+    price: 159.99,
+    delivryTime: "Livraison Express 24h à 48h maximum.",
+    description: "Ce Sac à Dos pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://fossil.scene7.com/is/image/FossilPartners/ZB1325200_4?$sfcc_fos_large$",
+    image1Src: "https://fossil.scene7.com/is/image/FossilPartners/ZB1325200_9L?$sfcc_lifestyle_large$",        
+    image2Src: "https://media.karousell.com/media/photos/products/2022/1/12/fossil_tess_backpack_1641990228_d4b2dd2f_progressive.jpg",        
+    image3Src: "https://fossil.scene7.com/is/image/FossilPartners/ZB1325001_main?$sfcc_fos_large$",
+
+},
+{
+    id: "price_sacados_pc5",   // id 50
+    title: "Sac à Dos pc ANTIVOL",
+    price: 89.99,
+    delivryTime: "Livraison Express 24h à 48h maximum.",
+    description: "Ce Sac à Dos pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+    imageSrc: "https://media.cdnws.com/_i/137922/3019/2645/19/sac-dos-pour-ordinateur-portable-17-pouces-15-6-pouces-anti-vol-pour-hommes-et-femmes.jpeg",
+    image1Src: "https://m.media-amazon.com/images/I/A1galXBNqhL._AC_SX385_.jpg",
+    image2Src: "https://www.tunisianet.com.tn/143183-large/sac-a-dos-pour-pc-portable-156-lenovo-b210-gris.jpg",        
+    image3Src: "https://www.tunisianet.com.tn/143190-large/sac-a-dos-pour-pc-portable-156-lenovo-b210-noir.jpg",
+},
+{
+id: "price_sacados_pc6",   // id 51
+title: "Sac à Dos pc KINGSTON",
+price: 62.99,
+delivryTime: "Livraison Express 24h à 48h maximum.",
+description: "Ce Sac à Dos pour PC est l'accessoire idéal pour transporter votre ordinateur portable en toute sécurité et avec style. Avec son design élégant et fonctionnel, elle offre une protection optimale pour votre appareil, en le préservant des chocs, des rayures et des éraflures. Dotée de compartiments rembourrés et ajustables, elle peut accueillir des ordinateurs portables de différentes tailles, ainsi que vos accessoires essentiels tels que votre chargeur, votre souris et vos câbles. La sacoche est également équipée de poches supplémentaires pour ranger vos documents, votre téléphone portable et d'autres petits objets indispensables. Son matériau résistant à l'eau assure une protection supplémentaire contre les intempéries. Que vous soyez un professionnel en déplacement ou un étudiant se rendant en classe, cette sacoche PC offre un mélange parfait de fonctionnalité et de style pour répondre à tous vos besoins de transport.",
+imageSrc: "https://media.cdnws.com/_i/59654/1679/323/80/kingsons-sacs-dos-13-15-17-pouces-ordinateur-portable-sac-dos-usb-chargeur-sac-antivol-sac.jpeg",
+image1Src: "https://www.dhresource.com/0x0/f2/albu/g20/M01/A6/A9/rBNaOGEImpuABingAACnU2azpYo589.jpg",
+image2Src: "https://ae01.alicdn.com/kf/H6ab4dddc53364169b0da4205b750e3e7S/KINGSONS-sac-dos-pour-ordinateur-portable-de-bonne-qualit-pour-hommes-et-femmes-la-mode-Business.jpg",        
+image3Src: "https://ae01.alicdn.com/kf/HTB1EtJPXZTxK1Rjy0Fgq6yovpXam/Kingsons-13-pouce-Externe-USB-De-Charge-Ordinateur-Portable-Sac-Dos-pour-Ordinateur-Sac-Femmes-Portable.jpg",
+},
+
+
+
+
+//--------- End of Sac à dos pour ordinateur portable -------------------------------------------------------------------------------------------------------
+ 
+
+
 
 
 ]

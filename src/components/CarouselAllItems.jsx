@@ -43,7 +43,7 @@ function CarouselAllItems() {
         ],
       };
 
-    const filteredProducts = ProdutcsArray.slice(8, 20);  // this will show items from id 8 to id 20  this is actually the easiest when you want to display particular items
+    const filteredProducts = ProdutcsArray.slice(7, 51);  // this will show items from id 8 to id 20  this is actually the easiest when you want to display particular items
 
   return (
     <div>

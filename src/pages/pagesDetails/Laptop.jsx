@@ -10,7 +10,7 @@ import phone_hand from '../../assets/images/phone_hand.png';
 
 function Laptop() {
 
-    const filteredLaptops = ProdutcsArray.slice(8, 13);
+    const filteredLaptops = ProdutcsArray.slice(7, 13);   // this will show from id 7 to id 12 
 
   return (
     <div>

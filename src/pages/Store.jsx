@@ -18,8 +18,8 @@ const Store = () => {
 
   //const filteredProducts = ProdutcsArray.filter(product => product.id !== "fake_xxxxxxxxxxx"); // this will remove a specific product with this id
   // const filteredProducts = ProdutcsArray.slice(5);  // this will remove the five first products in productStore     ProdutcsArray.slice(-5); will remove the fOURTH first one
-  const filteredProducts = ProdutcsArray.slice(0, 6);  // this will show items from id 1 to id 6  this is actually the easiest when you want to display particular items
-  const filteredThreeMostSold = ProdutcsArray.slice(8, 11);
+  const filteredProducts = ProdutcsArray.slice(0, 6);  // this will show items from id 0 to id 5  this is actually the easiest when you want to display particular items
+  const filteredThreeMostSold = ProdutcsArray.slice(8, 11);   // this will show items from id 8 to id 10 
 
   return (
     <div>
