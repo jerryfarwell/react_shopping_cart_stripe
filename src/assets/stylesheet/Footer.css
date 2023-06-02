@@ -15,13 +15,6 @@
     width: 40px;
 }
 
-.socialmedia-icon{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 50px;
-}
 
 .creditcard{
     width: 70px;

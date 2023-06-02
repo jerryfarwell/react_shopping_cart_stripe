@@ -1,25 +1,21 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import '../assets/stylesheet/Footer.css'
-import facebook from '../assets/images/facebook.png'
-import instagram from '../assets/images/instagram.png'
-import twitter from '../assets/images/twitter.png'
 import logo from '../assets/images/logo.png'
 import delivery_after_footer from '../assets/images/delivery_after_footer.png'
 import creditcard from '../assets/images/creditcard.png'
+import SocialmediaIcons from './SocialmediaIcons'
 
 
 function Footer() {
   return (
     <div>
+      <div>
+        <SocialmediaIcons/>
+      </div>
        <div className='footer'>
             <br/>
             <br/>
-            <div className='socialmedia-icon'>
-            <img src={facebook} alt="" className='logo-footer'/>
-            <img src={instagram} alt="" className='logo-footer'/>
-            <img src={twitter} alt="" className='logo-footer'/>
-            </div>
           <Row className='row-footer'>
             <Col>
               <h6>À propos </h6>
