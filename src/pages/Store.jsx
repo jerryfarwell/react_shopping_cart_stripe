@@ -12,6 +12,7 @@ import sitted_black_manpc from '../assets/images/sitted_black_manpc.png';
 import phone_hand from '../assets/images/phone_hand.png';
 import CarouselAllItems from '../components/CarouselAllItems'
 import Testimonials from '../components/Testimonials'
+import { ButtonHoverSecond, ButtonHoverThird } from '../components/ButtonHover'
 
 
 
@@ -42,19 +43,19 @@ const Store = () => {
         <br/>
         <Paragraphsecond/>
         <img src={jeune_femme_pc} alt="" className='img-womanpc'/>
-        <br/>
-        <br/>
+        <br/><br/>
+        <Testimonials/>
+        <br/><br/>
         <Paragraphthird/>
         <img src={black_jeune_femme_pc} alt="" className='img-womanpc'/>
-        <br/>
-        <br/>
+        <br/><br/>
         <Paragraphsix/>
         <CarouselAllItems/>
        <br/><br/>
         <div className='phone_handWords'>
        <h5 >Ne laissez pas passer cette opportunité ! Saisissez votre chance avec les téléphones de Networkleed.</h5>
         <p >Nous vous offrons une sélection exceptionnelle de téléphones haut de gamme, conçus pour répondre à tous vos besoins.</p>
-        <a href="/phones" className="button">Nos téléphones</a>
+        <a href='/phones' style={{textDecoration: "none"}}><ButtonHoverSecond/></a>
         <br/><br/>
         <img src={phone_hand} alt="" className='img-phoneHand'/>
        </div>
@@ -75,13 +76,12 @@ const Store = () => {
         <br/><br/>
        <div className='phone_handWords'>
        <h5>Transformez votre productivité et libérez votre créativité avec nos ordinateurs de pointe, conçus pour inspirer des performances extraordinaires.</h5>
-       <a href="/laptops" className="button">Nos Ordinateurs</a>
+       <a href='/laptops' style={{textDecoration: "none"}}><ButtonHoverThird/></a>
         <br/><br/>
        <img src={sitted_black_manpc} alt="" className='img-phoneHand'/>
        </div>
        <br/><br/>
 
-       <Testimonials/>
 
 
 

@@ -1,0 +1,178 @@
+.containerB{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: transparent;
+}
+
+.containerB button{
+    height:50px;
+    width:200px;
+    background-color:#6C5F5F;
+    border:none;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    font-size:15px;
+    border-radius:3px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.containerB button span{
+  
+    z-index:10;
+    
+}
+
+.containerB button:hover:after{
+    position:absolute;
+    content:'';
+    border-radius:1px;
+    background-color:blue;
+    height:400px;
+    width:400px;
+    top:-12px;
+    left:-13px;
+
+  
+}
+
+.containerB button:after{
+    position:absolute;
+    content:'';
+    border-radius:30% 70% 70% 30% / 30% 22% 78% 70%;
+    background-color:blue;
+    height:70px;
+    width:80px;
+    top:-12px;
+    left:-13px;
+    transition:all 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+.containerBsecond{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: transparent;
+}
+
+.containerBsecond button{
+    height:50px;
+    width:200px;
+    background-color: black;
+    border:none;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    font-size:15px;
+    border-radius:3px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.containerBsecond button span{
+  
+    z-index:10;
+    
+}
+
+.containerBsecond button:hover:after{
+    position:absolute;
+    content:'';
+    border-radius:1px;
+    background-color: red;
+    height:400px;
+    width:400px;
+    top:-12px;
+    left:-13px;
+
+  
+}
+
+.containerBsecond button:after{
+    position:absolute;
+    content:'';
+    border-radius:30% 70% 70% 30% / 30% 22% 78% 70%;
+    background-color: red;
+    height:70px;
+    width:80px;
+    top:-12px;
+    left:-13px;
+    transition:all 1s;
+}
+
+
+
+
+
+
+
+
+.containerBthird{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: transparent;
+}
+
+.containerBthird button{
+    height:50px;
+    width:200px;
+    background-color: white;
+    border:none;
+    position:relative;
+    overflow:hidden;
+    color: black;
+    font-size:15px;
+    border-radius:3px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.containerBthird button span{
+  
+    z-index:10;
+    
+}
+
+.containerBthird button:hover:after{
+    position:absolute;
+    content:'';
+    border-radius:1px;
+    background-color: rgb(0, 255, 21);
+    height:400px;
+    width:400px;
+    top:-12px;
+    left:-13px;
+
+  
+}
+
+.containerBthird button:after{
+    position:absolute;
+    content:'';
+    border-radius:30% 70% 70% 30% / 30% 22% 78% 70%;
+    background-color: rgb(0, 255, 21);
+    height:70px;
+    width:80px;
+    top:-12px;
+    left:-13px;
+    transition:all 1s;
+}
