@@ -36,18 +36,24 @@
     #fdf497 0%, #fdf497 5% , #fd5949 45%,
     #d6249f 60%, #285AEB 90%);
     outline-color:#a02d76;
+    color: white;
 }
 .icon--twitter:hover{
     background-color:#1da1f2;
     outline-color: #1da1f2;
+    color: white;
+
 }
 .icon--linkedin:hover{
     background-color:#0077b5;
     outline-color: #0077b5;
+    color: white;
+
 }
 .icon--facebook:hover{
     background-color:#301ce4;
     outline-color: #0a06f3;
+    color: white;
 }
 @keyframes shake{
     10%{transform:rotate(-15deg);}

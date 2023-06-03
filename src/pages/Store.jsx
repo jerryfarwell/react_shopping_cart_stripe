@@ -11,6 +11,7 @@ import femme_disque_dur from '../assets/images/femme_disque_dur.jpeg';
 import sitted_black_manpc from '../assets/images/sitted_black_manpc.png';
 import phone_hand from '../assets/images/phone_hand.png';
 import CarouselAllItems from '../components/CarouselAllItems'
+import Testimonials from '../components/Testimonials'
 
 
 
@@ -79,6 +80,8 @@ const Store = () => {
        <img src={sitted_black_manpc} alt="" className='img-phoneHand'/>
        </div>
        <br/><br/>
+
+       <Testimonials/>
 
 
 
