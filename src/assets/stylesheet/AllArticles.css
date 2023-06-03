@@ -1,0 +1,8 @@
+.allArticlesTop {
+  background: url("src/assets/images/allaticles_art.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5%;
+  text-align: center;
+  color: white;
+}

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "../../../assets/stylesheet/NewPasswordForm.css";
 import { Alert, Button } from "react-bootstrap";
-import lock from '../../../assets/images/lock.png'
-import loading_img from '../../../assets/images/loading_img.gif'
-
-
+import lock from "../../../assets/images/lock.png";
+import loading_img from "../../../assets/images/loading_img.gif";
 
 const ResetPassword = async (
   resetPasswordToken,
@@ -44,8 +42,6 @@ function NewPasswordForm() {
   const [passwordFormatError, setPasswordFormatError] = useState("");
   const [loading, setLoading] = useState(false);
 
-
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
@@ -66,11 +62,7 @@ function NewPasswordForm() {
     }
 
     try {
-      await ResetPassword(
-        reset_password_token,
-        password,
-        passwordConfirmation
-      );
+      await ResetPassword(reset_password_token, password, passwordConfirmation);
       setMessage("Le mot de passe a été mis à jour avec succès.");
       setLoading(false);
     } catch (error) {
@@ -83,7 +75,7 @@ function NewPasswordForm() {
     <div className="new-password">
       <br />
       <br />
-      <h2 style={{color: 'white'}}>Redéfinir votre mot de passe</h2>
+      <h2 style={{ color: "white" }}>Redéfinir votre mot de passe</h2>
       <br />
       <br />
       <form onSubmit={handleSubmit}>
@@ -114,8 +106,7 @@ function NewPasswordForm() {
           </Alert>
         )}
 
-        {loading && <img src={loading_img} alt="" /> }
-        
+        {loading && <img src={loading_img} alt="" />}
 
         <Button type="submit">Réinitialiser le mot de passe</Button>
         <br />
@@ -127,21 +118,34 @@ function NewPasswordForm() {
           <Alert variant="danger">{passwordFormatError}</Alert>
         )}
       </form>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <h5 >Nous prenons votre vie privée et votre sécurité très au sérieux.</h5>
+      <br />
+      <br />
+      <br />
+      <br />
+      <h5>Nous prenons votre vie privée et votre sécurité très au sérieux.</h5>
       <img src={lock} alt="" style={{ width: "200px" }} />
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <Alert variant="secondary">
-        <p>Veuillez entrer votre nouveau mot de passe dans le champ prévu à cet effet. Assurez-vous qu'il est sécurisé en utilisant au moins 6 caractères spéciaux , dont au moins une lettre majuscule, une lettre minuscule et un chiffre. Entrez à nouveau votre nouveau mot de passe dans le champ de confirmation pour éviter les erreurs de saisie. Cliquez sur "Réinitialiser le mot de passe" pour enregistrer les modifications.</p>
-        <p>Attention, ce lien de réinitialisation de mot de passe n'est utilisable qu'une seule fois. Si vous avez déjà changé votre mot de passe à l'aide de ce lien, veuillez demander un nouveau lien pour réinitialiser votre mot de passe.</p>
+        <p>
+          Veuillez entrer votre nouveau mot de passe dans le champ prévu à cet
+          effet. Assurez-vous qu'il est sécurisé en utilisant au moins 6
+          caractères spéciaux , dont au moins une lettre majuscule, une lettre
+          minuscule et un chiffre. Entrez à nouveau votre nouveau mot de passe
+          dans le champ de confirmation pour éviter les erreurs de saisie.
+          Cliquez sur "Réinitialiser le mot de passe" pour enregistrer les
+          modifications.
+        </p>
+        <p>
+          Attention, ce lien de réinitialisation de mot de passe n'est
+          utilisable qu'une seule fois. Si vous avez déjà changé votre mot de
+          passe à l'aide de ce lien, veuillez demander un nouveau lien pour
+          réinitialiser votre mot de passe.
+        </p>
       </Alert>
     </div>
   );
-} 
+}
 
 export default NewPasswordForm;

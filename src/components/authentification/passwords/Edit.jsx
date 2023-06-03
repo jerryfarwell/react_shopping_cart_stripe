@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function ForgotPassword() {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -10,10 +10,10 @@ function ForgotPassword() {
 
   const handleResetPassword = async () => {
     try {
-      const response = await fetch('http://localhost:3000/password/forgot', {
-        method: 'POST',
+      const response = await fetch("http://localhost:3000/password/forgot", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ email }),
       });
@@ -21,7 +21,7 @@ function ForgotPassword() {
       setMessage(data.message);
     } catch (error) {
       console.error(error);
-      setMessage('An error occurred while resetting your password.');
+      setMessage("An error occurred while resetting your password.");
     }
   };
 
@@ -38,4 +38,4 @@ function ForgotPassword() {
   );
 }
 
-export default ForgotPassword
+export default ForgotPassword;

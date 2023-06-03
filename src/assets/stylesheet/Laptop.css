@@ -1,54 +1,50 @@
-
-
-.laptop-space{
-    margin-bottom: 2%;
+.laptop-space {
+  margin-bottom: 2%;
 }
 
-
-.laptop-topTextTwo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.laptop-topTextTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.laptop-testyAndPic{
-    /*background: rgb(160, 145, 79); */
-    padding: 3%;
+.laptop-testyAndPic {
+  /*background: rgb(160, 145, 79); */
+  padding: 3%;
 }
 
-.words_first{
-    font-weight: bold;
-    font-style: italic;
+.words_first {
+  font-weight: bold;
+  font-style: italic;
 }
 
-.man_standingRow{
-    background: rgb(160, 145, 79);
-    padding: 3%;
-    width: 100%;
-    margin: auto;
-
+.man_standingRow {
+  background: rgb(160, 145, 79);
+  padding: 3%;
+  width: 100%;
+  margin: auto;
 }
 
-.young_black_man{
-    width: 100%;
-    margin: auto;
+.young_black_man {
+  width: 100%;
+  margin: auto;
 }
 
-.phone_handWords{
-    text-align: center;
-    background: rgb(160, 145, 79);
-    /*background: rgba(11, 80, 112, 0.719); */
-    color: white;
-    padding: 3%;
-    }
+@media (max-width: 767px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 
-    
-    .img-phoneHand{
-        margin: auto;
-        width: 50%;
-    }
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 
-
-
-
+.words_top_phone {
+  color: black;
+  background: rgb(31, 185, 188);
+  padding: 5%;
+  text-align: center;
+}
