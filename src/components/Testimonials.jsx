@@ -11,7 +11,7 @@ function Testimonials() {
        
        <Row>
          <Col>
-           <img src={testimonial_first} alt="" />
+           <img src={testimonial_first} alt="" className='testimonial_first'/>
          </Col>
          <Col>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellat sit labore, odit id, nostrum animi ducimus libero asperiores, atque quasi illum eos omnis repudiandae vero voluptatum ipsa est pariatur.</p>
