@@ -9,9 +9,9 @@ function Testimonials() {
   return (
     <div>
        
-       <Row>
+       <Row className='testimonial_first'>
          <Col>
-           <img src={testimonial_first} alt="" className='testimonial_first'/>
+           <img src={testimonial_first} alt="" />
          </Col>
          <Col>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellat sit labore, odit id, nostrum animi ducimus libero asperiores, atque quasi illum eos omnis repudiandae vero voluptatum ipsa est pariatur.</p>
