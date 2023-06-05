@@ -31,6 +31,9 @@ function PeopleTestimonials() {
       <div style={{ marginTop: "10%" }}></div>
 
       <CarouselAllItems />
+      <p style={{ textAlign: "center" }}>
+        swiper pour voir les articles ou laissez-les défiler automatiquement.
+      </p>
 
       <div style={{ marginBottom: "50%" }}></div>
     </div>

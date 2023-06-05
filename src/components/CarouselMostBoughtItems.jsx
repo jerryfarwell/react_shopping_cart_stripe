@@ -5,9 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { Col } from "react-bootstrap";
 import { ProdutcsArray } from "../productStore";
 import ProductCard from "./ProductCard";
-import "../assets/stylesheet/CarouselAllItems.css";
 
-function CarouselAllItems() {
+function CarouselMostBoughtItems() {
   const settings = {
     //dots: true,
     infinite: true,
@@ -43,7 +42,19 @@ function CarouselAllItems() {
     ],
   };
 
-  const filteredProducts = ProdutcsArray.slice(7, 51); // this will show items from id 8 to id 20  this is actually the easiest when you want to display particular items
+  const productIdsToFilter = [
+    "price_1N89RCFrCY7e7e3NoZM80yLG",
+    "price_laptops1",
+    "price_enceinte_bleutooth2",
+    "price_sacados_pc5",
+    "price_phones1",
+    "price_sacados_pc4",
+    "price_sacados_pc3",
+    "price_phones3",
+  ];
+  const filteredProducts = ProdutcsArray.filter((product) =>
+    productIdsToFilter.includes(product.id)
+  );
 
   return (
     <div>
@@ -60,4 +71,4 @@ function CarouselAllItems() {
   );
 }
 
-export default CarouselAllItems;
+export default CarouselMostBoughtItems;

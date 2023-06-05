@@ -88,7 +88,7 @@ function ItemDetails(props) {
           <h5>
             {product.price} €{" "}
             <img src={delivry} alt="" className="img-delivry" />
-            <small>Livraison express</small>
+            <small>Livraison accélérée </small>
           </h5>
           <Button
             variant="success"
@@ -105,9 +105,11 @@ function ItemDetails(props) {
           <hr />
           <h5>Garantie de satisfaction</h5>
           <p>
-            Si vous n'êtes pas entièrement satisfait de votre achat, vous avez
-            jusqu'à deux semaines après la réception pour demander un
-            remboursement.
+            Si vous n’êtes pas satisfait d'un produit que vous avez commandé sur
+            networklee.com ou si celui-ci est défectueux ou endommagé, vous
+            pouvez nous le retourner sous deux semaines suivant la date de
+            livraison, et nous vous rembourserons ou remplacerons l'intégralité
+            de l'article.
           </p>
           <hr />
           <h5>Délais de Livraison</h5>
@@ -120,15 +122,16 @@ function ItemDetails(props) {
             <li>Article neuf avec emballage d'origine.</li>
             <li>Tous nos articles font l'objet d'un controle de qualité.</li>
           </ul>
-          <hr />
-          <h5 className="item-guarantee">garantie : 1 an</h5>
-          <hr />
           <br />
           <br />
         </Col>
       </Row>
-      <br />
-
+      <div style={{ marginBottom: "10%" }}></div>
+      <div className="allProductsIn_itemsDetails">
+        <h5 style={{ marginTop: "1%", marginBottom: "1%" }}>
+          Ces produits qui pouraient vous intéresser{" "}
+        </h5>
+      </div>
       <Row xs={1} md={3} className="g-4">
         {/*{ProdutcsArray.map((product, idx) => (
                     <Col align="center" key={idx}>
