@@ -22,6 +22,7 @@ import ExternalHardDrive from "./pages/pagesDetails/ExternalHardDrive";
 import LaptopBag from "./pages/pagesDetails/LaptopBag";
 import LaptopBackBag from "./pages/pagesDetails/LaptopBackBag";
 import PeopleTestimonials from "./pages/PeopleTestimonials";
+import AboutUs from "./pages/FooterPages/AboutUs";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
                 path="/peopletestimonials"
                 element={<PeopleTestimonials />}
               />
+              <Route path="/AboutUs" element={<AboutUs />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </BrowserRouter>

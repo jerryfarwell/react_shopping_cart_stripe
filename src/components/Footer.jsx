@@ -17,7 +17,14 @@ function Footer() {
         <br />
         <Row className="row-footer">
           <Col>
-            <h6>À propos </h6>
+            <h6>
+              <a
+                href="/AboutUs"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                À propos{" "}
+              </a>
+            </h6>
             <h6>Mentions Légales</h6>
             <h6>protection des données personnelles</h6>
             <h6>Paiement 100% sécurisé</h6>
