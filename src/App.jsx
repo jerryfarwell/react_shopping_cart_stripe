@@ -23,6 +23,9 @@ import LaptopBag from "./pages/pagesDetails/LaptopBag";
 import LaptopBackBag from "./pages/pagesDetails/LaptopBackBag";
 import PeopleTestimonials from "./pages/PeopleTestimonials";
 import AboutUs from "./pages/FooterPages/AboutUs";
+import LegalNotice from "./pages/FooterPages/LegalNotice";
+import PersonalUserData from "./pages/FooterPages/PersonalUserData";
+import SecuredPayment from "./pages/FooterPages/SecuredPayment";
 
 function App() {
   return (
@@ -63,6 +66,9 @@ function App() {
                 element={<PeopleTestimonials />}
               />
               <Route path="/AboutUs" element={<AboutUs />} />
+              <Route path="/LegalNotice" element={<LegalNotice />} />
+              <Route path="/PersonalUserData" element={<PersonalUserData />} />
+              <Route path="/SecuredPayment" element={<SecuredPayment />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </BrowserRouter>

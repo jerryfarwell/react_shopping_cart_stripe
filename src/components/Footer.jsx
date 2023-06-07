@@ -25,9 +25,30 @@ function Footer() {
                 À propos{" "}
               </a>
             </h6>
-            <h6>Mentions Légales</h6>
-            <h6>protection des données personnelles</h6>
-            <h6>Paiement 100% sécurisé</h6>
+            <h6>
+              <a
+                href="/LegalNotice"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Mentions Légales
+              </a>
+            </h6>
+            <h6>
+              <a
+                href="/PersonalUserData"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                protection des données personnelles
+              </a>
+            </h6>
+            <h6>
+              <a
+                href="/SecuredPayment"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Paiement 100% sécurisé
+              </a>
+            </h6>
           </Col>
           <Col>
             <h6>Nous contacter</h6>

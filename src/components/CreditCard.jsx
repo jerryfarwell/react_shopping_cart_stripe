@@ -58,11 +58,12 @@ function CreditCard() {
             Sur www.networkleed.com, la sécurité de vos achats en ligne est
             notre priorité absolue. Nous comprenons à quel point il est
             important de vous sentir en confiance lors de vos transactions sur
-            notre plateforme. C'est pourquoi nous avons mis en place des mesures
-            de sécurité robustes pour protéger vos informations personnelles et
-            financières. Grâce à des protocoles de chiffrement avancés et à une
-            surveillance constante, vous pouvez effectuer vos achats en toute
-            tranquillité, sachant que votre sécurité est entre de bonnes mains
+            notre plateforme. C'est pourquoi Nous avons choisi Stripe
+            principalement en raison de sa sécurité de premier ordre en matière
+            de données bancaires. La confidentialité et la protection des
+            informations financières de nos clients sont une priorité absolue
+            pour nous. Avec Stripe, toutes les transactions sont effectuées
+            directement sur leur plateforme sécurisée.
           </div>
         </div>
       </div>
