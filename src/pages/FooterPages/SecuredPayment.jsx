@@ -71,7 +71,7 @@ function SecuredPayment() {
       </p>
       <br />
       <div className="secure_data">
-        <img src={stripe_allcards} alt="" />
+        <img src={stripe_allcards} alt="" style={{ maxWidth: "100%" }} />
       </div>
       <div style={{ marginBottom: "10%" }}></div>
     </div>

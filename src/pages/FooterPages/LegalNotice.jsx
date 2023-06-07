@@ -19,6 +19,8 @@ function LegalNotice() {
       <div className="legal_notice">
         <img src={legal_notice} alt="" width="30%" />
       </div>
+      <br />
+      <br />
       <Row xs={1} md={3} className="g-4">
         <Col align="center">
           <h3
