@@ -6,5 +6,4 @@ body::-webkit-scrollbar {
   margin: auto;
   width: 100%;
   max-width: 100%;
-  touch-action: manipulation; /* to prevent user to zoom in the app */
 }
