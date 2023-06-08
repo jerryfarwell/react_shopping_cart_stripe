@@ -21,7 +21,7 @@ function CreditCard() {
             </div>
           </div>
           <div className="d-flex justify-content-between flex-column card-details pt-2">
-            <div className="card-number">1234 5678 9012 3456</div>
+            <div className="card-number">5678 9012 3456</div>
             <div className="d-flex align-items-center expiry py-2">
               <div className="d-flex flex-column text-uppercase">
                 {/*<div>Valid</div>
@@ -60,10 +60,7 @@ function CreditCard() {
             important de vous sentir en confiance lors de vos transactions sur
             notre plateforme. C'est pourquoi Nous avons choisi Stripe
             principalement en raison de sa sécurité de premier ordre en matière
-            de données bancaires. La confidentialité et la protection des
-            informations financières de nos clients sont une priorité absolue
-            pour nous. Avec Stripe, toutes les transactions sont effectuées
-            directement sur leur plateforme sécurisée.
+            de données bancaires.
           </div>
         </div>
       </div>

@@ -1,11 +1,10 @@
 body::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
 
-
-.App{
-margin: auto;
-width: 100%;
-max-width: 100%;
-
+.App {
+  margin: auto;
+  width: 100%;
+  max-width: 100%;
+  touch-action: manipulation; /* to prevent user to zoom in the app */
 }
