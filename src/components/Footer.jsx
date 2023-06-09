@@ -57,9 +57,9 @@ function Footer() {
             </h6>
           </Col>
           <Col>
-            <button onClick={handleShowSecond} className="btn_contactUs">
+            <h6 onClick={handleShowSecond} title="cliker pour nous contacter">
               Nous contacter
-            </button>
+            </h6>
             <h6>Catalogue de produits </h6>
             <h6>Politique de retour et d'échange</h6>
             <h6>Livraison et expédition</h6>
