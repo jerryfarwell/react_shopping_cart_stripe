@@ -1,0 +1,79 @@
+.contact_form {
+  background: url("../images/helmet_art.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact_us {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputContact {
+  width: 230px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+}
+
+.inputContactText {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-color: transparent;
+}
+
+.buttonSubmitContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.buttonSubmitContact button {
+  height: 50px;
+  width: 200px;
+  background-color: lightpink;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  color: black;
+  font-size: 15px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttonSubmitContact button span {
+  z-index: 10;
+}
+
+.buttonSubmitContact button:hover:after {
+  position: absolute;
+  content: "";
+  border-radius: 1px;
+  background-color: blue;
+  height: 400px;
+  width: 400px;
+  top: -12px;
+  left: -13px;
+  color: white;
+}
+
+.buttonSubmitContact button:after {
+  position: absolute;
+  content: "";
+  border-radius: 30% 70% 70% 30% / 30% 22% 78% 70%;
+  background-color: blue;
+  height: 70px;
+  width: 80px;
+  top: -12px;
+  left: -13px;
+  transition: all 1s;
+  color: white;
+}

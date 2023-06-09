@@ -1,12 +1,18 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Modal, Row } from "react-bootstrap";
 import "../assets/stylesheet/Footer.css";
 import logo from "../assets/images/logo.png";
 import delivery_after_footer from "../assets/images/delivery_after_footer.png";
 import creditcard from "../assets/images/creditcard.png";
 import SocialmediaIcons from "./SocialmediaIcons";
+import ContactForm from "./ContactForm";
 
 function Footer() {
+  // here creating useSate to be able to show and close modal this one is for contact us
+  const [showSecond, setShowSecond] = useState(false);
+  const handleCloseSecond = () => setShowSecond(false);
+  const handleShowSecond = () => setShowSecond(true);
+
   return (
     <div>
       <div>
@@ -51,7 +57,9 @@ function Footer() {
             </h6>
           </Col>
           <Col>
-            <h6>Nous contacter</h6>
+            <button onClick={handleShowSecond} className="btn_contactUs">
+              Nous contacter
+            </button>
             <h6>Catalogue de produits </h6>
             <h6>Politique de retour et d'échange</h6>
             <h6>Livraison et expédition</h6>
@@ -82,6 +90,15 @@ function Footer() {
           </div>
         </div>
       </div>
+
+      <Modal show={showSecond} onHide={handleCloseSecond}>
+        <Modal.Header closeButton className="login-modal">
+          <Modal.Title className="modal-logint">Nous contacter </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="contactF">
+          <ContactForm />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

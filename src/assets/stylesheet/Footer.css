@@ -1,36 +1,41 @@
-
-
-.footer{
-    background: black;
-    color: rgb(239, 238, 238);
+.footer {
+  background: black;
+  color: rgb(239, 238, 238);
 }
 
-.row-footer{
-    margin-left: 10px;
-    margin-right: 10px;
+.row-footer {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-
-.logo-footer{
-    width: 40px;
+.logo-footer {
+  width: 40px;
 }
 
-
-.creditcard{
-    width: 70px;
-    height: 60px;
+.creditcard {
+  width: 70px;
+  height: 60px;
 }
 
-
-.after-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: white;
-    text-align: center;
-    color: black;
-    margin-bottom: 10px;
-
-
+.after-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: white;
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
 }
 
+.contactF {
+  background: url("../images/helmet_art.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_contactUs {
+  border-color: transparent;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+}

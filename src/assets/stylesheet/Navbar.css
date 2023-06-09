@@ -58,6 +58,12 @@
   background-size: cover;
 }
 
+.contactF {
+  background: url("../images/helmet_art.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .dropdown-item:hover {
   background-color: blue;
   color: white;

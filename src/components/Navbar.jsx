@@ -22,6 +22,8 @@ import UserProfilePage from "./UserProfilePage";
 import jwt_decode from "jwt-decode";
 import ResetPasswordForm from "./authentification/passwords/RessetPasswordForm";
 import FavoritesPage from "./FavoritesPage";
+import contact_us from "../assets/images/contact_us.png";
+import ContactForm from "./ContactForm";
 
 function NavbarComponent() {
   //-- this belongs to the dropdown using onMousse------------------------//
@@ -142,6 +144,16 @@ function NavbarComponent() {
     setShowSecond(false);
     setShowThird(false);
     setShowSix(true);
+  };
+
+  // here creating useSate to be able to show and close modal this one is for contact us
+  const [showSeven, setShowSeven] = useState(false);
+  const handleCloseSeven = () => setShowSeven(false);
+  const handleShowSeven = () => {
+    setShow(false);
+    setShowSecond(false);
+    setShowThird(false);
+    setShowSeven(true);
   };
 
   // this is for setting message base on the fetch
@@ -342,6 +354,14 @@ function NavbarComponent() {
         </Navbar.Collapse>
 
         <Navbar.Collapse className="navdropdown">
+          <button onClick={handleShowSeven} className="cart-button">
+            <div className="favHeart-count">
+              <img src={contact_us} width={"40px"} title="Nous contacter" />
+            </div>
+          </button>
+        </Navbar.Collapse>
+
+        <Navbar.Collapse className="navdropdown">
           {/*<DropdownButton
                      title={
                       <div className='favHeart-count'>
@@ -425,6 +445,15 @@ function NavbarComponent() {
           </button>
         </div>
       </Navbar>
+
+      <Modal show={showSeven} onHide={handleCloseSeven}>
+        <Modal.Header closeButton className="login-modal">
+          <Modal.Title className="modal-logint">Nous contacter </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="contactF">
+          <ContactForm />
+        </Modal.Body>
+      </Modal>
 
       <Modal
         show={showFourth}
