@@ -26,6 +26,9 @@ import AboutUs from "./pages/FooterPages/AboutUs";
 import LegalNotice from "./pages/FooterPages/LegalNotice";
 import PersonalUserData from "./pages/FooterPages/PersonalUserData";
 import SecuredPayment from "./pages/FooterPages/SecuredPayment";
+import ReturnAndExchangePolicy from "./pages/FooterPages/ReturnAndExchangePolicy";
+import DeliveryAndShipping from "./pages/FooterPages/DeliveryAndShipping";
+import SupportAndCustomerservice from "./pages/FooterPages/SupportAndCustomerservice";
 
 function App() {
   return (
@@ -69,6 +72,18 @@ function App() {
               <Route path="/LegalNotice" element={<LegalNotice />} />
               <Route path="/PersonalUserData" element={<PersonalUserData />} />
               <Route path="/SecuredPayment" element={<SecuredPayment />} />
+              <Route
+                path="/ReturnAndExchangePolicy"
+                element={<ReturnAndExchangePolicy />}
+              />
+              <Route
+                path="/DeliveryAndShipping"
+                element={<DeliveryAndShipping />}
+              />
+              <Route
+                path="/SupportAndCustomerservice"
+                element={<SupportAndCustomerservice />}
+              />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </BrowserRouter>

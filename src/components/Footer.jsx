@@ -57,15 +57,32 @@ function Footer() {
             </h6>
           </Col>
           <Col>
-            <h6 onClick={handleShowSecond} title="cliker pour nous contacter">
-              Nous contacter
-            </h6>
+            <a href="#" style={{ textDecoration: "none", color: "inherit" }}>
+              <h6 onClick={handleShowSecond} title="cliker pour nous contacter">
+                Nous contacter
+              </h6>
+            </a>
             <h6>Catalogue de produits </h6>
-            <h6>Politique de retour et d'échange</h6>
-            <h6>Livraison et expédition</h6>
+            <a
+              href="/ReturnAndExchangePolicy"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h6>Politique de retour et d'échange</h6>
+            </a>
+            <a
+              href="/DeliveryAndShipping"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h6>Livraison et expédition</h6>
+            </a>
           </Col>
           <Col>
-            <h6>Assistance et service client</h6>
+            <a
+              href="/SupportAndCustomerservice"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h6>Assistance et service client</h6>
+            </a>
             <h6>FAQ (Foire aux questions)</h6>
             <h6>Promotions et offres spéciales</h6>
             <h6>Ressources</h6>

@@ -1,14 +1,21 @@
-
-
 @media (max-width: 767px) {
-    .col-md-4 {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  
-    .col-md-8 {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  
+
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.chronopost_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.customer_service {
+  display: flex;
+  justify-content: center;
+}
