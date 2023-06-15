@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../assets/stylesheet/ContactForm.css";
 import { Alert } from "react-bootstrap";
+import loading_img from "../assets/images/loading_img.gif";
 
 function ContactForm() {
   const [name, setName] = useState("");
@@ -10,7 +11,9 @@ function ContactForm() {
 
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (event) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     // Create an object with the form data
@@ -21,33 +24,32 @@ function ContactForm() {
       content,
     };
 
-    // Send the form data to your backend API endpoint
-    fetch("http://localhost:3000/contacts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ contact: formData }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          setMessage(
-            "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
-          );
-          // Handle success, e.g., show a success message to the user
-          console.log("Email sent successfully");
-        } else {
-          setMessage(
-            "Erreur lors de l'envoi du message. Veuillez réessayer ultérieurement. "
-          );
-          // Handle failure, e.g., display an error message
-          console.error("Failed to send email");
-        }
-      })
-      .catch((error) => {
-        // Handle any error that occurred during the request
-        console.error("An error occurred", error);
+    try {
+      setLoading(true);
+      const response = await fetch("http://localhost:3000/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ contact: formData }),
       });
+
+      if (response.ok) {
+        setMessage(
+          "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
+        );
+        console.log("Email sent successfully");
+      } else {
+        setMessage(
+          "Erreur lors de l'envoi du message. Veuillez réessayer ultérieurement."
+        );
+        console.error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("An error occurred", error);
+    } finally {
+      setLoading(false);
+    }
 
     // Clear the form fields after submission
     setName("");
@@ -102,6 +104,8 @@ function ContactForm() {
       />
       <br />
       <br />
+      {loading && <img src={loading_img} alt="" />}
+
       <div className="buttonSubmitContact">
         <button type="submit">
           <span>Envoyer</span>{" "}

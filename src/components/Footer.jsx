@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Modal, Row } from "react-bootstrap";
 import "../assets/stylesheet/Footer.css";
 import logo from "../assets/images/logo.png";
+import french_flag from "../assets/images/french_flag.png";
 import delivery_after_footer from "../assets/images/delivery_after_footer.png";
 import creditcard from "../assets/images/creditcard.png";
 import SocialmediaIcons from "./SocialmediaIcons";
@@ -15,7 +16,7 @@ function Footer() {
 
   return (
     <div>
-      <div>
+      <div className="socialmediafooter">
         <SocialmediaIcons />
       </div>
       <div className="footer">
@@ -62,7 +63,12 @@ function Footer() {
                 Nous contacter
               </h6>
             </a>
-            <h6>Catalogue de produits </h6>
+            <a
+              href="/BecomePartner"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h6>Devenez Partenaire </h6>
+            </a>
             <a
               href="/ReturnAndExchangePolicy"
               style={{ textDecoration: "none", color: "inherit" }}
@@ -83,11 +89,30 @@ function Footer() {
             >
               <h6>Assistance et service client</h6>
             </a>
-            <h6>FAQ (Foire aux questions)</h6>
-            <h6>Promotions et offres spéciales</h6>
-            <h6>Ressources</h6>
+            <a
+              href="/peopletestimonials"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h6>Voix des clients</h6>
+            </a>
+            <a
+              href="/AllArticles"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h6>Tous les Articles</h6>
+            </a>
+            <h6>Ressources "bientôt disponible"</h6>
           </Col>
         </Row>
+        <br />
+        <br />
+        <div className="french_flag">
+          <img src={french_flag} alt="" style={{ maxWidth: "70px" }} />
+          <p style={{ marginLeft: "1%" }}>
+            Made with <br /> love , <br /> in France{" "}
+          </p>
+        </div>
+
         <br />
         <div className="after-footer">
           <div>
@@ -107,6 +132,8 @@ function Footer() {
           </div>
         </div>
       </div>
+      <br />
+      <br />
 
       <Modal show={showSecond} onHide={handleCloseSecond}>
         <Modal.Header closeButton className="login-modal">

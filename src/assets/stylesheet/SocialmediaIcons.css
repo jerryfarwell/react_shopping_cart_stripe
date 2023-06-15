@@ -1,63 +1,73 @@
-.icon_body{
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
+.icon_body {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
 }
 
-.icons{
-    display:flex;
-    column-gap:25px;
+.icons {
+  display: flex;
+  column-gap: 25px;
 }
-.icon{
-    width:50px;
-    height:50px;
-    display: inline-flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-size:22px;
-    color:#fff;
-    border-radius:50%;
-    outline:2px solid #fff;
-    transition-property : outline-offset , outline-color ,
-    background-color;
-    transition-duration: .25s;
+.icon {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
 }
-.icon:hover{
-    outline-offset: 4px;
+.icon:hover {
+  outline-offset: 4px;
 }
-.icon:hover i{
-    animation: shake .25px;
+.icon:hover i {
+  animation: shake 0.25px;
 }
-.icon--instagram:hover{
-    background-image: radial-gradient(circle at 30% 107% ,
-    #fdf497 0%, #fdf497 5% , #fd5949 45%,
-    #d6249f 60%, #285AEB 90%);
-    outline-color:#a02d76;
-    color: white;
+.icon--instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d76;
+  color: white;
 }
-.icon--twitter:hover{
-    background-color:#1da1f2;
-    outline-color: #1da1f2;
-    color: white;
-
+.icon--twitter:hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+  color: white;
 }
-.icon--linkedin:hover{
-    background-color:#0077b5;
-    outline-color: #0077b5;
-    color: white;
-
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+  color: white;
 }
-.icon--facebook:hover{
-    background-color:#301ce4;
-    outline-color: #0a06f3;
-    color: white;
+.icon--facebook:hover {
+  background-color: #301ce4;
+  outline-color: #0a06f3;
+  color: white;
 }
-@keyframes shake{
-    10%{transform:rotate(-15deg);}
-    20%{transform:rotate(-15deg);}
-    30%{transform:rotate(-15deg);}
-    40%{transform:rotate(-15deg);}
+@keyframes shake {
+  10% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
 }

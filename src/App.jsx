@@ -29,6 +29,7 @@ import SecuredPayment from "./pages/FooterPages/SecuredPayment";
 import ReturnAndExchangePolicy from "./pages/FooterPages/ReturnAndExchangePolicy";
 import DeliveryAndShipping from "./pages/FooterPages/DeliveryAndShipping";
 import SupportAndCustomerservice from "./pages/FooterPages/SupportAndCustomerservice";
+import BecomePartner from "./pages/FooterPages/BecomePartner";
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
                 path="/SupportAndCustomerservice"
                 element={<SupportAndCustomerservice />}
               />
+              <Route path="/BecomePartner" element={<BecomePartner />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </BrowserRouter>

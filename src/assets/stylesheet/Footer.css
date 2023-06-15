@@ -32,3 +32,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.french_flag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.socialmediafooter {
+  background-color: black;
+}
