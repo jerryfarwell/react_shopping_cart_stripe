@@ -17,7 +17,7 @@ function Paid() {
 
       if (userId) {
         fetch(
-          `https://lionfish-app-i98fg.ondigitalocean.app/payment_succeeded/${userId}`
+          `https://lobster-app-9v8bb.ondigitalocean.app/payment_succeeded/${userId}`
         )
           .then((res) => res.json())
           .then((data) => setUser(data.user))

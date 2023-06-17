@@ -11,7 +11,7 @@ const ResetPassword = async (
 ) => {
   try {
     const response = await fetch(
-      `https://lionfish-app-i98fg.ondigitalocean.app/password?reset_password_token=${resetPasswordToken}`,
+      `https://lobster-app-9v8bb.ondigitalocean.app/password?reset_password_token=${resetPasswordToken}`,
       {
         method: "PUT",
         headers: {

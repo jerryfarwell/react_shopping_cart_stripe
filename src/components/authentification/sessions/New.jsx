@@ -30,7 +30,7 @@ function LoginForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoading(true); // set loading to true when form is submitted
-    fetch("https://lionfish-app-i98fg.ondigitalocean.app/login", {
+    fetch("https://lobster-app-9v8bb.ondigitalocean.app/login", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

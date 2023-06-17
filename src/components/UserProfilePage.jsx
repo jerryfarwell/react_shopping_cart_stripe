@@ -16,7 +16,7 @@ function UserProfilePage() {
       const userId = decodedToken.user_id;
 
       if (userId) {
-        fetch(`https://lionfish-app-i98fg.ondigitalocean.app/user/${userId}`)
+        fetch(`https://lobster-app-9v8bb.ondigitalocean.app/user/${userId}`)
           .then((res) => res.json())
           .then((data) => setUser(data.user))
           .catch((err) => console.error(err));

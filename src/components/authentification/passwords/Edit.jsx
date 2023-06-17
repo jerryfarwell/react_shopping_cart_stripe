@@ -11,7 +11,7 @@ function ForgotPassword() {
   const handleResetPassword = async () => {
     try {
       const response = await fetch(
-        "https://lionfish-app-i98fg.ondigitalocean.app/password/forgot",
+        "https://lobster-app-9v8bb.ondigitalocean.app/password/forgot",
         {
           method: "POST",
           headers: {

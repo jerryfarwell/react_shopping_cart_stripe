@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const ResetPassword = async (email) => {
   try {
     const response = await fetch(
-      "https://lionfish-app-i98fg.ondigitalocean.app/password",
+      "https://lobster-app-9v8bb.ondigitalocean.app/password",
       {
         method: "POST",
         headers: {

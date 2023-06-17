@@ -50,7 +50,7 @@ function SignupForm() {
       );
       setDisableButton(true);
     } else {
-      fetch("https://lionfish-app-i98fg.ondigitalocean.app/signup", {
+      fetch("https://lobster-app-9v8bb.ondigitalocean.app/signup", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

@@ -27,7 +27,7 @@ function ContactForm() {
     try {
       setLoading(true);
       const response = await fetch(
-        "https://lionfish-app-i98fg.ondigitalocean.app/contacts",
+        "https://lobster-app-9v8bb.ondigitalocean.app/contacts",
         {
           method: "POST",
           headers: {
