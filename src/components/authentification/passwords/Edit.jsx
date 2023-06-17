@@ -10,13 +10,16 @@ function ForgotPassword() {
 
   const handleResetPassword = async () => {
     try {
-      const response = await fetch("http://localhost:3000/password/forgot", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
+      const response = await fetch(
+        "https://lionfish-app-i98fg.ondigitalocean.app/password/forgot",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
       const data = await response.json();
       setMessage(data.message);
     } catch (error) {

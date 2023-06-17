@@ -16,13 +16,15 @@ function Paid() {
       const userId = decodedToken.user_id;
 
       if (userId) {
-        fetch(`http://localhost:3000/payment_succeeded/${userId}`)
+        fetch(
+          `https://lionfish-app-i98fg.ondigitalocean.app/payment_succeeded/${userId}`
+        )
           .then((res) => res.json())
           .then((data) => setUser(data.user))
           .catch((err) => console.error(err));
 
         setTimeout(() => {
-          window.location.href = "http://localhost:5173/";
+          window.location.href = "/";
         }, 20000); // user is redirected to home page after 20 second
       }
     }

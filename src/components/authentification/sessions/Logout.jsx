@@ -9,7 +9,7 @@ function Logout() {
     Cookies.remove("token");
 
     // Redirect the user to the home page
-    window.location.href = "http://localhost:5173/";
+    window.location.href = "/";
   };
 
   return (

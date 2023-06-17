@@ -11,7 +11,7 @@ const ResetPassword = async (
 ) => {
   try {
     const response = await fetch(
-      `http://localhost:3000/password?reset_password_token=${resetPasswordToken}`,
+      `https://lionfish-app-i98fg.ondigitalocean.app/password?reset_password_token=${resetPasswordToken}`,
       {
         method: "PUT",
         headers: {
@@ -63,7 +63,7 @@ function NewPasswordForm() {
 
     try {
       await ResetPassword(reset_password_token, password, passwordConfirmation);
-      setMessage("Le mot de passe a été mis à jour avec succès.");
+      setMessage("Votre mot de passe a été mis à jour avec succès.");
       setLoading(false);
     } catch (error) {
       console.error(error);

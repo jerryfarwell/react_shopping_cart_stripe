@@ -24,7 +24,7 @@ function ResetPasswordForm() {
     event.preventDefault();
     setLoading(true); // set loading to true when form is submitted
 
-    fetch("http://localhost:3000/password", {
+    fetch("https://lionfish-app-i98fg.ondigitalocean.app/password", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

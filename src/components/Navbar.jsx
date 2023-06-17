@@ -181,7 +181,7 @@ function NavbarComponent() {
       const decodedToken = jwt_decode(token);
       const userId = decodedToken.user_id;
 
-      await fetch("http://localhost:3000/checkout", {
+      await fetch("https://lionfish-app-i98fg.ondigitalocean.app/checkout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

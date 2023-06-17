@@ -50,7 +50,7 @@ function SignupForm() {
       );
       setDisableButton(true);
     } else {
-      fetch("http://localhost:3000/signup", {
+      fetch("https://lionfish-app-i98fg.ondigitalocean.app/signup", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function SignupForm() {
               "Félicitations ! Un lien de confirmation a été envoyé à votre adresse mail pour finaliser votre inscription."
             );
             setTimeout(() => {
-              window.location.href = "http://localhost:5173/";
+              window.location.href = "/";
             }, 9000);
             return res.json();
           } else {

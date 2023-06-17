@@ -30,7 +30,7 @@ function LoginForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoading(true); // set loading to true when form is submitted
-    fetch("http://localhost:3000/login", {
+    fetch("https://lionfish-app-i98fg.ondigitalocean.app/login", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -59,7 +59,7 @@ function LoginForm() {
         setToken(json.token); // set the token state
         //Cookies.set("userFirstName", json.user.first_name); // geting the user first_name from rails api
         setTimeout(() => {
-          window.location.href = "http://localhost:5173/"; // redirect to the homepage
+          window.location.href = "/"; // redirect to the homepage
         }, 3000); // close the parentheses for the setTimeout function here
       })
       .catch((err) => console.error(err))

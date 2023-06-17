@@ -26,13 +26,16 @@ function ContactForm() {
 
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/contacts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ contact: formData }),
-      });
+      const response = await fetch(
+        "https://lionfish-app-i98fg.ondigitalocean.app/contacts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ contact: formData }),
+        }
+      );
 
       if (response.ok) {
         setMessage(

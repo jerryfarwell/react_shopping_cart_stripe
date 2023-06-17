@@ -111,10 +111,23 @@ function ItemDetails(props) {
             livraison, et nous vous rembourserons ou remplacerons l'intégralité
             de l'article.
           </p>
+          <a
+            href="/ReturnAndExchangePolicy"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            En savoir plus{" "}
+          </a>
           <hr />
           <h5>Délais de Livraison</h5>
           <ul>
             <li>{product.delivryTime}</li>
+
+            <a
+              href="/DeliveryAndShipping"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <li>En savoir plus</li>
+            </a>
           </ul>
           <hr />
           <h5>État actuel de l'article</h5>
