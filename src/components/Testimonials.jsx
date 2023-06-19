@@ -9,7 +9,9 @@ function Testimonials() {
     <div>
       <Row>
         <Col className="col-md-4">
-          <img src={garçon_casque} alt="" style={{ maxWidth: "100%" }} />
+          <a href="/Helmet" style={{ textDecoration: "none" }}>
+            <img src={garçon_casque} alt="" style={{ maxWidth: "100%" }} />
+          </a>
         </Col>
 
         <Col className="col-md-8">

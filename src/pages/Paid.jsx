@@ -45,10 +45,9 @@ function Paid() {
         <div>
           <h3>félicitations {user.first_name} !</h3>
           <h6 className="words">
-            Votre confiance en notre plateforme et votre soutien sont très
-            appréciés.
-            <br />
-            Un mail confirmation a été envoyé à l'adresse mail{" "}
+            Votre paiement a été effectué avec succès. Nous sommes ravis de vous
+            compter parmi nos clients. <br />
+            Un mail de confirmation a été envoyé à l'adresse e-mail{" "}
             <span style={{ color: "green" }}>{user.email}</span>{" "}
           </h6>
         </div>

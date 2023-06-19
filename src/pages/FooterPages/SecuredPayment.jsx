@@ -9,9 +9,14 @@ function SecuredPayment() {
       <h2 style={{ textAlign: "center", fontFamily: "cursive", color: "red" }}>
         Paiement 100% sécurisé{" "}
       </h2>
+      <br />
+      <br />
+
       <div className="secure_data">
-        <CreditCard />
+        <img src={stripe_allcards} alt="" style={{ maxWidth: "100%" }} />
       </div>
+      <br />
+      <br />
       <p>
         Chez Networleed, nous avons choisi de travailler avec Stripe en raison
         de sa réputation solide en matière de sécurité des paiements en ligne.
@@ -71,8 +76,10 @@ function SecuredPayment() {
       </p>
       <br />
       <div className="secure_data">
-        <img src={stripe_allcards} alt="" style={{ maxWidth: "100%" }} />
+        <CreditCard />
       </div>
+      <p style={{ textAlign: "center" }}>Toucher la carte</p>
+
       <div style={{ marginBottom: "10%" }}></div>
     </div>
   );
