@@ -35,13 +35,18 @@ function AboutUs() {
           </h3>
           <br />
           <p style={{ textAlign: "justify" }}>
-            Networkleed a été fondée en février 2023 par Monsieur Jerry Mankou,
-            entrepreneur individuel et gérant de la SARL african market
-            travaillant en collaboration avec des entreprises aux États-Unis et
-            en France. Notre entreprise a été créée en France et est enregistrée
-            sous le numéro SIREN 948754775. Vous pouvez consulter les
-            informations détaillées concernant notre entreprise sur le site Le
-            Figaro :{" "}
+            Networkleed a été fondée en février 2023 par l'entreprise KMT. Notre
+            entreprise a été créée en France et est enregistrée sous le numéro
+            SIREN 948754775. Notre site internet a été développé par l'agence
+            web{" "}
+            <a
+              href="https://www.triovy.com/"
+              style={{ textDecoration: "none" }}
+            >
+              www.triovy.com
+            </a>{" "}
+            Vous pouvez consulter les informations détaillées concernant notre
+            entreprise sur le site Le Figaro : <br />
             <a
               href="https://entreprise.lefigaro.fr/monsieur-jerry-mankou-91/entreprise-948754775"
               style={{ textDecoration: "none" }}
@@ -134,7 +139,7 @@ function AboutUs() {
         Networkleed et partenaires
       </h3>
       <br />
-      <Row>
+      {/* <Row>
         <Col className="col-md-4">
           <p style={{ textAlign: "center" }}>Chef d'entreprise - founder </p>
           <img src={jerry_nobackground} alt="" style={{ maxWidth: "100%" }} />
@@ -144,18 +149,15 @@ function AboutUs() {
             Originaire du Congo, monsieur Jerry MANKOU a parcouru un chemin
             inspirant dans son parcours académique et professionnel. Après avoir
             terminé ses études secondaires, il a choisi de poursuivre ses études
-            à l'étranger, notamment au Ghana, où il a obtenu un diplôme de
-            "Proficiency en études de langue anglaise". Cette expérience lui a
-            permis de développer des compétences linguistiques solides en
-            anglais.
+            à l'étranger, où il a obtenu un diplôme de "Proficiency en études de
+            langue anglaise". Cette expérience lui a permis de développer des
+            compétences linguistiques solides en anglais.
           </p>
           <p>
             Soucieux d'élargir ses connaissances, monsieur Jerry MANKOU a
             ensuite entrepris un Master en logistique et gestion des transports,
             ainsi qu'une formation en QHSE (Qualité, Hygiène, Sécurité,
-            Environnement) et d'autres domaines connexes. Son parcours l'a
-            également conduit en Norvège, où il a acquis une expérience
-            précieuse avant de s'installer en France.
+            Environnement) et d'autres domaines connexes.
           </p>
           <p>
             Avant de fonder Networkleed, monsieur Jerry MANKOU a travaillé dans
@@ -202,7 +204,7 @@ function AboutUs() {
             respectueuses de l'environnement dans toutes nos activités.
           </p>
         </Col>
-      </Row>
+      </Row> */}
       <div style={{ marginBottom: "10%" }}></div>
       <Row>
         <Col className="col-md-4">
